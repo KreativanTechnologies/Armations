@@ -1,6 +1,6 @@
 import React from 'react'
 import AboutHero from '../../components/AboutPageComp/AboutHero.jsx'
-import OurStory from '../../components/AboutPageComp/OurStory.jsx'
+// import OurStory from '../../components/AboutPageComp/OurStory.jsx'
 import OurLeadership from '../../components/AboutPageComp/OurLeadership.jsx'
 import HowWeWork from '../../components/AboutPageComp/HowWeWork.jsx'
 import SolutionWeProvide from '../../components/AboutPageComp/SolutionWeProvide.jsx'
@@ -10,7 +10,7 @@ const page = () => {
   return (
     <div>
         <AboutHero/>
-        <OurStory/>
+        {/* <OurStory/> */}
         <OurLeadership/>
         <HowWeWork/>
         <SolutionWeProvide/>
