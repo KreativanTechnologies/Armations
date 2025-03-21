@@ -34,6 +34,7 @@ const Navbar = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
+    console.log("----handle nextLick");
     if (activeDropdown === "Solutions") {
       setCurrentIndex((prev) => (prev + 1) % solutions.items.length);
     } else if (activeDropdown === "Industries") {
@@ -77,7 +78,7 @@ const Navbar = () => {
                     Solutions
                   </button>
                   {activeDropdown === "Solutions" && (
-                    <div className='absolute inset-x-0  w-full pt-8 bg-transparent'>
+                    <div className='absolute z-50 inset-x-0  w-full pt-8 bg-transparent'>
                       <div className='shadow-xl flex bg-white '>
                         <div className='w-1/3 border-Color bg-[#ec3436]/10 p-4 rounded-l-lg'>
                           <h3 className=' pt-6 w-[308px] mx-auto flex items-center justify-between text-center text-[#333333] text-3xl font-normal font-poppins'>
@@ -117,7 +118,7 @@ const Navbar = () => {
                     Industries
                   </button>
                   {activeDropdown === "Industries" && (
-                    <div className='absolute inset-x-0  w-full pt-8 bg-transparent'>
+                    <div className='absolute z-50 inset-x-0  w-full pt-8 bg-transparent'>
                       <div className='shadow-xl flex bg-white '>
                         <div className='w-1/3 border-Color bg-[#ec3436]/10 p-4 rounded-l-lg'>
                           <h3 className=' pt-6 w-[308px] mx-auto flex items-center justify-between text-center text-[#333333] text-3xl font-normal font-poppins'>
@@ -199,11 +200,11 @@ const Navbar = () => {
             {/* Mobile Solutions Dropdown */}
             <div className='relative'>
               <button
-                onClick={() =>
+                onClick={() => {
                   setActiveDropdown(
                     activeDropdown === "Solutions" ? null : "Solutions"
-                  )
-                }
+                  );
+                }}
                 className='w-full text-left px-3 py-2 text-gray-700 flex justify-between items-center'
               >
                 Solutions
