@@ -57,7 +57,7 @@ const Navbar = () => {
                 <a href='/' className='text-gray-700 hover:text-gray-900'>
                   Home
                 </a>
-                <a href='/about' className='text-gray-700 hover:text-gray-900'>
+                <a href='/About' className='text-gray-700 hover:text-gray-900'>
                   About
                 </a>
                 <a
@@ -151,7 +151,7 @@ const Navbar = () => {
                   Blog
                 </a>
                 <a
-                  href='/contact'
+                  href='/ContactUs'
                   className='text-gray-700 hover:text-gray-900'
                 >
                   Contact Us
@@ -189,7 +189,7 @@ const Navbar = () => {
             <a href='/' className='block px-3 py-2 text-gray-700'>
               Home
             </a>
-            <a href='/about' className='block px-3 py-2 text-gray-700'>
+            <a href='/About' className='block px-3 py-2 text-gray-700'>
               About Us
             </a>
             <a href='/products' className='block px-3 py-2 text-gray-700'>
@@ -267,7 +267,7 @@ const Navbar = () => {
               Blog
             </a>
             <a
-              href='/contact'
+              href='/ContactUs'
               className='block shrink-0 px-3 py-2 text-gray-700'
             >
               Contact Us

@@ -72,7 +72,7 @@ const Footer = () => {
           <ul className='space-y-2'>
             <li>
               <a
-                href='/about'
+                href='/About'
                 className=' hover:text-white transition  text-white text-xl font-normal font-poppins leading-[30px]'
               >
                 About
