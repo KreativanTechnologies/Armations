@@ -28,3 +28,12 @@ body {
 .border-Color {
   border-color: #ec3436;
 }
+
+.contact-section {
+  display: flex;
+  padding: 3rem 0;
+  background: linear-gradient(to right, white 30%, transparent 0%),
+    url("../assets/chooseUs/phone.png");
+  background-size: cover;
+  background-position: center;
+}
