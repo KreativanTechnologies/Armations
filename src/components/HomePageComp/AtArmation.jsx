@@ -26,26 +26,26 @@ const AtArmation = () => {
 
         <div className="w-full h-full">
           <div className="w-full h-full flex relative">
-            <div className="w-1/2 h-2/3 -top-4 -left-2 md:-left-4 md:top-[19%] md:h-[65%] md:w-[60%] absolute overflow-hidden z-10 hover:z-10 hover:scale-105 duration-1000 hover:opacity-100 cursor-pointer">
+            <div className="w-1/2 h-2/3 -top-4 -left-2 md:-left-4 md:top-[19%] md:h-[65%] md:w-[60%] absolute overflow-hidden z-10 hover:z-10 hover:scale-105 duration-1000 hover:opacity-100 cursor-pointer hover:rounded-[3vw]">
               <img
                 className="w-full h-full object-cover"
-                src="https://img.freepik.com/free-photo/beautiful-wooden-pathway-going-breathtaking-colorful-trees-forest_181624-5840.jpg?t=st=1742369061~exp=1742372661~hmac=20a81030c81c095c08227e52d11fa94ee6215dcf38f97610a200eef5a7298d9f&w=1380"
+                src="/images/NewsStories/Plug.png"
                 alt="HMTL"
               />
             </div>
 
-            <div className=" w-1/2 h-1/2 top-0 right-0  md:right-[4%] md:-top-12 md:h-[55%] md:w-[60%] absolute overflow-hidden hover:z-30 hover:scale-105 duration-1000 hover:opacity-100 cursor-pointer">
+            <div className=" w-1/2 h-1/2 top-0 right-0  md:right-[4%] md:-top-12 md:h-[55%] md:w-[60%] absolute overflow-hidden hover:z-30 hover:scale-105 duration-1000 hover:opacity-100 cursor-pointer hover:rounded-[3vw]">
               <img
                 className="w-full h-full object-cover"
-                src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?t=st=1742368195~exp=1742371795~hmac=b7d81997a6898a567ea290a7901383703cb985e5d66295234c6a4957ab26e608&w=1380"
+                src="/images/NewsStories/Operator.png"
                 alt="Node"
               />
             </div>
 
-            <div className="w-full h-1/2 -right-2 -bottom-2 md:-right-[3%] md:bottom-2 md:h-[50%] md:w-[55%] absolute overflow-hidden z-20 hover:z-30 hover:scale-105 duration-1000 hover:opacity-100 cursor-pointer">
+            <div className="w-full h-1/2 -right-2 -bottom-2 md:-right-[3%] md:bottom-2 md:h-[50%] md:w-[55%] absolute overflow-hidden z-20 hover:z-30 hover:scale-105 duration-1000 hover:opacity-100 cursor-pointer hover:rounded-[3vw]">
               <img
                 className="w-full h-full object-cover"
-                src="https://img.freepik.com/free-photo/morskie-oko-tatry_1204-510.jpg?t=st=1742368678~exp=1742372278~hmac=63a0181e9156d0fda83ce9d24a45abef425bd3316fcd0f18d0855f911a9695c0&w=1380"
+                src="/images/AtArmation/Enginee.png"
                 alt="Code"
               />
             </div>

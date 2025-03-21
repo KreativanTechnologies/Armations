@@ -3,12 +3,12 @@ import React from "react";
 const HowWeWork = () => {
   return (
     <div className="w-full h-full bg-white px-[7vw] py-[8vw] md:py-[4vw] text-black">
-      <div className="w-full h-full md:h-[32vw] flex flex-col md:flex-row relative gap-4 md:gap-0">
+      <div className="w-full h-full md:h-[30vw] flex flex-col md:flex-row relative gap-4 md:gap-0">
       <div className={`h-20 w-1 md:w-[0.3vw] md:h-[8vw] absolute top-{$count} left-0 z-40 bg-orange-400 rounded-full`}></div>
         <div className="w-full md:w-[65%] h-full md:h-[80%] left-0 md:absolute bg-white flex flex-col justify-center px-[4.9vw]">
           <h1 className="text-xl md:text-[2vw] font-bold md:leading-[2.5vw]">How We Work?</h1>
           <hr className=" w-16 h-1 md:w-[5vw] md:h-[0.2vw] bg-amber-500 border-none rounded-full" />
-          <p className="text-sm md:text-[1.3vw] md:leading-[1.8vw] mt-[0.5vw]">
+          <p className="text-sm md:text-[1.3vw] md:leading-[1.8vw] mt-[0.5vw] text-gray-600">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -35,7 +35,7 @@ const HowWeWork = () => {
         {/* Right Section (Image) */}
         <div className="h-full w-full">
           <img
-            src="https://s3-alpha-sig.figma.com/img/b55e/2397/684ae5dd9e71a750dc82245f5d59955b?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=AuyPJqU9zqCfJAT8BZuwVP-aJUT4LZhupbCrkyTZSpeIpc9LaLN1XSj583cV~oMXDObypiOAKPxQLRs38f8QFCeNFGsxvDTe5ZltZci1P2c9gbbfvHzMcF2fLWXkL1vvRIhuUryODg782M3r3IMbRnyYr5g2BlfZS9ybqTsxDMt5lRRaUqP-vq00l7N614gQ~D-d-D3sjqbcmSnS~5dnyzsPllz6KMQwKdvvLcljgCp~O2ZdD7coXGDOyrYMPB8hqW06T9C5Vm5XcYgJdQ1MG1r9ozhc~syX~SseMN7MdDTHnNQ-mb6JkRKS1AD15A80j7dx4ch9AmEqODzfAmWpUA__"
+            src="/images/AtArmation/Enginee.png"
             alt="How We Work"
             className="h-full w-full object-center object-cover"
           />
