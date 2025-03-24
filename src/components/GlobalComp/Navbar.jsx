@@ -6,12 +6,30 @@ import Logo from "../Logo";
 const solutions = {
   title: "Solutions",
   items: [
-    "Customized Solutions",
-    "Energy Saving Solutions",
-    "Turnkey Systems",
-    "Distributed Control Systems",
-    "Switchgear Solutions",
-    "Supervisory Control & Data Aquisition",
+    {
+      name: "Customized Solutions",
+      href: "/CustomizedSolutions",
+    },
+    {
+      name: "Energy Saving Solutions",
+      href: "/EnergySavingSolutions",
+    },
+    {
+      name: "Turnkey Systems",
+      href: "/TurnkeySystems",
+    },
+    {
+      name: "Distributed Control Systems",
+      href: "/DistributedControlSystems",
+    },
+    {
+      name: "Switchgear Solutions",
+      href: "/SwitchgearSolutions",
+    },
+    {
+      name: "Supervisory Control & Data Acquisition",
+      href: "/SupervisoryControlDataAcquisition",
+    },
   ],
 };
 
@@ -92,14 +110,15 @@ const Navbar = () => {
                         <div className='w-full p-12 grid grid-cols-2 gap-4'>
                           {solutions.items.map((item, index) => (
                             <div
-                              key={item}
+                              key={item.href}
                               className={`justify-center text-[#333333] text-[29px] font-normal font-poppins transition-opacity duration-300 ${
                                 index === currentIndex
                                   ? "opacity-100"
                                   : "opacity-50"
                               }`}
                             >
-                              {item}
+                              {item.name}
+                              
                             </div>
                           ))}
                         </div>
@@ -218,11 +237,11 @@ const Navbar = () => {
                 <div className='pl-6'>
                   {solutions.items.map((item) => (
                     <a
-                      key={item}
-                      href='#'
+                      key={item.name}
+                      href={item.href}
                       className='block px-3 py-2 text-gray-600'
                     >
-                      {item}
+                      {item.name}
                     </a>
                   ))}
                 </div>
