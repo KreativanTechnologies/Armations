@@ -1,11 +1,11 @@
 import React from 'react'
-import Hero from '../../components/TurenkeySystems/Hero.js'
+import Home from '../../../components/TurenkeySystems/Home.jsx'
 import Range from '../../../components/TurenkeySystems/CompleteRange.jsx'
 
 const Page = () => {
   return (
-    <div>
-    <Hero/>
+    <div className='bg-white'>
+    <Home/>
     <Range/>
     </div>
   )

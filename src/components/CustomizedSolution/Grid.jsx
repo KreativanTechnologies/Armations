@@ -21,7 +21,7 @@ const data = [
 
 export default function GridGallery() {
   return (
-    <div className="container mx-auto p-18 bg-white">
+    <div className="container mx-auto px-18 py-18">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {data.map((item, index) => (
           <div key={index} className="bg-white shadow-lg rounded-lg p-4">
@@ -32,7 +32,7 @@ export default function GridGallery() {
               height={300} 
               className="rounded-lg"
             />
-            {/* <p className="text-center text-sm font-semibold mt-2">{item.title}</p> */}
+            <p className="text-center text-red-500 text-sm font-semibold mt-2">{item.title}</p>
           </div>
         ))}
       </div>

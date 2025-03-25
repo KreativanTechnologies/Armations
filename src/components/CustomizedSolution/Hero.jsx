@@ -16,7 +16,7 @@ const Hero = () => {
         <h1 className="relative z-10 text-2xl md:text-4xl lg:text-5xl font-bold">
           Energy Management Systems
         </h1>
-        <div className=" w-64 mt-4 h-1 bg-red-500 mx-auto" />
+        <div className=" w-20 md:w-64 mt-3 h-1 bg-red-500 mx-auto" />
       </div>
     </div>
   );

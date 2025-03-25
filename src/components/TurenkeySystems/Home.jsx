@@ -1,40 +1,18 @@
-import React from 'react'
-import Image from 'next/image';
+import React from "react";
 
-const sensors = [
-  { name: 'Level Sensors', image: '/images/CoustimizeSol/CBg.png' },
-  { name: 'Temperature Sensors', image: '/images/CoustimizeSol/CBg.png' },
-  { name: 'Photoelectric Sensors', image: '/images/CoustimizeSol/CBg.png' },
-  { name: 'Proximity Sensors', image: '/images/CoustimizeSol/CBg.png' },
-  { name: 'Level Sensors', image: '/images/CoustimizeSol/CBg.png' },
-  { name: 'Proximity Sensors', image: '/images/CoustimizeSol/CBg.png' },
-  { name: 'Pressure Sensors', image: '/images/CoustimizeSol/CBg.png' },
-];
-
-const Home = () => {
+const TurnkeySolutions = () => {
   return (
-    <section className="max-w-7xl mx-auto p-6 text-center">
-      <h2 className="text-2xl md:text-3xl font-semibold mb-4">Complete range of Industrial Sensors</h2>
-      <p className="text-gray-600 mb-8">
-        Turnkey solutions of automation industry help you to explore our complete range of industrial sensors, designed to
-        enhance accuracy and efficiency across various applications. Choose our industrial sensors for comprehensive
-        solutions that drive performance and reliability in your operations.
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {sensors.map((sensor, index) => (
-          <div key={index} className="border p-4 rounded-lg shadow-md bg-white hover:shadow-lg transition">
-            <Image
-              src={sensor.image}
-              alt={sensor.name}
-              width={200}
-              height={150}
-              className="mx-auto mb-4"
-            />
-            <h3 className="text-red-500 font-semibold">{sensor.name}</h3>
-          </div>
-        ))}
-      </div>
-    </section>
+    <div className="relative w-full h-[250px] md:h-[350px] lg:h-[400px] flex items-center justify-center bg-cover bg-center" 
+      style={{ backgroundImage: "url('/images/TurnkeySol/T9.png')" }}>
+      
+      <div className="absolute inset-0 bg-black/50"></div>
+      
+      <h1 className="relative text-white text-2xl md:text-4xl lg:text-5xl font-bold">
+        Turnkey <span className="text-red-500">Solutions</span>
+        <div className="w-16 md:w-48 h-1 bg-red-500 mt-2 mx-auto"></div>
+      </h1>
+    </div>
   );
-}
-export default Home
+};
+
+export default TurnkeySolutions;

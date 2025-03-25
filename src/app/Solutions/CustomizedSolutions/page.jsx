@@ -6,7 +6,7 @@ import Remote from '../../../components/CustomizedSolution/Remote.jsx'
 
 const page = () => {
   return (
-    <div>
+    <div className='bg-white'>
     <Hero/>
     <Remote/>
     <Grid/>
