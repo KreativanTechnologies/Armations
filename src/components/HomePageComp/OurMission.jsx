@@ -2,10 +2,10 @@
 import React from 'react'
 const OurMission = () => {
   return (
-    <div className="h-full flex flex-col-reverse bg-white md:flex-row items-center justify-between w-full overflow-hidden">
+    <div className="h-full flex  md:pl-20 pb-10 flex-col-reverse md:flex-row items-center justify-between w-full overflow-hidden">
 {/* left side */}
       <div
-        className="w-full h-[45%] md:h-full md:w-1/2  flex flex-col gap-3 md:gap-7 py-[18vw]  ">
+        className="w-full h-[45%] md:h-full md:w-1/2  flex flex-col gap-3 md:gap-7  ">
         <h1 className="text-3xl text-black md:text-4xl font-bold p-4">
           Our Mission
         </h1>

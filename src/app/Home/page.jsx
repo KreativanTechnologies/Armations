@@ -8,7 +8,7 @@ import Parallax from "../../components/HomePageComp/Parallax.jsx"
 
 const page = () => {
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full bg-white">
       <HeroSection/>
       <OurMission/>
       <Parallax/>
