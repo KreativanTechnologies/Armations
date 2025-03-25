@@ -23,7 +23,7 @@ const OurAchievements = () => {
     }}
   >
     {/* Dark overlay */}
-    <div className="absolute inset-0 bg-black/60" />
+    <div className="absolute inset-0 bg-black/60 border-2 " />
 
     <div className="relative max-w-6xl mx-auto">
       {/* Title */}
