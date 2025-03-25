@@ -25,6 +25,7 @@ const DistributedControlSystems = () => {
         <Image
           src={I1}
           className=' max-w-4xl mx-auto w-full h-full object-cover'
+          alt=""
         />
         <p className='my-4  '>
           The DCS employs multiple autonomous controllers, each housing its own
