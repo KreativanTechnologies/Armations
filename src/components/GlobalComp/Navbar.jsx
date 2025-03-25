@@ -8,7 +8,7 @@ const solutions = {
   items: [
     {
       name: "Customized Solutions",
-      href: "/CustomizedSolutions",
+      href: "/Solutions/CustomizedSolutions",
     },
     {
       name: "Energy Saving Solutions",
@@ -16,7 +16,7 @@ const solutions = {
     },
     {
       name: "Turnkey Systems",
-      href: "/TurnkeySystems",
+      href: "/Solutions/TurnkeySystems",
     },
     {
       name: "Distributed Control Systems",
