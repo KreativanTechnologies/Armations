@@ -1,7 +1,7 @@
 import React from 'react'
-import Hero from '../../components/CustomizedSolution/Hero.jsx'
-import Grid from '../../components/CustomizedSolution/Grid.jsx'
-import Remote from '../../components/CustomizedSolution/Remote.jsx'
+import Hero from '../../components/Customized/Hero.jsx'
+import Grid from '../../components/Customized/Grid.jsx'
+import Remote from '../../components/Customized/Remote.jsx'
 
 
 const page = () => {

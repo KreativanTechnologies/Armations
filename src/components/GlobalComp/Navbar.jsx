@@ -2,6 +2,8 @@
 import { ChevronRight, Globe, Mail, Menu, Search, X } from "lucide-react";
 import { useState } from "react";
 import Logo from "../Logo";
+import Link from 'next/link';
+
 
 const solutions = {
   title: "Solutions",
@@ -12,23 +14,23 @@ const solutions = {
     },
     {
       name: "Energy Saving Solutions",
-      href: "/EnergySavingSolutions",
+      href: "/Solutions/EnergySavingSolutions",
     },
     {
       name: "Turnkey Systems",
-      href: "/Solutions/TurnkeySystems",
+      href: "/Solutions/TurnkeySystems", 
     },
     {
       name: "Distributed Control Systems",
-      href: "/DistributedControlSystems",
+      href: "/Solutions/DistributedControlSystems",
     },
     {
       name: "Switchgear Solutions",
-      href: "/SwitchgearSolutions",
+      href: "/Solutions/SwitchgearSolutions",
     },
     {
       name: "Supervisory Control & Data Acquisition",
-      href: "/SupervisoryControlDataAcquisition",
+      href: "/Solutions/SupervisoryControlDataAcquisition",
     },
   ],
 };
@@ -94,6 +96,7 @@ const Navbar = () => {
                 >
                   <button className='text-gray-700 hover:text-gray-900'>
                     Solutions
+                    
                   </button>
                   {activeDropdown === "Solutions" && (
                     <div className='absolute z-50 inset-x-0  w-full pt-8 bg-transparent'>
@@ -109,17 +112,15 @@ const Navbar = () => {
                         </div>
                         <div className='w-full p-12 grid grid-cols-2 gap-4'>
                           {solutions.items.map((item, index) => (
-                            <div
-                              key={item.href}
-                              className={`justify-center text-[#333333] text-[29px] font-normal font-poppins transition-opacity duration-300 ${
-                                index === currentIndex
-                                  ? "opacity-100"
-                                  : "opacity-50"
+                            <Link href={item.href}>
+                            <span
+                              className={`block justify-center text-[#333333] text-[29px] font-normal font-poppins transition-opacity duration-300 ${
+                                index === currentIndex ? "opacity-100" : "opacity-50"
                               }`}
                             >
                               {item.name}
-                              
-                            </div>
+                            </span>
+                          </Link>
                           ))}
                         </div>
                       </div>
