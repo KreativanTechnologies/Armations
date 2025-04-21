@@ -2,19 +2,19 @@ import Image from "next/image";
 
 const data = [
   {
-    src: "/images/CoustimizeSol/C1.png",
+    src: "/images/Sensors/S1.webp",
     title: "Data monitoring and controlling of a machine/process."
   },
   {
-    src: "/images/CoustimizeSol/C2.png",
+    src: "/images/Sensors/S2.webp",
     title: "Fully automated system with instrumentation and IOT"
   },
   {
-    src: "/images/CoustimizeSol/C3.png",
+    src: "/images/Sensors/S8.webp",
     title: "Dust controller system"
   },
   {
-    src: "/images/CoustimizeSol/C4.png",
+    src: "/images/Sensors/S4.webp",
     title: "Monitoring of DC voltage and tanks"
   }
 ];
