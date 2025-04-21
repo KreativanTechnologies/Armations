@@ -9,7 +9,7 @@ const HeroSection = () => {
         <Image
           src="/bg.png" 
           alt="Aarmation Electric"
-          layout="fill"
+          fill
           quality={100}
           className="brightness-50 object-cover"
         />
