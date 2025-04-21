@@ -10,6 +10,7 @@ const page = () => {
     <Hero/>
     <Remote/>
     <Grid/>
+    
     </div>
 )
 }
