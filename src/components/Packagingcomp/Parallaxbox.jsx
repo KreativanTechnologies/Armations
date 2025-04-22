@@ -9,7 +9,7 @@ const Parallaxbox = () => {
         {/* Image Section - Left Side */}
         <div className="w-full lg:w-[60%] h-[300px] sm:h-[400px] md:h-[450px] relative rounded-lg overflow-hidden">
           <Image
-            src="/images/Industryimg/Rectangle 31.png"
+            src="/images/Industryimg/Packagingimg/Rectangle 31.png"
             alt="Business technology meeting"
             fill
             className="object-cover"
@@ -27,7 +27,7 @@ const Parallaxbox = () => {
           <div className="space-y-2">
             <div className="space-y-2">
               <h2 className="text-2xl md:text-3xl font-semibold font-Poppins text-black">Packaging Industry</h2>
-              <div className="w-16 h-1 bg-red-500"></div>
+              <div className="w-24 h-1 bg-red-500 rounded-lg"></div>
             </div>
 
             <p className="text-[#606062] text-lg font-Poppins font-medium md:text-base leading-relaxed">

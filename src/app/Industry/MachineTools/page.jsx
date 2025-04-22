@@ -1,14 +1,20 @@
 import React from 'react'
 import NewsStories from '../../../components/HomePageComp/NewsStories'
-
 import Herobox from '../../../components/MachineToolsComp/Herobox'
+import ToolBox from '../../../components/MachineToolsComp/ToolBox.jsx'
+import Section from "../../../components/Textile/section.jsx"
+import BenefitsBox from '../../../components/MachineToolsComp/BenefitsBox.jsx'
 
 const page = () => {
   return (
     <>
-    <div className='mb-42'><Herobox /></div>
-      
-      <NewsStories newsData={newsData}/>
+    <div className='mb-42'>
+      <Herobox />
+      </div>
+    <BenefitsBox/>
+    <ToolBox/>
+    <Section/>
+    <NewsStories newsData={newsData}/>
     </>
   )
 }

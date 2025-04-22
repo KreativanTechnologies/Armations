@@ -1,11 +1,17 @@
 import React from 'react'
 import Parallaxbox from '../../../components/Packagingcomp/Parallaxbox.jsx'
 import NewsStories from "../../../components/HomePageComp/NewsStories.jsx"
+import Automation from '../../../components/Packagingcomp/Automation.jsx'
+import Section from  "../../../components/Textile/section.jsx"
+import Titlebox from '../../../components/Packagingcomp/Titlebox.jsx'
 
 const page = () => {
   return (
     <div>
+      <Titlebox industryName="Packaging"/>
       <Parallaxbox/>
+      <Automation/>
+      <Section/>
       <NewsStories newsData={newsData}/>
     </div>
   )
