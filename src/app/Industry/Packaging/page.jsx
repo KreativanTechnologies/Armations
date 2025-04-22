@@ -18,6 +18,7 @@ const page = () => {
 }
 
 export default page
+
 const newsData = [
   {
     id: 1,
