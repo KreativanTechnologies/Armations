@@ -2,14 +2,14 @@ import Image from "next/image"
 // import { Zap, Sun } from "lucide-react"
 
 
-const Parallaxbox = () => {
+const FirstParallax = () => {
   return (
     <div className="bg-white   ">
       <div className="relative flex flex-col lg:flex-row items-center">
         {/* Image Section - Left Side */}
         <div className="w-full lg:w-[60%] h-[300px] sm:h-[400px] md:h-[450px] relative  overflow-hidden">
           <Image
-            src="/images/Industryimg/Packagingimg/Rectangle 31.png"
+            src="/images/Industryimg/Automationimg/Rectangle 31.png"
             alt="Business technology meeting"
             fill
             className="object-cover"
@@ -26,15 +26,12 @@ const Parallaxbox = () => {
         >
           <div className="space-y-2">
             <div className="space-y-2">
-              <h2 className="text-2xl md:text-3xl font-semibold font-Poppins text-black">Packaging Industry</h2>
-              <div className="w-24 h-1 bg-red-500 rounded-lg"></div>
+              <h2 className="text-2xl md:text-3xl font-semibold font-Poppins text-black">The Growing Landscape of the Automation<br></br>Industry in India</h2>
+              <div className="w-30 h-1 bg-red-500 rounded-lg"></div>
             </div>
 
             <p className="text-[#606062] text-lg font-Poppins font-medium md:text-base leading-relaxed">
-            Automation has helped integrate various functions involved in the packaging industry.
-            Automation gives a clearer picture of various sub-processes and plant conditions which helps to optimize complex packaging processes and improve smart maintenance.
-            With the help of automation, most processes involved in the packaging industry have been digitized. Also, it helps in achieving high accuracy in processes.
-            It has also provided safer working conditions for employees.
+            The Automation Industry in India stands before a quantum jump. The rapid industrial growth, with fast and continuous changes in technology, has driven automation to the forefront in fostering innovation and giving a competitive edge to businesses across most industries. This article explores emerging automation in India, current trends, and their future prospects.
             </p>
 
             {/* <div className="space-y-3 py-2">
@@ -54,9 +51,9 @@ const Parallaxbox = () => {
             </div> */}
 
             <div className="pt-2 md:pt-4">
-            <button className="mt-4 px-4 py-2.5 rounded-full border-2 border-red-500 text-black text-[15px] font-normal hover:bg-red-500 hover:text-white transition-colors duration-200">
+            {/* <button className="mt-4 px-4 py-2.5 rounded-full border-2 border-red-500 text-black text-[15px] font-normal hover:bg-red-500 hover:text-white transition-colors duration-200">
           Learn More
-        </button>
+        </button> */}
             </div>
           </div>
         </div>
@@ -67,6 +64,6 @@ const Parallaxbox = () => {
 
 
 
-export default Parallaxbox;
+export default FirstParallax;
 
 

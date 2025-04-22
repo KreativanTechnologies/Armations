@@ -2,14 +2,14 @@ import Image from "next/image"
 // import { Zap, Sun } from "lucide-react"
 
 
-const Parallaxbox = () => {
+const ThirdParallax = () => {
   return (
     <div className="bg-white   ">
       <div className="relative flex flex-col lg:flex-row items-center">
         {/* Image Section - Left Side */}
         <div className="w-full lg:w-[60%] h-[300px] sm:h-[400px] md:h-[450px] relative  overflow-hidden">
           <Image
-            src="/images/Industryimg/Packagingimg/Rectangle 31.png"
+            src="/images/Industryimg/Automationimg/Rectangle 33.png"
             alt="Business technology meeting"
             fill
             className="object-cover"
@@ -26,15 +26,13 @@ const Parallaxbox = () => {
         >
           <div className="space-y-2">
             <div className="space-y-2">
-              <h2 className="text-2xl md:text-3xl font-semibold font-Poppins text-black">Packaging Industry</h2>
-              <div className="w-24 h-1 bg-red-500 rounded-lg"></div>
+              <h2 className="text-2xl md:text-3xl font-semibold font-Poppins text-black">Challenges and Opportunities</h2>
+              <div className="w-40 h-1 bg-red-500 rounded-lg"></div>
             </div>
 
             <p className="text-[#606062] text-lg font-Poppins font-medium md:text-base leading-relaxed">
-            Automation has helped integrate various functions involved in the packaging industry.
-            Automation gives a clearer picture of various sub-processes and plant conditions which helps to optimize complex packaging processes and improve smart maintenance.
-            With the help of automation, most processes involved in the packaging industry have been digitized. Also, it helps in achieving high accuracy in processes.
-            It has also provided safer working conditions for employees.
+            Growth in India’s automation industry is impressive. High initial investment cost, unavailable enough manpower with the required skill set, and hesitation for change acceptance due to traditional industries-are some of the problems associated with this sector. Whichever way, such challenges are opportunities too.
+            Investment in training programs and the development of affordable solutions in automation will bridge these gaps and accelerate adoptions.
             </p>
 
             {/* <div className="space-y-3 py-2">
@@ -54,9 +52,9 @@ const Parallaxbox = () => {
             </div> */}
 
             <div className="pt-2 md:pt-4">
-            <button className="mt-4 px-4 py-2.5 rounded-full border-2 border-red-500 text-black text-[15px] font-normal hover:bg-red-500 hover:text-white transition-colors duration-200">
+            {/* <button className="mt-4 px-4 py-2.5 rounded-full border-2 border-red-500 text-black text-[15px] font-normal hover:bg-red-500 hover:text-white transition-colors duration-200">
           Learn More
-        </button>
+        </button> */}
             </div>
           </div>
         </div>
@@ -67,6 +65,6 @@ const Parallaxbox = () => {
 
 
 
-export default Parallaxbox;
+export default ThirdParallax;
 
 
