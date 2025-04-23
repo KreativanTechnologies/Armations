@@ -2,6 +2,8 @@
 import { ChevronRight, Globe, Mail, Menu, Search, X } from "lucide-react";
 import { useState } from "react";
 import Logo from "../Logo";
+import Link from 'next/link';
+
 
 const solutions = {
   title: "Solutions",
@@ -16,7 +18,7 @@ const solutions = {
     },
     {
       name: "Turnkey Systems",
-      href: "/Solutions/TurnkeySystems",
+      href: "/Solutions/TurnkeySystems", 
     },
     {
       name: "Distributed Control Systems",
@@ -84,6 +86,7 @@ const Navbar = () => {
                 >
                   <button className='text-gray-700 hover:text-gray-900'>
                     Solutions
+                    
                   </button>
                   {activeDropdown === "Solutions" && (
                     <div className='absolute z-50 inset-x-0 w-full pt-8 bg-transparent'>
