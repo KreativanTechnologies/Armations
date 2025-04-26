@@ -1,6 +1,6 @@
 import React from 'react'
-import HeroSection from "../../components/SwitchgearSolComp/HeroSection"
-import Products from "../../components/SwitchgearSolComp/Products"
+import HeroSection from "../../../components/SwitchgearSolComp/HeroSection"
+import Products from "../../../components/SwitchgearSolComp/Products"
 
 const page = () => {
   return (

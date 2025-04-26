@@ -1,5 +1,5 @@
 import React from 'react'
-import Banner from '../../components/Supervisory/Banner'
+import Banner from '../../../components/Supervisory/Banner'
 import Image from "next/image"
 const page = () => {
   const equipmentData = [
