@@ -4,7 +4,7 @@ import Grid from '../../../components/CustomizedSolution/Grid.jsx'
 import Remote from '../../../components/CustomizedSolution/Remote.jsx'
 
 
-const page = () => {
+const Page = () => {
   return (
     <div className='bg-white'>
     <Hero/>
@@ -14,4 +14,4 @@ const page = () => {
 )
 }
 
-export default page
+export default Page

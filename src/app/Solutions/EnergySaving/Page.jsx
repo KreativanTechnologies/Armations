@@ -2,7 +2,7 @@ import React from 'react'
 import HeroSection from "../../../components/SwitchgearSolComp/HeroSection"
 import Products from "../../../components/SwitchgearSolComp/Products"
 
-const page = () => {
+const Page = () => {
   return (
     <div>
       <HeroSection/>
@@ -11,4 +11,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
