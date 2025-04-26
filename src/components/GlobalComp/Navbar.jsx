@@ -7,12 +7,15 @@ import Link from "next/link";
 const solutions = {
   title: "Solutions",
   items: [
-    { name: "Customized Solutions", href: "/Solutions/CustomizedSolutions" },
-    { name: "Energy Saving Solutions", href: "/Solutions/EnergySaving" },
-    { name: "Turnkey Systems", href: "/Solutions/TurnkeySystems" },
-    { name: "Distributed Control Systems", href: "/Solutions/DistrictCS" },
-    { name: "Switchgear Solutions", href: "/Solutions/SwitcherSol" },
-    { name: "Supervisory Control & Data Acquisition", href: "/Solutions/SupervisoryCDA" },
+    { name: "Customized Solutions", href: "/Solution/CustomizedSolutions" },
+    { name: "Energy Saving Solutions", href: "/Solution/EnergySaving" },
+    { name: "Turnkey Systems", href: "/Solution/TurnkeySystems" },
+    { name: "Distributed Control Systems", href: "/Solution/DistrictCS" },
+    { name: "Switchgear Solutions", href: "/Solution/SwitcherSol" },
+    {
+      name: "Supervisory Control & Data Acquisition",
+      href: "/Solution/SupervisoryCDA",
+    },
   ],
 };
 
@@ -53,15 +56,24 @@ const Navbar = () => {
             <div className="grid grid-cols-6 pr-8 items-center justify-center h-[74px] bg-gray-100 bg-opacity-90">
               <div></div>
               <div className="flex col-span-3 font-poppin items-center h-full justify-center space-x-8">
-                <Link href="/" className="text-gray-700 hover:text-gray-900">Home</Link>
-                <Link href="/About" className="text-gray-700 hover:text-gray-900">About</Link>
+                <Link href="/" className="text-gray-700 hover:text-gray-900">
+                  Home
+                </Link>
+                <Link
+                  href="/About"
+                  className="text-gray-700 hover:text-gray-900"
+                >
+                  About
+                </Link>
 
                 {/* Solutions Dropdown */}
                 <div
                   onMouseEnter={() => setActiveDropdown("Solutions")}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
-                  <button className="text-gray-700 hover:text-gray-900">Solutions</button>
+                  <button className="text-gray-700 hover:text-gray-900">
+                    Solutions
+                  </button>
                   {activeDropdown === "Solutions" && (
                     <div className="absolute z-50 inset-x-0 w-full pt-8 bg-transparent">
                       <div className="shadow-xl flex bg-white">
@@ -80,7 +92,9 @@ const Navbar = () => {
                               key={item.href}
                               href={item.href}
                               className={`block justify-center text-[#333333] text-[29px] font-normal font-poppins transition-opacity duration-300 ${
-                                index === currentIndex ? "opacity-100" : "opacity-50"
+                                index === currentIndex
+                                  ? "opacity-100"
+                                  : "opacity-50"
                               }`}
                             >
                               {item.name}
@@ -97,7 +111,9 @@ const Navbar = () => {
                   onMouseEnter={() => setActiveDropdown("Industries")}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
-                  <button className="text-gray-700 hover:text-gray-900">Industries</button>
+                  <button className="text-gray-700 hover:text-gray-900">
+                    Industries
+                  </button>
                   {activeDropdown === "Industries" && (
                     <div className="absolute z-50 inset-x-0 w-full pt-8 bg-transparent">
                       <div className="shadow-xl flex bg-white">
@@ -116,7 +132,9 @@ const Navbar = () => {
                               key={item.href}
                               href={item.href}
                               className={`block justify-center text-[#333333] text-[29px] font-normal font-poppins transition-opacity duration-300 ${
-                                index === currentIndex ? "opacity-100" : "opacity-50"
+                                index === currentIndex
+                                  ? "opacity-100"
+                                  : "opacity-50"
                               }`}
                             >
                               {item.name}
@@ -128,8 +146,18 @@ const Navbar = () => {
                   )}
                 </div>
 
-                <Link href="/Blog" className="text-gray-700 hover:text-gray-900">Blog</Link>
-                <Link href="/WhyUs" className="text-gray-700 hover:text-gray-900">Contact Us</Link>
+                <Link
+                  href="/Blog"
+                  className="text-gray-700 hover:text-gray-900"
+                >
+                  Blog
+                </Link>
+                <Link
+                  href="/WhyUs"
+                  className="text-gray-700 hover:text-gray-900"
+                >
+                  Contact Us
+                </Link>
               </div>
 
               <div className="hidden col-span-2 md:flex items-center justify-end space-x-4">
@@ -146,7 +174,11 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-600 hover:text-gray-900"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -156,14 +188,24 @@ const Navbar = () => {
       {isOpen && (
         <div className="lg:hidden bg-white">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <Link href="/" className="block px-3 py-2 text-gray-700">Home</Link>
-            <Link href="/About" className="block px-3 py-2 text-gray-700">About Us</Link>
-            <Link href="/products" className="block px-3 py-2 text-gray-700">Products</Link>
+            <Link href="/" className="block px-3 py-2 text-gray-700">
+              Home
+            </Link>
+            <Link href="/About" className="block px-3 py-2 text-gray-700">
+              About Us
+            </Link>
+            <Link href="/products" className="block px-3 py-2 text-gray-700">
+              Products
+            </Link>
 
             {/* Mobile Solutions Dropdown */}
             <div className="relative">
               <button
-                onClick={() => setActiveDropdown(activeDropdown === "Solutions" ? null : "Solutions")}
+                onClick={() =>
+                  setActiveDropdown(
+                    activeDropdown === "Solutions" ? null : "Solutions"
+                  )
+                }
                 className="w-full text-left px-3 py-2 text-gray-700 flex justify-between items-center"
               >
                 Solutions
@@ -191,7 +233,11 @@ const Navbar = () => {
             {/* Mobile Industries Dropdown */}
             <div className="relative">
               <button
-                onClick={() => setActiveDropdown(activeDropdown === "Industries" ? null : "Industries")}
+                onClick={() =>
+                  setActiveDropdown(
+                    activeDropdown === "Industries" ? null : "Industries"
+                  )
+                }
                 className="w-full text-left px-3 py-2 text-gray-700 flex justify-between items-center"
               >
                 Industries
@@ -216,8 +262,12 @@ const Navbar = () => {
               )}
             </div>
 
-            <Link href="/Blog" className="block px-3 py-2 text-gray-700">Blog</Link>
-            <Link href="/WhyUs" className="block px-3 py-2 text-gray-700">Contact Us</Link>
+            <Link href="/Blog" className="block px-3 py-2 text-gray-700">
+              Blog
+            </Link>
+            <Link href="/WhyUs" className="block px-3 py-2 text-gray-700">
+              Contact Us
+            </Link>
           </div>
         </div>
       )}
