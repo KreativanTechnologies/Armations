@@ -1,37 +1,37 @@
-'use client'; // (optional if you're using states later)
+'use client';
 
 import React from 'react';
 import Banner from '../../../components/Supervisory/Banner';
 import Image from 'next/image';
 
-const Page = () => {
-  const equipmentData = [
-    {
-      id: 1,
-      title: "Air Handling Units",
-      image: "/images/energySaving/energy1.png",
-      description: "Air handling units condition and distribute air throughout a building with Energy Saving Solution – Aarmation Electric. First, they draw fresh ambient air from outside and then clean it. Next, they either heat or cool the air and may add humidity as needed. Subsequently, the system forces this conditioned air through ductwork to designated areas within the building. Additionally, most units include a separate duct to remove used, dirty air from rooms, which is then returned to the AHU. A fan in the AHU discharges this air back to the atmosphere. Furthermore, some of this return air gets recirculated into the fresh air supply to conserve energy.",
-    },
-    {
-      id: 2,
-      title: "Air Compressors",
-      image: "/images/energySaving/energy2.png",
-      description: "An air compressor is a device that converts power (using an electric motor, diesel or gasoline engine, etc.) into potential energy stored in pressurized air (i.e., compressed air).",
-    },
-    {
-      id: 3,
-      title: "Chillers",
-      image: "/images/energySaving/energy3.png",
-      description: "An air compressor is a device that converts power (using an electric motor, diesel or gasoline engine, etc.) into potential energy stored in pressurized air (i.e., compressed air).",
-    },
-    {
-      id: 4,
-      title: "Centrifugal Fans",
-      image: "/images/energySaving/energy4.png",
-      description: "A centrifugal fan is a mechanical device for moving air or other gases in a direction at an angle to the incoming fluid. Centrifugal fans often contain a ducted housing to direct outgoing air in a specific direction or across a heat sink.",
-    },
-  ];
+const equipmentData = [
+  {
+    id: 1,
+    title: "Air Handling Units",
+    image: "/images/energySaving/energy1.png",
+    description: "Air handling units condition and distribute air throughout a building with Energy Saving Solution – Aarmation Electric. ...",
+  },
+  {
+    id: 2,
+    title: "Air Compressors",
+    image: "/images/energySaving/energy2.png",
+    description: "An air compressor is a device that converts power ...",
+  },
+  {
+    id: 3,
+    title: "Chillers",
+    image: "/images/energySaving/energy3.png",
+    description: "An air compressor is a device that converts power ...",
+  },
+  {
+    id: 4,
+    title: "Centrifugal Fans",
+    image: "/images/energySaving/energy4.png",
+    description: "A centrifugal fan is a mechanical device for moving air ...",
+  },
+];
 
+const Page = () => {
   return (
     <div className="bg-white">
       <Banner bgImage="/images/Banner/energySaving.png" title="Energy Saving Solution" />

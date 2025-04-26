@@ -1,14 +1,14 @@
-import React from 'react'
-import HeroSection from "../../../components/SwitchgearSolComp/HeroSection"
-import Products from "../../../components/SwitchgearSolComp/Products"
+import React from 'react';
+import HeroSection from "../../../components/SwitchgearSolComp/HeroSection";
+import Products from "../../../components/SwitchgearSolComp/Products";
 
 const Page = () => {
   return (
-    <div>
-      <HeroSection/>
-      <Products/>
+    <div className="bg-white">
+      <HeroSection />
+      <Products />
     </div>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;
