@@ -3,10 +3,11 @@ import React from "react";
 const compData = [
   {
     Heading:
-      "Remote monitoring and controlling of a process through data cloud and automation.",
+      " 🤖 IoT-Based Monitoring System in Automation",
     Description:
-      "Smoothen your operations seamlessly with our Customized Automation Solutions in India. Moreover, enhance remote monitoring and control through advanced cloud data and automation. Our innovative solution provides state-of-the-art, real-time oversight and management of processes from anywhere in the world. By leveraging cloud technology, you gain instant access to crucial data, thus enabling proactive decision-making and swift troubleshooting. Furthermore, automation guarantees consistent performance, thereby minimizing human error and maximizing both operational efficiency and reliability. Consequently, our remote monitoring system empowers organizations with superior control, optimized performance, and elevated productivity, all while reducing downtime and operational costs.",
-    Img_Src: "/images/CoustimizeSol/R1.png",
+      "A system where smart sensors, controllers, and cloud platforms work together to monitor, control, and optimize automated processes in real time.",
+    
+      Img_Src: "/images/CoustimizeSol/R1.webp",
     isReverse: false,
   },
   {
@@ -44,6 +45,8 @@ const Remote = () => {
               {data.Heading}
             </h1>
             <p className="md:text-[1.1vw] mt-[1vw]">{data.Description}</p>
+                        <p className="md:text-[1.1vw] mt-[1vw]">{data.keyDescription}</p>
+
           </div>
           <div className="hidden md:flex w-1/2 h-full"></div>
           <div
@@ -52,7 +55,7 @@ const Remote = () => {
             } bg-white  overflow-hidden`}
           >
             <img
-              className="w-full h-full object-center object-cover"
+              className="w-full h-full object-center object-contain"
               src={data.Img_Src}
               alt=""
             />
