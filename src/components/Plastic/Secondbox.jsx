@@ -21,7 +21,7 @@ const Secondbox = () => {
           </p>
         </div>
 
-        {/* Right Image Section – no spacing, object-cover, not cropped */}
+        
         <div className="w-full md:w-1/2 h-[600px] relative p-0 m-0">
           <Image
             src="/images/Industryimg/Plasticimg/Rectangle 32.png"
