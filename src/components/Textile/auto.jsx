@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Head from 'next/head';
 
-const Secondbox = () => {
+const Auto = () => {
   return (
     <>
       <Head>
@@ -45,4 +45,4 @@ const Secondbox = () => {
   );
 };
 
-export default Secondbox;
+export default Auto;
