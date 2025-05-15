@@ -20,7 +20,7 @@ const PharmaSection = () => {
           <div
             className="
               relative
-              w-full md:w-1/2     mb-20   
+              w-full md:w-1/2     mb-0   
               h-[500px] sm:h-[600px] md:h-[600px]  
             "
           >

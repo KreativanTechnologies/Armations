@@ -4,11 +4,16 @@ import Head from 'next/head';
 const ToolBox = () => {
   return (
     <>
-      <div className="flex flex-col-reverse md:flex-row items-center md:items-start px-4 sm:px-6 lg:px-12 py-8 bg-white gap-8">
-       
-        <div className="w-full md:w-1/2 text-black space-y-4">
-          <p className="text-sm sm:text-base md:text-lg leading-relaxed">
-            Key trends are shaping the Machine Tools Industry, with automation and smart technology at the forefront.
+      <Head>
+        <title>Automation for the Pharmaceutical Industry</title>
+      </Head>
+
+      <div className="flex flex-col md:flex-row md:items-center bg-white m-0 p-0">
+        
+        {/* Left Text Section */}
+        <div className="w-full md:w-1/2 space-y-4 text-black p-20">
+        
+          <p>Key trends are shaping the Machine Tools Industry, with automation and smart technology at the forefront.
             For instance, advanced machine tools now come equipped with sophisticated sensors and control systems.
             These innovations not only enhance precision but also reduce downtime and facilitate real-time monitoring.
             Consequently, this automation trend improves efficiency, ensures consistent product quality, and lowers labor costs.
@@ -21,16 +26,18 @@ const ToolBox = () => {
             By adopting automation and embracing sustainability, this sector continues to drive innovation and efficiency, meeting the evolving demands of a dynamic global market.
           </p>
         </div>
+
         
-        <div className="w-full md:w-1/2 h-[250px] sm:h-[350px] md:h-[400px] lg:h-[450px] relative">
-          <Image
-            src="/images/Industryimg/Machineimg/Rectangle 32.png"
-            alt="Business technology meeting"
-            fill
-            className="object-cover rounded-lg"
-            priority
-          />
-        </div>
+        <div className="w-full md:w-1/2 relative p-0 m-0 h-[350px] sm:h-[450px] md:h-[500px]">
+  <Image
+    src="/images/Industryimg/Machineimg/Rectangle 32.png"
+    alt="Business technology meeting"
+    fill
+    className="object-cover"
+    priority
+  />
+</div>
+
       </div>
     </>
   );

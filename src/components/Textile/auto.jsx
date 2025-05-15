@@ -11,11 +11,11 @@ const Auto = () => {
       <div className="flex flex-col md:flex-row md:items-center bg-white m-0 p-0">
         
         {/* Left Text Section */}
-        <div className="w-full md:w-1/2 space-y-4 text-black p-6">
+        <div className="w-full md:w-1/2 space-y-4 text-black p-6 p-20">
           <h2 className="text-2xl md:text-3xl font-bold">
             <span className="text-red-600">Automation</span> for the Textile Industry
           </h2>
-          <div className="w-44 h-1 bg-red-500 rounded-lg"></div>
+          <div className="w-44 h-1 bg-red-500 rounded-lg "></div>
           <p>
             Automation for the Textile Industry transforms manufacturing with increased efficiency and precision. Our cutting-edge automation solutions streamline various textile processes, from spinning and weaving to dyeing and finishing.
                     

@@ -11,7 +11,7 @@ const Secondbox = () => {
       <div className="flex flex-col md:flex-row md:items-center bg-white m-0 p-0">
         
         {/* Left Text Section */}
-        <div className="w-full md:w-1/2 space-y-4 text-black p-6">
+        <div className="w-full md:w-1/2 space-y-4 text-black p-20 ">
           <h2 className="text-2xl md:text-3xl font-bold">
             <span className="text-red-600">Automation</span> for the Plastic Industry
           </h2>
