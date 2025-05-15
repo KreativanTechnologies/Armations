@@ -13,6 +13,7 @@ return (
                     <h2 className="text-2xl md:text-3xl font-bold">
                             <span className="text-red-600">Automation</span> for the Textile Industry
                     </h2>
+                     <div className="w-44 h-1 bg-red-500 rounded-lg"></div>
                     <p>
                             Automation for the Textile Industry transforms manufacturing with increased efficiency and precision. Our cutting-edge automation solutions streamline various textile processes, from spinning and weaving to dyeing and finishing.
                     

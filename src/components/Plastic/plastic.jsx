@@ -18,7 +18,7 @@ const plastic = () => {
                 <h1 className="text-4xl md:text-6xl font-bold text-white">
                     Plastic Industry <span className="text-red-500">Solutions</span>
                 </h1>
-                <div className="w-32 h-1 bg-red-500 mt-4"></div>
+                <div className="w-90 h-1 bg-red-500 mt-4"></div>
             </div>
         </div>
     );
