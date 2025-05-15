@@ -19,7 +19,7 @@ const ThirdParallax = () => {
 
         {/* Mission Section - Right Side with Overlap */}
         <div
-          className="w-[85%] lg:w-[55%] bg-white rounded-lg shadow-lg p-6 md:p-8 
+          className="w-[85%] lg:w-[55%] bg-white  p-6 md:p-8 
                         lg:absolute lg:right-0 lg:top-1/2 lg:transform lg:-translate-y-1/2 
                         lg:-ml-[20%] mt-[-40px] lg:mt-0 z-10 lg:left-[58%]
                         my-4 lg:my-8 "
