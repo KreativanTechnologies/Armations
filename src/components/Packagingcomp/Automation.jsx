@@ -5,33 +5,33 @@ const Automation = () => {
   return (
     <>
       <Head>
-        <title>Automation for the Packaging Industry</title>
+        <title>Automation for the Plastic Industry</title>
       </Head>
-      <div className="flex flex-col md:flex-row items-center md:items-start p-6 md:p-10 bg-white mt-6 mx-4 md:mx-10">
-    
-        <div className="md:w-1/2 w-full space-y-4 text-black ">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-            <span className="text-red-600">Automation</span> for the Packaging Industry
+
+      <div className="flex flex-col md:flex-row md:items-center bg-white m-0 p-0 mt-20">
+        
+        {/* Left Text Section */}
+        <div className="w-full md:w-1/2 space-y-4 text-black p-6">
+          <h2 className="text-2xl md:text-3xl font-bold">
+            <span className="text-red-600">Automation</span> for the Plastic Industry
           </h2>
-          <div className="w-50 h-1 bg-red-500 rounded-lg"></div>
-          <p className="text-sm sm:text-base md:text-base">
-            In the fast-paced packaging world, efficiency and precision are crucial. Automation for the Packaging Industry offers transformative solutions. Our systems streamline operations, cut costs, and boost productivity. 
-            Advanced automation technologies improve speed and accuracy significantly. Automated systems perform repetitive tasks like sorting, filling, sealing, and labeling with high precision. These systems minimize human error and reduce manual labor needs. They speed up production and ensure consistent quality. This consistency is vital for maintaining brand reputation and meeting regulations.
-            We tailor our automation solutions to fit the packaging sector’s needs, whether for food, beverages, pharmaceuticals, or consumer goods. Our customized systems integrate smoothly with your existing processes. They offer flexibility and scalability to adapt to changing demands.
-            Our solutions enhance operational efficiency and cut waste. They also optimize resource usage, supporting more sustainable practices. With real-time monitoring and data analytics, you gain valuable insights. This data enables proactive management and continuous improvement.
-            Embrace the future of packaging with our automation solutions. Watch your business thrive with improved efficiency and accuracy.
+          <div className="w-44 h-1 bg-red-500 rounded-lg"></div>
+          <p>
+            Automation for the Plastic Industry transforms production processes with precision and efficiency. Our advanced automation solutions are designed to enhance every stage of plastic manufacturing. By implementing cutting-edge technology, we streamline operations and increase speed while maintaining high accuracy. Automated systems handle repetitive tasks such as molding, trimming, and assembly with consistency, reducing the need for manual intervention and minimizing errors. This results in faster production cycles and improved product quality. Our solutions are tailored to meet the specific needs of the plastic sector, whether for packaging, automotive parts, or consumer goods. We offer customized systems that integrate seamlessly with your existing processes, providing flexibility and scalability to adapt to market changes and production demands. In addition to improving efficiency, our automation systems help reduce waste and optimize resource usage. Real-time monitoring and data analytics offer valuable insights into your production, enabling proactive management and continuous improvements. Adopt Aarmation Electric innovative automation solutions and experience a new level of productivity and precision. Watch your plastic manufacturing operations thrive with reduced costs, enhanced quality, and streamlined processes.
           </p>
         </div>
 
-        <div className="w-full lg:w-[50%] h-[250px] sm:h-[400px] md:h-[450px] relative overflow-hidden mt-6 md:mt-0">
-          <Image
-            src="/images/Industryimg/Packagingimg/Rectangle 32.png"
-            alt="Business technology meeting"
-            layout="fill"
-            className="object-cover"
-            priority
-          />
-        </div>
+        
+        <div className="w-full md:w-1/2 relative p-0 m-0 h-[400px] sm:h-[500px] md:h-[600px]">
+  <Image
+    src="/images/Industryimg/Packagingimg/Rectangle 32.png"
+    alt="Business technology meeting"
+    fill
+    className="object-cover"
+    priority
+  />
+</div>
+
       </div>
     </>
   );

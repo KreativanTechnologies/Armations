@@ -31,7 +31,7 @@ const Auto = () => {
         </div>
 
         
-        <div className="w-full md:w-1/2 h-[600px] relative p-0 m-0">
+        <div className="w-full md:w-1/2 relative p-0 m-0 h-[400px] sm:h-[500px] md:h-[600px]">
           <Image
             src="/images/about/Textile/Rectangle 32.png"
             alt="Business technology meeting"
