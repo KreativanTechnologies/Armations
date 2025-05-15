@@ -1,21 +1,23 @@
 import Image from 'next/image';
 import Head from 'next/head';
 
-const auto = () => {
-return (
+const Secondbox = () => {
+  return (
     <>
-        <Head>
-            <title>Automation for the Textile Industry</title>
-        </Head>
-        <div className="flex flex-col md:flex-row items-center md:items-start p-6 md:p- bg-white" style={{ marginLeft: '20px', marginRight: '0' }}>
-    
-            <div className="md:w-1/2 w-full space-y-4 text-black">
-                    <h2 className="text-2xl md:text-3xl font-bold">
-                            <span className="text-red-600">Automation</span> for the Textile Industry
-                    </h2>
-                     <div className="w-44 h-1 bg-red-500 rounded-lg"></div>
-                    <p>
-                            Automation for the Textile Industry transforms manufacturing with increased efficiency and precision. Our cutting-edge automation solutions streamline various textile processes, from spinning and weaving to dyeing and finishing.
+      <Head>
+        <title>Automation for the Textile Industry</title>
+      </Head>
+
+      <div className="flex flex-col md:flex-row md:items-center bg-white m-0 p-0">
+        
+        {/* Left Text Section */}
+        <div className="w-full md:w-1/2 space-y-4 text-black p-6">
+          <h2 className="text-2xl md:text-3xl font-bold">
+            <span className="text-red-600">Automation</span> for the Textile Industry
+          </h2>
+          <div className="w-44 h-1 bg-red-500 rounded-lg"></div>
+          <p>
+            Automation for the Textile Industry transforms manufacturing with increased efficiency and precision. Our cutting-edge automation solutions streamline various textile processes, from spinning and weaving to dyeing and finishing.
                     
                             By integrating advanced technologies, we help businesses achieve faster production cycles, improved quality, and reduced operational costs. Automated systems handle repetitive tasks with high accuracy, minimizing human error and ensuring consistent product quality.
                     
@@ -25,21 +27,22 @@ return (
                             Our solutions are designed to adapt to the specific needs of the textile sector, whether you are involved in apparel, home textiles, or industrial fabrics. We offer customized automation that integrates seamlessly with existing operations, providing flexibility to meet evolving demands.
                     
                             Embracing automation in the textile industry not only boosts production efficiency but also supports sustainable practices by reducing energy consumption and material waste. Experience the benefits of advanced automation and watch your textile operations achieve new levels of productivity, quality, and cost-effectiveness.
-                    </p>
-            </div>
-
-            
-            <div className="w-full lg:w-[50%] h-[250px] sm:h-[400px] md:h-[450px] relative  overflow-hidden">
-                <Image
-                    src="/images/about/Textile/Rectangle 32.png"
-                    alt="Business technology meeting"
-                    fill
-                    className="object-cover"
-                    priority
-                />
-            </div>
+          </p>
         </div>
+
+        
+        <div className="w-full md:w-1/2 h-[600px] relative p-0 m-0">
+          <Image
+            src="/images/about/Textile/Rectangle 32.png"
+            alt="Business technology meeting"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </div>
     </>
-);
-}
-export default auto;
+  );
+};
+
+export default Secondbox;
