@@ -21,7 +21,10 @@ const CompleteRange = () => {
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10">
         {sensors.map((sensor, index) => (
-          <div key={index} className="border p-4 rounded-lg  bg-white">
+          <div
+            key={index}
+            className="border p-4 rounded-lg bg-white transition-shadow duration-300 hover:shadow-lg"
+          >
             <Image
               src={sensor.image}
               alt={sensor.name}
@@ -29,7 +32,7 @@ const CompleteRange = () => {
               height={50}
               className="mx-auto mb-4"
             />
-            <h3 className="text-red-500 font-semibold">{sensor.name}</h3>
+            <h3 className="text-red-500 font-semibold ">{sensor.name}</h3>
           </div>
         ))}
       </div>

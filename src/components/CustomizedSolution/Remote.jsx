@@ -6,6 +6,7 @@ const compData = [
       " 🤖 IoT-Based Monitoring System in Automation",
     Description:
       "A system where smart sensors, controllers, and cloud platforms work together to monitor, control, and optimize automated processes in real time.",
+      
     
       Img_Src: "/images/CoustimizeSol/R1.webp",
     isReverse: false,
