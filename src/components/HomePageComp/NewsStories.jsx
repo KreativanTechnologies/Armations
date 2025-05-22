@@ -5,10 +5,17 @@ const NewsStories = ({ newsData = [] }) => {
   const [showAll, setShowAll] = useState(false);
 
   return (
-    <div className="h-full w-full bg-white text-black py-[4vw] px-[7vw] flex flex-col gap-[2vw] pt-30 md:pt-30">
+    <div
+      className="
+        h-full w-full bg-white text-black
+        pt-2 md:pt-12 lg:pt-16
+        px-6 pb-16 md:px-14 md:pb-20
+        flex flex-col gap-8
+      "
+    >
       <div className="w-full flex flex-col items-center justify-center">
         <h1 className="text-xl md:text-4xl font-bold">Latest News And Stories</h1>
-        <hr className="h-1 bg-orange-600 w-[20%] md:w-[8%] border-none rounded-4xl" />
+        <hr className="h-1 bg-orange-600 w-1/5 md:w-1/12 border-none rounded-4xl" />
       </div>
 
       <div className="w-full h-full">
@@ -30,9 +37,7 @@ const NewsStories = ({ newsData = [] }) => {
                 <p className="text-gray-500 text-sm">
                   {news.title} {news.date}
                 </p>
-                <h3 className="font-semibold text-lg mt-2">
-                  {news.description}
-                </h3>
+                <h3 className="font-semibold text-lg mt-2">{news.description}</h3>
               </div>
             </div>
           ))}

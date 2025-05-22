@@ -6,7 +6,7 @@ const Plastic = () => {
         src="/images/about/Textile/Rectangle 113.png"
         alt="Plastic Industry Background"
         className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[calc(100%-90px)] h-full object-cover opacity-90"
-        // width and height can be omitted or adjusted as Next.js Image is not used here
+        
       />
 
       
