@@ -24,12 +24,15 @@ export default function GridGallery() {
     <div className="container mx-auto px-18 py-18">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {data.map((item, index) => (
-          <div key={index} className="bg-white shadow-lg rounded-lg p-4">
-            <Image 
-              src={item.src} 
-              alt={item.title} 
-              width={500} 
-              height={300} 
+          <div
+            key={index}
+            className="bg-white shadow-lg rounded-lg p-4 transition-transform duration-200 hover:scale-105 hover:shadow-xl cursor-pointer"
+          >
+            <Image
+              src={item.src}
+              alt={item.title}
+              width={500}
+              height={300}
               className="rounded-lg"
             />
             <p className="text-center text-red-500 text-sm font-semibold mt-2">{item.title}</p>

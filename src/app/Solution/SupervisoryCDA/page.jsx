@@ -1,11 +1,14 @@
-import React from 'react';
-
-const Page = () => {
+import React from 'react'
+import Banner from '../../../components/Supervisory/Banner.jsx'
+import ScadaInfo from '../../../components/Supervisory/ScadaInfo.jsx'
+const page = () => {
   return (
-    <div className="bg-white min-h-screen flex items-center justify-center">
-      <h1 className="text-3xl font-bold text-gray-800">Page</h1>
-    </div>
-  );
-};
+    <div>
+      
+      <Banner/>
+      <ScadaInfo/>
+      </div>
+  )
+}
 
-export default Page;
+export default page
