@@ -1,35 +1,67 @@
-import React from 'react';
 import Image from 'next/image';
 
 const PharmaSection = () => {
   return (
-    <div className="relative flex flex-col md:flex-row gap-4 items-center justify-center p-8 bg-white mt-[-200px] mb-2">
-      {/* Image Section - Now on the left */}
-      <div className="relative w-full md:w-1/3 h-96 md:h-[400px] overflow-hidden">
-        <Image
-          src="/images/about/Pharma/Rectangle 31 (1).png"
-          alt="Colorful Pills"
-          layout="fill"
-          className="object-cover"
+    <>
+      {/* Background Image */}
+      <div className="relative w-full h-[60vh] sm:h-[80vh] md:h-screen overflow-hidden mt-12">
+        <img
+          src="/images/about/Pharma/Rectangle 115.png"
+          alt="Pharma Background"
+          className="absolute inset-0 w-[90%] h-full object-cover opacity-90 mx-auto"
         />
       </div>
 
-      {/* Text Content - Now on the right */}
-      <div className="w-full md:w-1/2 bg-white p-6 md:p-6 z-10">
-        <div className="space-y-2">
-          <h2 className="text-2xl md:text-3xl font-semibold font-Poppins text-black">Textile Industry</h2>
-          <div className="w-16 h-1 bg-red-500"></div>
-          <p className="text-[#606062] text-lg font-Poppins font-medium md:text-base leading-relaxed">
-            The Textile Industry has grown rapidly due to the advent of automation. Textile products such as cloth, yarn, cotton and other fabrics have been easier to produce due to automation. Automation has improved product quality and reduced working hours, while providing safer working conditions for employees.
-          </p>
-          <div className="pt-2 md:pt-4">
-            <button className="mt-4 px-4 py-2.5 rounded-full border-2 border-red-500 text-black text-[15px] font-normal hover:bg-red-500 hover:text-white transition-colors duration-200">
-              Learn More
-            </button>
+      {/* Foreground Content */}
+      <div className="relative z-10 -mt-24 sm:-mt-32 md:-mt-40 lg:-mt-60 xl:-mt-72 overflow-x-hidden">
+        <div className="relative flex flex-col md:flex-row items-start w-full">
+
+          {/* Left Image */}
+          <div
+            className="
+              relative
+              w-full md:w-1/2     mb-0   
+              h-[500px] sm:h-[600px] md:h-[600px]  
+            "
+          >
+            <Image
+              src="/images/about/Pharma/Rectangle 31 (1).png"
+              alt="Pharma Industry"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
+
+          {/* Right Text Block */}
+          <div
+            className="
+              bg-white shadow-lg p-6 md:p-8
+              w-full md:w-[55%]     
+              mt-6 md:mt-0
+              relative md:absolute md:right-0 md:top-1/2 md:transform md:-translate-y-1/2
+              z-20
+            "
+          >
+            <div className="space-y-3 h-full flex flex-col justify-center">
+              <h2 className="text-2xl md:text-3xl font-semibold font-Poppins text-black">
+                Pharmaceutical Industry
+              </h2>
+              <div className="w-20 h-1 bg-red-500 rounded-lg"></div>
+              <p className="text-[#606062] text-base md:text-lg font-Poppins leading-relaxed">
+                The Pharmaceutical Industry plays a pivotal role in global healthcare, driving advancements in medical science and improving patient outcomes. It focuses on research, development, and production of drugs to treat a wide range of conditions—leveraging technology and scientific research to deliver safe medications.
+              </p>
+              <div className="pt-2 md:pt-4">
+                <button className="mt-2 px-4 py-2.5 rounded-full border-2 border-red-500 text-black text-sm md:text-base hover:bg-red-500 hover:text-white transition-colors duration-200">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

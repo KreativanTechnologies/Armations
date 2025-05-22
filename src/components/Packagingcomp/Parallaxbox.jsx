@@ -6,7 +6,7 @@ const Parallaxbox = () => {
   return (
     <div className="bg-white   ">
       <div className="relative flex flex-col lg:flex-row items-center">
-        {/* Image Section - Left Side */}
+        {/* Image Section */}
         <div className="w-full lg:w-[60%] h-[300px] sm:h-[400px] md:h-[450px] relative  overflow-hidden">
           <Image
             src="/images/Industryimg/Packagingimg/Rectangle 31.png"
@@ -17,7 +17,7 @@ const Parallaxbox = () => {
           />
         </div>
 
-        {/* Mission Section - Right Side with Overlap */}
+        {/* Mission Section */}
         <div
           className="w-[85%] lg:w-[55%] bg-white rounded-lg shadow-lg p-6 md:p-8 
                         lg:absolute lg:right-0 lg:top-1/2 lg:transform lg:-translate-y-1/2 
