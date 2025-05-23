@@ -8,6 +8,7 @@ const OurMission = () => {
         className="w-full h-[45%] md:h-full md:w-1/2  flex flex-col gap-3 md:gap-7  ">
         <h1 className="text-3xl text-black md:text-4xl font-bold p-4">
           Our Mission
+        <div className="w-28 h-1 bg-red-500 mt-2"></div>
         </h1>
         <p className="mt-4 text-lg text-black leading-relaxed">
           At our Mobile App development agency, we specialize in creating custom websites and apps that are fast, responsive, and visually stunning. We focus on delivering seamless user experiences and scalable solutions tailored to your business needs.
@@ -27,7 +28,7 @@ const OurMission = () => {
             src="/om.png"
             alt="Mission"
             layout="fill"
-            className="rounded-lg object-cover"
+            className=" object-cover"
           />
           <div className="absolute inset-0 bg-red-600 opacity-60 rounded-lg"></div>
         

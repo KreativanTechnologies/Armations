@@ -2,7 +2,7 @@ import Image from "next/image"
 import { Zap, Sun } from "lucide-react"
 
 
-const Parallax = () => {
+const Parallax2 = () => {
   return (
     <div className="bg-white  mb-10 ">
       <div className="relative flex flex-col lg:flex-row items-center">
@@ -26,34 +26,19 @@ const Parallax = () => {
         >
           <div className="space-y-2">
             <div className="space-y-2">
-              <h2 className="text-2xl md:text-3xl font-semibold font-Poppins text-black">Our Mission</h2>
-              <div className="w-24 h-1 bg-red-500"></div>
+              <h2 className="text-2xl md:text-3xl font-semibold font-Poppins text-black">Did You Know?</h2>
+              <div className="w-32 h-1 bg-red-500"></div>
             </div>
 
             <p className="text-[#606062] text-lg font-Poppins font-medium md:text-base leading-relaxed">
-              Our end to end smart solutions empower smart industries, smart living and smart enterprises and deliver
-              connecting experiences by connecting assets, operation/ logistics and services
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
             </p>
 
-            <div className="space-y-3 py-2">
-              <div className="flex items-center gap-3">
-                <div className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-red-50">
-                  <Zap className="w-4 h-4 md:w-5 md:h-5 text-red-500" />
-                </div>
-                <span className="text-[#606062] font-medium text-lg md:text-base">Energy Saving Solution</span>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <div className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-red-50">
-                  <Sun className="w-4 h-4 md:w-5 md:h-5 text-red-500" />
-                </div>
-                <span className="text-gray-700 font-medium text-sm md:text-base">Distributed Control System</span>
-              </div>
-            </div>
+       
 
             <div className="pt-2 md:pt-4">
             <button className="mt-4 px-4 py-2.5 rounded-full border-2 border-red-500 text-black text-[15px] font-normal hover:bg-red-500 hover:text-white transition-colors duration-200">
-          Learn More About Us
+          Learn More 
         </button>
             </div>
           </div>
@@ -65,6 +50,6 @@ const Parallax = () => {
 
 
 
-export default Parallax;
+export default Parallax2;
 
 

@@ -7,7 +7,7 @@ const HeroSection = () => {
     <div className="relative w-full h-screen">
       <div className="absolute inset-0">
         <Image
-          src="/bg.png" 
+          src="/images/home/bg.png" 
           alt="Aarmation Electric"
           fill
           quality={100}

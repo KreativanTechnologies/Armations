@@ -5,6 +5,7 @@ import NewsStories from "../../components/HomePageComp/NewsStories.jsx"
 import OurAchievements from "../../components/HomePageComp/OurAchievements.jsx"
 import OurMission from "../../components/HomePageComp/OurMission.jsx"
 import Parallax from "../../components/HomePageComp/Parallax.jsx"
+import Parallax2 from "../../components/HomePageComp/Parallex2.jsx"
 
 const page = () => {
   return (
@@ -15,7 +16,7 @@ const page = () => {
       <OurAchievements/>
       <AtArmation/>
       <NewsStories newsData={newsData}/>
-      <Parallax/>
+      <Parallax2/>
     </div>
   )
 }
