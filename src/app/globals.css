@@ -5,13 +5,6 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     /* --background: #0a0a0a; */
@@ -22,7 +15,6 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .border-Color {
@@ -36,4 +28,102 @@ body {
     url("../assets/chooseUs/phone.png");
   background-size: cover;
   background-position: center;
+}
+
+
+
+
+/* fonts */
+@font-face {
+  font-family: 'arialBold';
+  src: url('/fonts/Arial-BoldMT.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'faBrand';
+  src: url('/fonts/fa-brands-400.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'faLight';
+  src: url('/fonts/fa-light-300.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'faRegular';
+  src: url('/fonts/fa-regular-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'faSolid';
+  src: url('/fonts/fa-solid-900.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'jazminLight';
+  src: url('/fonts/Jazmin-Light.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'jazminMedium';
+  src: url('/fonts/Jazmin-Medium.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'jazminRegular';
+  src: url('/fonts/Jazmin-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'memv1';
+  src: url('/fonts/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'memv2';
+  src: url('/fonts/RWmPoKKX6u8sp8fIWdnDKqDSroEH.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+*{
+  font-family: 'memv2';
+}
+button{
+  font-family: 'jazminMedium';
+}
+h1{
+  font-family: 'jazminRegular';
+}
+
+@theme {
+  --font-Lato: "Lato", sans-serif;
+  --font-Abhaya_Libre: "Abhaya Libre", serif;
 }

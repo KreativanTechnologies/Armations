@@ -5,16 +5,16 @@ const SolutionWeProvide = () => {
     <div className="w-full h-full px-[7vw] py-[5vw] bg-white text-black">
       <div className="w-full h-full md:h-[35vw] flex flex-col md:flex-row gap-8 md:gap-[5vw]">
         <div className="w-full h-80 md:h-full relative">
-          <div className="absolute w-[80%] h-[80%] top-0 right-0 overflow-hidden hover:z-40 hover:scale-110 duration-1000 hover:rounded-[3vw] cursor-pointer">
+          <div className="absolute w-[80%] h-[80%] rounded-2xl top-0 right-0 overflow-hidden hover:z-40 duration-1000 hover:rounded-[3vw] cursor-pointer">
             <img
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-cover object-center hover:scale-110 duration-1000"
               src="/images/SolutionWeProvide/Laptop.png"
               alt=""
             />
           </div>
-          <div className="absolute w-[50%] h-[55%] left-0 bottom-0 overflow-hidden hover:scale-110 duration-1000 hover:rounded-[3vw] cursor-pointer">
+          <div className="absolute w-[50%] rounded-2xl h-[55%] left-0 bottom-0 overflow-hidden duration-1000 hover:rounded-[3vw] cursor-pointer">
             <img
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-cover object-center hover:scale-110 duration-1000"
               src="/images/NewsStories/Operator.png"
               alt=""
             />

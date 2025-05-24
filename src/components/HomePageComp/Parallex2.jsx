@@ -37,7 +37,7 @@ const Parallax2 = () => {
        
 
             <div className="pt-2 md:pt-4">
-            <button className="mt-4 px-4 py-2.5 rounded-full border-2 border-red-500 text-black text-[15px] font-normal hover:bg-red-500 hover:text-white transition-colors duration-200">
+            <button className="mt-4 px-4 cursor-pointer py-2.5 rounded-full border-2 border-red-500 text-black text-[15px] font-normal hover:bg-red-500 hover:text-white transition-colors duration-200">
           Learn More 
         </button>
             </div>

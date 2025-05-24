@@ -2,8 +2,8 @@ import React from "react";
 
 const AtArmation = () => {
   return (
-    <div className="bg-gray-100 w-full h-screen py-[8vw] flex">
-      <div className="w-full h-full px-[7vw] flex flex-col md:flex-row gap-6 md:gap-0">
+    <div className="bg-gray-100 w-full h-screen py-[8vw] flex px-6 md:px-[7vw]">
+      <div className="w-full h-full flex flex-col md:flex-row gap-6 md:gap-0">
         <div className="w-full h-full text-slate-600 flex flex-col justify-center pr-[10vw] font-normal">
           <h1 className="text-xl md:text-4xl font-bold text-black">
             At Aarmation Electric
@@ -26,7 +26,7 @@ const AtArmation = () => {
 
         <div className="w-full h-full">
           <div className="w-full h-full flex relative">
-            <div className="w-1/2 h-2/3 -top-4 -left-2 md:-left-4 md:top-[19%] md:h-[65%] md:w-[60%] absolute overflow-hidden z-10 hover:z-10 hover:scale-105 duration-1000 hover:opacity-100 cursor-pointer hover:rounded-[3vw]">
+            <div className="w-1/2 h-2/3 -top-4 -left-2 md:-left-4 md:top-[19%] md:h-[65%] md:w-[60%] absolute overflow-hidden z-10 hover:z-10 hover:scale-105 duration-1000 hover:opacity-100 cursor-pointer rounded-2xl hover:rounded-[3vw]">
               <img
                 className="w-full h-full object-cover"
                 src="/images/NewsStories/Plug.png"
@@ -34,7 +34,7 @@ const AtArmation = () => {
               />
             </div>
 
-            <div className=" w-1/2 h-1/2 top-0 right-0  md:right-[4%] md:-top-12 md:h-[55%] md:w-[60%] absolute overflow-hidden hover:z-30 hover:scale-105 duration-1000 hover:opacity-100 cursor-pointer hover:rounded-[3vw]">
+            <div className=" w-1/2 h-1/2 top-0 right-0  md:right-[4%] md:-top-12 md:h-[55%] md:w-[60%] absolute overflow-hidden hover:z-30 hover:scale-105 duration-1000 hover:opacity-100 cursor-pointer rounded-2xl hover:rounded-[3vw]">
               <img
                 className="w-full h-full object-cover"
                 src="/images/NewsStories/Operator.png"
@@ -42,7 +42,7 @@ const AtArmation = () => {
               />
             </div>
 
-            <div className="w-full h-1/2 -right-2 -bottom-2 md:-right-[3%] md:bottom-2 md:h-[50%] md:w-[55%] absolute overflow-hidden z-20 hover:z-30 hover:scale-105 duration-1000 hover:opacity-100 cursor-pointer hover:rounded-[3vw]">
+            <div className="w-[80%] h-2/3 -right-2 -bottom-2 md:-right-[3%] md:bottom-2 md:h-[50%] md:w-[55%] absolute overflow-hidden z-20 hover:z-30 hover:scale-105 duration-1000 hover:opacity-100 rounded-2xl cursor-pointer hover:rounded-[3vw]">
               <img
                 className="w-full h-full object-cover"
                 src="/images/AtArmation/Enginee.png"

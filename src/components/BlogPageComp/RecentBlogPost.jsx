@@ -46,7 +46,7 @@ const BlogPost = ({ newsData = [] }) => {
         <div className="text-center mt-8">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="border-2 text-md md:text-xl font-normal border-red-500 text-black px-6 py-2 md:px-8 md:py-4 rounded-full hover:bg-red-500 hover:text-white transition"
+            className="border-2 text-md md:text-xl font-normal border-red-500 text-black px-6 py-2 md:px-8 md:py-4 rounded-full hover:bg-red-500 hover:text-white transition cursor-pointer"
           >
             {showAll ? "Show Less" : "See All Stories"}
           </button>

@@ -1,11 +1,17 @@
 import React from 'react'
-import BlogHero from '../../components/BlogPageComp/BlogHero'
-import BlogPost from '../../components/BlogPageComp/RecentBlogPost'
+import NewsStories from "../../components/HomePageComp/NewsStories.jsx"
+import HeroSection from "../../components/HomePageComp/HeroSection.jsx"
+
+const heroSectionData = { 
+  img_Src : '/images/blog/blogimg.png',
+  title : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+  desc : 'In the realm of industrial automation, logic controllers play a pivotal role in managing and controlling various processes. These intelligent devices, often referred to as Programmable Logic Controllers (PLCs), have revolutionized the way industries operate [...]',
+}
 const page = () => {
   return (
     <div>
-      <BlogHero/>
-      <BlogPost newsData={newsData}/>
+       <HeroSection data={heroSectionData}/>
+       <NewsStories newsData={newsData} defaultRows={2}/>
     </div>
   )
 }
