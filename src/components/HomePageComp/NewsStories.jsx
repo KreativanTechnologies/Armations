@@ -5,9 +5,9 @@ const NewsStories = ({ newsData = [] }) => {
   const [showAll, setShowAll] = useState(false);
 
   return (
-    <div className="h-full w-full bg-white text-black py-[4vw] px-[7vw] flex flex-col gap-[2vw]">
+    <div className="h-full w-full bg-white text-black py-[4vw] px-[7vw] flex flex-col gap-[2vw] pt-30 md:pt-30">
       <div className="w-full flex flex-col items-center justify-center">
-        <h1 className="text-xl md:text-4xl font-bold">Latest News and Stories</h1>
+        <h1 className="text-xl md:text-4xl font-bold">Latest News And Stories</h1>
         <hr className="h-1 bg-orange-600 w-[20%] md:w-[8%] border-none rounded-4xl" />
       </div>
 

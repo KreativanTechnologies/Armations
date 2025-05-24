@@ -3,7 +3,8 @@ import React from "react";
 import Pharmasection from "../../../components/Pharma/pharmaSection.jsx";
 import Section from "../../../components/Textile/section.jsx";
 import NewsStories from "../../../components/HomePageComp/NewsStories.jsx";
-import Auto from "../../../components/Textile/auto.jsx";
+
+import Pharmabox from "../../../components/Pharma/Pharmabox.jsx";
 
 const newsData = [
   {
@@ -59,18 +60,10 @@ export default function Page() {
           <div className="h-1 w-40 bg-red-500 mx-auto mt-2 rounded-full" />
         </div>
       </div>
-      <div className="relative w-full h-screen overflow-hidden mt-12">
-        {/* Background Image */}
-        <img
-          src="/images/about/Pharma/Rectangle 115.png"
-          alt="Plastic Industry Background"
-          className="absolute inset-0 w-[calc(90%-80px)] object-cover opacity-90 mx-auto"
-          width={200}
-          height={200}
-        />
-      </div>
+      
+      
       <Pharmasection />
-      <Auto />
+      <Pharmabox />
       <Section />
       <NewsStories newsData={newsData} />
     </>

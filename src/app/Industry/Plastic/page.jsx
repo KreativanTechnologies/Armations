@@ -2,15 +2,17 @@ import React from 'react'
 import Auto from "../../../components/Textile/auto.jsx"
 import  Section from "../../../components/Textile/section.jsx"
 import NewsStories from "../../../components/HomePageComp/NewsStories.jsx"
-import Text from "../../../components/Textile/text.jsx"
+
 import Plastic from "../../../components/Plastic/plastic.jsx"
+import Firstbox from '../../../components/Plastic/Firstbox.jsx'
+import Secondbox from '../../../components/Plastic/Secondbox.jsx'
 const page = () => {
   return (
     <div>
       
    <Plastic/>
-      <Text/>
-      <Auto/>
+      <Firstbox/>
+      <Secondbox/>
       <Section/>
       <NewsStories newsData={newsData} />
       </div>
