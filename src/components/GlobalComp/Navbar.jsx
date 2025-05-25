@@ -56,12 +56,12 @@ const Navbar = () => {
             <div className="grid grid-cols-6 pr-8 items-center justify-center h-[74px] bg-gray-100 bg-opacity-90">
               <div></div>
               <div className="flex col-span-3 font-poppin items-center h-full justify-center space-x-8">
-                <Link href="/" className="text-gray-700 hover:text-gray-900">
+                <Link href="/" className="text-gray-700 hover:text-gray-900 font-bold">
                   Home
                 </Link>
                 <Link
                   href="/About"
-                  className="text-gray-700 hover:text-gray-900"
+                  className="text-gray-700 hover:text-gray-900 font-bold"
                 >
                   About
                 </Link>
@@ -148,13 +148,13 @@ const Navbar = () => {
 
                 <Link
                   href="/Blog"
-                  className="text-gray-700 hover:text-gray-900"
+                  className="text-gray-700 hover:text-gray-900 font-bold"
                 >
                   Blog
                 </Link>
                 <Link
                   href="/WhyUs"
-                  className="text-gray-700 hover:text-gray-900"
+                  className="text-gray-700 hover:text-gray-900 font-bold"
                 >
                   Contact Us
                 </Link>
@@ -188,13 +188,13 @@ const Navbar = () => {
       {isOpen && (
         <div className="lg:hidden bg-white">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <Link href="/" className="block px-3 py-2 text-gray-700">
+            <Link href="/" className="block px-3 py-2 text-gray-700 font-bold">
               Home
             </Link>
-            <Link href="/About" className="block px-3 py-2 text-gray-700">
+            <Link href="/About" className="block px-3 py-2 text-gray-700 font-bold">
               About Us
             </Link>
-            <Link href="/products" className="block px-3 py-2 text-gray-700">
+            <Link href="/products" className="block px-3 py-2 text-gray-700 font-bold">
               Products
             </Link>
 
@@ -262,10 +262,10 @@ const Navbar = () => {
               )}
             </div>
 
-            <Link href="/Blog" className="block px-3 py-2 text-gray-700">
+            <Link href="/Blog" className="block px-3 py-2 text-gray-700 font-bold">
               Blog
             </Link>
-            <Link href="/WhyUs" className="block px-3 py-2 text-gray-700">
+            <Link href="/WhyUs" className="block px-3 py-2 text-gray-700 font-bold">
               Contact Us
             </Link>
           </div>

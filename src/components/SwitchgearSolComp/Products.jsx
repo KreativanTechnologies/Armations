@@ -43,7 +43,7 @@ const Products = () => {
     <div className="w-full h-full text-black bg-white">
       {compData.map((data, index) => (
         <div
-          className={`relative h-full md:h-[36vw] w-full flex flex-col ${
+          className={`relative h-full md:h-[36vw] w-full flex flex-col  ${
             data.isReverse ? "md:flex-row-reverse" : "md:flex-row"
           } items-center`}
           key={index}
@@ -63,10 +63,11 @@ const Products = () => {
             } overflow-hidden p-[5vw]`}
             style={{
               backgroundImage: "radial-gradient(circle, #FFFFFF, #D9D9D9)",
+             
             }}
           >
             <img
-              className="w-full h-full object-center object-contain"
+              className="w-full h-full object-center object-contain rounded-2xl"
               src={data.Img_Src}
               alt=""
             />

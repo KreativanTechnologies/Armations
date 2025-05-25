@@ -5,17 +5,24 @@ import NewsStories from "../../components/HomePageComp/NewsStories.jsx"
 import OurAchievements from "../../components/HomePageComp/OurAchievements.jsx"
 import OurMission from "../../components/HomePageComp/OurMission.jsx"
 import Parallax from "../../components/HomePageComp/Parallax.jsx"
+import Parallax2 from "../../components/HomePageComp/Parallex2.jsx"
+const heroSectionData = {
+  img_Src : '/images/home/bg.png',
+  title : 'Aarmation Electric',
+  desc : 'Our end-to-end smart solutions empower smart industries, smart living, and smart enterprises and deliver connected experiences by connecting assets, operation/logistics, and services.',
+  btn_Text : 'Register Now'
+}
 
 const page = () => {
   return (
-    <div className="w-full h-full bg-white">
-      <HeroSection/>
+    <div className="w-full h-full bg-white flex flex-col gap-4 md:gap-0 ">
+      <HeroSection data={heroSectionData}/>
       <OurMission/>
       <Parallax/>
       <OurAchievements/>
       <AtArmation/>
       <NewsStories newsData={newsData}/>
-      <Parallax/>
+      <Parallax2/>
     </div>
   )
 }
