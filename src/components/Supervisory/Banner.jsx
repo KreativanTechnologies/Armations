@@ -19,7 +19,7 @@ export default function Banner({ bgImage, title }) {
       <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex items-center justify-center h-full w-full px-2 sm:px-4">
+      <div className="relative  flex items-center justify-center h-full w-full px-2 sm:px-4">
         <h1 className="text-white text-center text-xl xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold max-w-4xl leading-tight">
           {title}
         </h1>

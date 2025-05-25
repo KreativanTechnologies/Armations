@@ -11,7 +11,7 @@ const Plastic = () => {
 
       
       {/* Text Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+      <div className="relative  flex flex-col items-center justify-center h-full text-center px-4">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white">
           Plastic Industry <span className="text-red-500">Solutions</span>
         </h1>
