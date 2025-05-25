@@ -33,14 +33,14 @@ const ContactInfo = () => {
         <div className='border-r-4 border-[#ec3436]/20'>
           <div className='flex items-center gap-2 mb-2'>
             <MapPin className='size-10 fill-[#1f1f1f] stroke-white' />
-            <span className='text-black text-[22px] font-medium font-poppins'>
+            <span className='text-black text-2xl md:text-3xl  font-medium font-poppins'>
               Address
             </span>
           </div>
-          <div className='text-[#ec3436] text-3xl font-medium font-poppins mb-3'>
+          <div className='text-[#ec3436] text-2xl md:text-3xl  font-medium font-poppins mb-3'>
             Visit us at
           </div>
-          <div className='space-y-4 text-2xl font-poppins'>
+          <div className='space-y-4 text-xl md:text-2xl  font-poppins'>
             <div>
               <div className='text-black font-semibold mb-1'>
                 Head Office & Works:
@@ -67,14 +67,14 @@ const ContactInfo = () => {
         <div className='border-r-4 border-[#ec3436]/20'>
           <div className='flex items-center gap-2 mb-2'>
             <Send className='size-10 fill-[#1f1f1f]  stroke-white' />
-            <span className='text-black text-[22px] font-medium font-poppins'>
+            <span className='text-black text-2xl md:text-3xl font-medium font-poppins'>
               Drop a line...
             </span>
           </div>
-          <div className='text-[#ec3436] text-3xl font-medium font-poppins mb-3'>
+          <div className='text-[#ec3436] text-2xl md:text-3xl font-medium font-poppins mb-3'>
             Mail us on
           </div>
-          <div className='text-2xl break-all text-[#606062]'>
+          <div className='text-xl md:text-2xl break-all text-[#606062]'>
             info@aarmationelectric.com
           </div>
         </div>
@@ -85,14 +85,14 @@ const ContactInfo = () => {
         <div className='border-r-4 border-[#ec3436]/20'>
           <div className='flex items-center gap-2 mb-2'>
             <Phone className='size-10 fill-[#1f1f1f]  stroke-white' />
-            <span className='text-black text-[22px] font-medium font-poppins'>
+            <span className='text-black text-2xl md:text-3xl font-medium font-poppins'>
               Phone no.
             </span>
           </div>
-          <div className='text-[#ec3436] text-3xl font-medium font-poppins mb-3'>
+          <div className='text-[#ec3436] text-2xl md:text-3xl font-medium font-poppins mb-3'>
             Call us on
           </div>
-          <div className='space-y-1 text-[#606062] text-2xl font-medium'>
+          <div className='space-y-1 text-[#606062] text-xl md:text-2xl font-medium'>
             <div className=''>Mob : +91 7814000888</div>
             <div className=''>Tel : 1800-8892-319</div>
           </div>
@@ -103,14 +103,14 @@ const ContactInfo = () => {
       <div className='flex flex-col'>
         <div className='flex items-center gap-2 mb-2'>
           <Clock className='size-10 fill-[#1f1f1f]  stroke-white' />
-          <span className='text-black text-[22px] font-medium font-poppins'>
+          <span className='text-black text-2xl md:text-3xl font-medium font-poppins'>
             Working Hours
           </span>
         </div>
-        <div className='text-[#ec3436] text-3xl font-medium font-poppins mb-3'>
+        <div className='text-[#ec3436] text-2xl md:text-3xl font-medium font-poppins mb-3'>
           Opening Time
         </div>
-        <div className='space-y-1 text-2xl font-medium text-[#606062]'>
+        <div className='space-y-1 text-xl md:text-2xl font-medium text-[#606062]'>
           <div className=''>Monday to Friday</div>
           <div className=''>9am - 5 pm</div>
         </div>
@@ -143,7 +143,7 @@ const WhyChooseUs = () => {
 
   return (
     <section className='py-12 bg-white text-center font-poppins'>
-      <h2 className='text-xl md:text-2xl lg:text-3xl font-semibold text-black mb-4'>
+      <h2 className='text-2xl md:text-3xl font-semibold text-black mb-4'>
         Why Choose Aarmation Electric?
       </h2>
       <div className='w-16 h-1 bg-red-500 mx-auto mb-8'></div>
@@ -171,13 +171,13 @@ const WhyChooseUs = () => {
 
 const ContactUs = () => {
   return (
-    <section className='relative contasct_bg_image w-full contact-section'>
+    <section className='relative contasct_bg_image w-full contact-section mb-10'>
       {/* Contact Form Container */}
-      <div className='lg:w-full mx-auto lg:ml-[80px] rounded-lg w-4/5 lg:max-w-4xl px-16 py-10 bg-white'>
-        <h2 className='text-black text-2xl md:text-[2vw] font-semibold font-poppins'>
+      <div className='lg:w-full mx-auto lg:ml-[80px] rounded-lg w-4/5 lg:max-w-4xl px-8 py-10 bg-white'>
+        <h2 className='text-black text-xl md:text-3xl font-semibold font-poppins'>
           Contact Us
         </h2>
-        <h3 className='text-[#ec3436] text-xl md:text-[1.5vw] font-bold font-poppins'>
+        <h3 className='text-[#ec3436] text-xl md:text-3xl font-bold font-poppins mb-5'>
           Reach and Get in Touch With Us!
         </h3>
 
@@ -201,7 +201,7 @@ const ContactUs = () => {
           ></textarea>
           <button
             type='submit'
-            className='px-6 py-3 text-black text-xl md:text-[1.5vw] font-normal border border-red-500  rounded-full cursor-pointer hover:bg-red-500 hover:text-white transition'
+            className='px-4 py-3 text-black text-lg md:text-xl font-normal border border-red-500  rounded-full cursor-pointer hover:bg-red-500 hover:text-white transition'
           >
             Send Message
           </button>

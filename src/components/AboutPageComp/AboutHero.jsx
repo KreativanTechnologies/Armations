@@ -16,8 +16,7 @@ const AboutHero = () => {
             About <span className="text-red-500">Us</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-xl leading-relaxed">
-            Our end to end smart solutions empower smart industries, smart living and smart enterprises and deliver
-            connecting experiences by connecting assets, operation/logistics and services
+          Welcome to Aarmation Electric, where innovation meets reliability. As a trusted leader in electrical solutions, we specialize in delivering cutting-edge products and services tailored to meet the dynamic needs of modern industries.
           </p>
         </div>
 
@@ -39,13 +38,11 @@ const AboutHero = () => {
               <div className="h-1 w-16 bg-red-500 mt-2"></div>
             </h3>
             <p className="text-gray-600 text-sm md:text-base">
-              Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
-              of Letraset sheets containing Lorem ipsum passages, and more recently with desktop publishing software
-              like Aldus PageMaker including versions of Lorem ipsum. Lorem ipsum is simply dummy text of the printing
-              and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s.
+            Aarmation Electric Private Limited (AEPL) provides comprehensive automation, instrumentation, and electrical solutions. We handle a broad range of automation projects across sectors such as Water & Waste Water, Building and Infrastructure, Industries, and Government Departments.
+<br />
+Since our start in 2018, we have successfully completed over 750 schemes and projects across India. We offer full automation solutions for man-less operations, including lift water supply schemes, irrigation water supply schemes, water treatment, and sewage treatment plants.We operate a Corporate Sales Office in Chandigarh, a Head Office at our electrical panel manufacturing plant in Palampur (Himachal Pradesh), and Branch Offices in Dehradun, Mumbai, and Bhubaneshwar.
+<br />
+Our expertise encompasses the supply and installation of various starters, LT and HT panels, pumping machinery, automation, and SCADA systems. We also provide valves such as NRV, sluice valves, actuated valves, electromagnetic and ultrasonic flow meters, ultrasonic level sensors, water quality analyzers, and a wide array of instrumentation products.
             </p>
           </div>
         </div>
