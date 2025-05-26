@@ -1,33 +1,57 @@
-import React from 'react'
-import AtArmation from "../../components/HomePageComp/AtArmation.jsx"
-import HeroSection from "../../components/HomePageComp/HeroSection.jsx"
-import NewsStories from "../../components/HomePageComp/NewsStories.jsx"
-import OurAchievements from "../../components/HomePageComp/OurAchievements.jsx"
-import OurMission from "../../components/HomePageComp/OurMission.jsx"
-import Parallax from "../../components/HomePageComp/Parallax.jsx"
-import Parallax2 from "../../components/HomePageComp/Parallex2.jsx"
+import React from "react";
+import AtArmation from "../../components/HomePageComp/AtArmation.jsx";
+import HeroSection from "../../components/HomePageComp/HeroSection.jsx";
+import NewsStories from "../../components/HomePageComp/NewsStories.jsx";
+import OurAchievements from "../../components/HomePageComp/OurAchievements.jsx";
+import OurMission from "../../components/HomePageComp/OurMission.jsx";
+import Parallax from "../../components/HomePageComp/Parallax.jsx";
+import Parallax2 from "../../components/HomePageComp/Parallex2.jsx";
+import { Zap, Sun } from "lucide-react";
 const heroSectionData = {
-  img_Src : '/images/home/bg.png',
-  title : 'Aarmation Electric',
-  desc : 'Our end-to-end smart solutions empower smart industries, smart living, and smart enterprises and deliver connected experiences by connecting assets, operation/logistics, and services.',
-  btn_Text : 'Explore more'
-}
+  img_Src: "/images/home/bg.png",
+  title: "Aarmation Electric",
+  desc: "Our end-to-end smart solutions empower smart industries, smart living, and smart enterprises and deliver connected experiences by connecting assets, operation/logistics, and services.",
+  btn_Text: "Explore more",
+};
+
+const OurVisionData = {
+  title: "Our Vision",
+  desc: "Our vision is to position “AARMATION ELECTRIC” globally as a leading project company in Electrical, IoT, SCADA, Artificial Intelligence, Automation Solutions, and Instrumentation by 2030.",
+  btn_Text: "Let's go",
+  img_Src: "/om.png",
+};
+const OurMissionData = {
+  title: "Our Mission",
+  desc: "Our end to end smart solutions empower smart industries, smart living and smart enterprises and deliver connecting experiences by connecting assets, operation/ logistics and services.",
+  btn_Text: "Learn More About Us",
+  redirectTo: "/About",
+  img_Src: "/om.png",
+  list: [
+    {
+      icon: Zap,
+      text: "Energy Saving Solution",
+    },
+    {
+      icon: Sun,
+      text: "Distributed Control System",
+    },
+  ],
+};
 
 const page = () => {
   return (
     <div className="w-full h-full bg-white flex flex-col gap-4 md:gap-0 ">
-      <HeroSection data={heroSectionData}/>
-      <OurMission/>
-      <Parallax/>
-      <OurAchievements/>
-      <AtArmation/>
-      <NewsStories newsData={newsData}/>
-      <Parallax2/>
+      <HeroSection data={heroSectionData} />
+      <OurMission data={OurVisionData} />
+      <Parallax data={OurMissionData} />
+      <OurAchievements />
+      <AtArmation />
+      <NewsStories newsData={newsData} />
+      <Parallax2 />
     </div>
-  )
-}
-export default page
-
+  );
+};
+export default page;
 
 const newsData = [
   {
