@@ -1,11 +1,15 @@
-import React from 'react';
-import Home from '../../../components/TurenkeySystems/Home';
 import Range from '../../../components/TurenkeySystems/CompleteRange';
+import HeroSection from "../../../components/DCScomp/HeroSection";
+
+const heroData = {
+  img_Src: '/images/TurnkeySol/T9.png',
+  title: "Turnkey Solutions",
+};
 
 const Page = () => {
   return (
     <div className="bg-white">
-      <Home />
+      <HeroSection data={heroData} />
       <Range />
     </div>
   );

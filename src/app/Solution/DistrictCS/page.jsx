@@ -1,19 +1,19 @@
-import React from 'react'
-import DCSContent from '../../../components/DCScomp/DCSContent'
-// import DCSInfo from '../../../components/DCSComp/DCSInfo.jsx'
-// import DCSLayout from '../../../components/DCSComp/DCSLayout.jsx'
-import HeroSection from '../../../components/DCScomp/HeroSection'
+import DCSContent from "../../../components/DCScomp/DCSContent";
+import HeroSection from "../../../components/DCScomp/HeroSection";
+import HeroImage from "../../../assets/distributed/hero.png";
+
+const heroData = {
+  img_Src: HeroImage,
+  title: "Distributed Control System",
+};
+
 const page = () => {
   return (
-    <div className=''>
-       <HeroSection/>
-      <DCSContent/>
-      {/* <DCSInfo/> */}
-      {/* <DCSLayout/> */}
-     
-      
-      </div>
-  )
-}
+    <div>
+      <HeroSection data={heroData} />
+      <DCSContent />
+    </div>
+  );
+};
 
-export default page
+export default page;

@@ -1,18 +1,19 @@
 'use client';
-
-import React from 'react'
-import Hero from '../../../components/CustomizedSolution/Hero.jsx'
 import Grid from '../../../components/CustomizedSolution/Grid.jsx'
 import Remote from '../../../components/CustomizedSolution/Remote.jsx'
+import HeroSection from "../../../components/DCScomp/HeroSection";
+
+const heroData = {
+  img_Src: '/images/CoustimizeSol/CBg.png',
+  title: "Customized Solutions",
+};
 
 const Page = () => {
   return (
     <div className="bg-white">
-      <main>
-        <Hero />
+        <HeroSection data={heroData} />
         <Remote />
         <Grid />
-      </main>
     </div>
   );
 };

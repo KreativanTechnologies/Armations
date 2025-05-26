@@ -1,8 +1,7 @@
 'use client';
 
-import React from 'react';
-import Banner from '../../../components/Supervisory/Banner';
 import Image from 'next/image';
+import HeroSection from "../../../components/DCScomp/HeroSection";
 
 const equipmentData = [
   {
@@ -31,10 +30,16 @@ const equipmentData = [
   },
 ];
 
+const heroData = {
+  img_Src: '/images/Banner/energySaving.png',
+  title: "Energy Saving Solution",
+};
+
+
 const Page = () => {
   return (
     <div className="bg-white">
-      <Banner bgImage="/images/Banner/energySaving.png" title="Energy Saving Solution" />
+      <HeroSection data={heroData} />
       <div className="container mx-auto px-4 py-8 mt-8 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {equipmentData.map((item) => (
