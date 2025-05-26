@@ -10,7 +10,7 @@ const heroSectionData = {
   img_Src : '/images/home/bg.png',
   title : 'Aarmation Electric',
   desc : 'Our end-to-end smart solutions empower smart industries, smart living, and smart enterprises and deliver connected experiences by connecting assets, operation/logistics, and services.',
-  btn_Text : 'Register Now'
+  btn_Text : 'Explore more'
 }
 
 const page = () => {
