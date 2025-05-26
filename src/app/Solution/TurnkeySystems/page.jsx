@@ -1,6 +1,6 @@
 import React from 'react';
-import Home from '../../../components/TurenkeySystems/Home.jsx';
-import Range from '../../../components/TurenkeySystems/CompleteRange.jsx';
+import Home from '../../../components/TurenkeySystems/Home';
+import Range from '../../../components/TurenkeySystems/CompleteRange';
 
 const Page = () => {
   return (

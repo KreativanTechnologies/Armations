@@ -1,7 +1,7 @@
 import React from 'react'
   
 import Herosection from '../../../components/SwitchgearSolComp/HeroSection.jsx'
-import Products from '../../../components/SwitchgearsolComp/Products.jsx'
+import Products from '../../../components/SwitchgearSolComp/Products.jsx'
 const page = () => {
   return (
     <div>
