@@ -1,43 +1,76 @@
+'use client'
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
-const data = [
-  {
-    src: "/images/Sensors/S1.webp",
-    title: "Data monitoring and controlling of a machine/process."
-  },
-  {
-    src: "/images/Sensors/S2.webp",
-    title: "Fully automated system with instrumentation and IOT"
-  },
-  {
-    src: "/images/Sensors/S8.webp",
-    title: "Dust controller system"
-  },
-  {
-    src: "/images/Sensors/S4.webp",
-    title: "Monitoring of DC voltage and tanks"
-  }
-];
+export default function GridGallery({data}) {
+  const [visibleIndexes, setVisibleIndexes] = useState({});
+  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+  const [showCursor, setShowCursor] = useState(false);
 
-export default function GridGallery() {
+  const toggleOverlay = (index) => {
+    setVisibleIndexes((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
+
+  useEffect(() => {
+    const moveCursor = (e) => {
+      setCursorPos({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener("mousemove", moveCursor);
+    return () => window.removeEventListener("mousemove", moveCursor);
+  }, []);
+
   return (
-    <div className="container mx-auto px-18 py-18">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {data.map((item, index) => (
-          <div
-            key={index}
-            className="bg-white shadow-lg rounded-lg p-4 transition-transform duration-200 hover:scale-105 hover:shadow-xl cursor-pointer"
-          >
-            <Image
-              src={item.src}
-              alt={item.title}
-              width={500}
-              height={300}
-              className="rounded-lg"
-            />
-            <p className="text-center text-red-500 text-sm font-semibold mt-2">{item.title}</p>
-          </div>
-        ))}
+    <div className="relative">
+      {/* Custom Cursor */}
+      {showCursor && (
+        <div
+          className="fixed z-50 pointer-events-none text-white bg-black p-2 text-xs rounded-full hidden md:flex"
+          style={{
+            left: cursorPos.x,
+            top: cursorPos.y,
+            transition: "transform 0.05s ease",
+            transform: "translate(-50%, -50%)",
+            whiteSpace: "nowrap",
+          }}
+        >
+          click
+        </div>
+      )}
+
+      {/* Grid */}
+      <div className="container mx-auto px-8 py-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-[3vw]">
+          {data.map((item, index) => (
+            <div
+              key={index}
+              className="relative bg-white shadow-2xl drop-shadow-lg rounded-[2vw] overflow-hidden cursor-pointer md:h-[70vh] flex items-center justify-center"
+              onClick={() => toggleOverlay(index)}
+              onMouseEnter={() => setShowCursor(true)}
+              onMouseLeave={() => setShowCursor(false)}
+            >
+              {!visibleIndexes[index] ? (
+                <Image
+                  src={item.src}
+                  alt={item.title}
+                  width={500}
+                  height={300}
+                  className="object-center object-contain"
+                />
+              ) : (
+                <div className="w-full h-full bg-red-500 flex flex-col justify-center items-center text-white text-center p-4 md:p-[2vw]">
+                  <h3 className="text-lg md:text-[2vw] font-bold mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-md md:text-[1.2vw]">{item.desc}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

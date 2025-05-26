@@ -3,18 +3,19 @@ import I1 from "../../assets/distributed/1.png";
 
 const DCSContent = () => {
   return (
-    <section className="absolute left-1/2 transform -translate-x-1/2 items-center justify-center w-full px-4 py-16 bg-white text-[#606062]">
+    <section className="flex flex-col items-center justify-center w-full px-4 py-12 bg-white text-[#606062]">
       {/* Image Section */}
       <div className="w-full max-w-6xl flex justify-center mb-12">
         <Image
           src={I1}
           alt="DCS System Diagram"
-          className="w-full h-auto rounded-xl shadow-lg object-contain"
+          className="w-full h-auto rounded-2xl shadow-lg object-contain"
         />
       </div>
 
       {/* Text Section */}
-      <div className="max-w-4xl text-center space-y-6 text-lg font-poppins">
+      <div className="max-w-4xl text-center space-y-6 text-lg md:text-[1.5vw] text-black">
+        <h1 className="text-[2vw]">Autonomous controllers</h1>
         <p>
           The DC employs multiple autonomous controllers, each housing its own processor, which distribute across the system to automate processes effectively. If a processor fails, it impacts only one section of the plant process, unlike a central computer failure that could disrupt the entire process.
         </p>

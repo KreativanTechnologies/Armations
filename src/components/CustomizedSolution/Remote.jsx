@@ -2,13 +2,11 @@ import React from "react";
 
 const compData = [
   {
-    Heading:
-      " 🤖 IoT-Based Monitoring System in Automation",
+    Heading: " 🤖 IoT-Based Monitoring System in Automation",
     Description:
       "A system where smart sensors, controllers, and cloud platforms work together to monitor, control, and optimize automated processes in real time.",
-      
-    
-      Img_Src: "/images/CoustimizeSol/R1.webp",
+
+    Img_Src: "/images/CoustimizeSol/R1.webp",
     isReverse: false,
   },
   {
@@ -29,10 +27,10 @@ const compData = [
 
 const Remote = () => {
   return (
-    <div className="w-full h-full text-black bg-white flex flex-col gap-[4vw]">
+    <div className="w-full h-full text-black bg-gray-100 flex flex-col gap-[4vw]">
       {compData.map((data, index) => (
         <div
-          className={`relative h-full md:h-[36vw] w-full flex flex-col ${
+          className={`relative h-full md:h-[36vw] w-full flex flex-col gap-12 md:gap-0 ${
             data.isReverse ? "md:flex-row-reverse" : "md:flex-row"
           } items-center`}
           key={index}
@@ -46,14 +44,12 @@ const Remote = () => {
               {data.Heading}
             </h1>
             <p className="md:text-[1.1vw] mt-[1vw]">{data.Description}</p>
-                        <p className="md:text-[1.1vw] mt-[1vw]">{data.keyDescription}</p>
-
+            <p className="md:text-[1.1vw] mt-[1vw]">{data.keyDescription}</p>
           </div>
-          <div className="hidden md:flex w-1/2 h-full"></div>
           <div
-            className={`md:absolute w-full md:w-[53%] h-[80%] ${
-              data.isReverse ? "md:left-0" : "md:right-0"
-            } bg-white  overflow-hidden`}
+            className={`md:absolute w-full md:w-[53%] h-[80%] rounded-2xl md:rounded-none ${
+              data.isReverse ? "md:left-0" : "md:right-0 md:rounded-l-[2vw]"
+            } bg-white  overflow-hidden md:rounded-r-[2vw]`}
           >
             <img
               className="w-full h-full object-center object-contain"
