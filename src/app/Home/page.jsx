@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import AtArmation from "../../components/HomePageComp/AtArmation.jsx";
 import HeroSection from "../../components/HomePageComp/HeroSection.jsx";
