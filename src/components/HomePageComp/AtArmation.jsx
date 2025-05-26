@@ -10,17 +10,9 @@ const AtArmation = () => {
           </h1>
           <hr className="h-1 bg-orange-600 w-[40%] md:w-1/6 border-none rounded-4xl -mt-1" />
           <p className="text-sm md:text-xl mt-[1vw]">
-            We transform business operations with cutting-edge automation
-            solutions tailored to your needs. Our technology streamlines complex
-            processes, boosts efficiency, and drives cost savings. We specialize
-            in automating routine tasks, optimizing workflows, and integrating
-            advanced systems to enhance productivity and innovation.
+            We transform business operations with cutting-edge automation solutions tailored to your needs. Our technology streamlines complex processes, boosts efficiency, and drives cost savings. We specialize in automating routine tasks, optimizing workflows, and integrating advanced systems to enhance productivity and innovation.
             <br />
-            Our expert team collaborates closely with you to design and
-            implement solutions that address your unique challenges and goals.
-            By leveraging state-of-the-art tools and industry best practices, we
-            help you achieve greater accuracy, speed, and operational
-            excellence.
+            Our expert team collaborates closely with you to design and implement solutions that address your unique challenges and goals. By leveraging state-of-the-art tools and industry best practices, we help you achieve greater accuracy, speed, and operational excellence.
           </p>
         </div>
 
