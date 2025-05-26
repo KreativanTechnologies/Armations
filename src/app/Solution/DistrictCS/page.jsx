@@ -5,7 +5,7 @@ import DCSContent from '../../../components/DCScomp/DCSContent'
 import HeroSection from '../../../components/DCScomp/HeroSection'
 const page = () => {
   return (
-    <div>
+    <div className=''>
        <HeroSection/>
       <DCSContent/>
       {/* <DCSInfo/> */}

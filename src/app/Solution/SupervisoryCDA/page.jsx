@@ -4,8 +4,7 @@ import ScadaInfo from '../../../components/Supervisory/ScadaInfo.jsx'
 const page = () => {
   return (
     <div>
-      
-      <Banner/>
+      <Banner bgImage={'/images/supervisory/banner.png'} title={"Supervisory control and Data Aquisition"}/>
       <ScadaInfo/>
       </div>
   )
