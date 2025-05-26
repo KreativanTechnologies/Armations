@@ -5,7 +5,6 @@ import NewsStories from "../../components/HomePageComp/NewsStories.jsx";
 import OurAchievements from "../../components/HomePageComp/OurAchievements.jsx";
 import OurMission from "../../components/HomePageComp/OurMission.jsx";
 import Parallax from "../../components/HomePageComp/Parallax.jsx";
-import Parallax2 from "../../components/HomePageComp/Parallex2.jsx";
 import { Zap, Sun } from "lucide-react";
 const heroSectionData = {
   img_Src: "/images/home/bg.png",
@@ -20,7 +19,7 @@ const OurVisionData = {
   btn_Text: "Let's go",
   img_Src: "/om.png",
 };
-const OurMissionData = {
+const ParallaxData = {
   title: "Our Mission",
   desc: "Our end to end smart solutions empower smart industries, smart living and smart enterprises and deliver connecting experiences by connecting assets, operation/ logistics and services.",
   btn_Text: "Learn More About Us",
@@ -38,16 +37,24 @@ const OurMissionData = {
   ],
 };
 
+const ParallaxData2 = {
+  title: "Did You Know?",
+  desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
+  btn_Text: "Learn More",
+  redirectTo: "/About",
+  img_Src: "/om.png",
+  list: [],
+};
 const page = () => {
   return (
     <div className="w-full h-full bg-white flex flex-col gap-4 md:gap-0 ">
       <HeroSection data={heroSectionData} />
       <OurMission data={OurVisionData} />
-      <Parallax data={OurMissionData} />
+      <Parallax data={ParallaxData} />
       <OurAchievements />
       <AtArmation />
       <NewsStories newsData={newsData} />
-      <Parallax2 />
+      <Parallax data={ParallaxData2} />
     </div>
   );
 };
