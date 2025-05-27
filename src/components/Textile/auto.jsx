@@ -45,7 +45,7 @@ const Auto = () => {
               src="/images/about/Textile/Rectangle 32.png"
               alt="Business technology meeting"
               fill
-              className="object-cover"
+              className="object-cover rounded-lg"
               priority
             />
           </div>

@@ -11,18 +11,20 @@ const SecondParallax = () => {
             src="/images/Industryimg/Automationimg/Rectangle 32.png"
             alt="Business technology meeting"
             layout="fill"
-            className="object-cover"
+            className="object-cover rounded-lg"
             priority
           />
         </div>
         
         {/* Text Section */}
-        <div
-          className="w-[85%] lg:w-[55%] bg-white p-6 md:p-8 
-            lg:absolute lg:left-0 lg:top-1/2 lg:transform lg:-translate-y-1/2 
-            lg:-mr-[20%] mt-[-40px] lg:mt-0 z-10 lg:right-[58%]
-            my-4 lg:my-8 lg:ml-[10%]"
-        >
+        <div className="
+            w-full max-w-[90%] sm:max-w-[85%] md:max-w-[75%] 
+            lg:w-[55%] bg-white rounded-lg shadow-lg 
+            p-6 md:p-8 
+            lg:absolute lg:top-1/2 lg:transform lg:-translate-y-1/2 
+            lg:-ml-[20%] mt-4 lg:mt-0 z-10 lg:right-[40%] lg:my-8
+            relative
+          ">
           <div className="space-y-2">
             <h2 className="text-2xl md:text-3xl font-semibold font-Poppins text-black">
               Emergence of Automation in India

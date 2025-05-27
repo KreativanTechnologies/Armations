@@ -15,7 +15,7 @@ const Herobox = () => {
   <Image
     src="/images/Industryimg/Machineimg/Rectangle 113.png"
     alt="Business technology meeting"
-    className="w-[90vw] h-full shadow-md absolute" 
+    className="w-[90vw] h-full shadow-md absolute rounded-lg" 
     width={200}
     height={200}
   />

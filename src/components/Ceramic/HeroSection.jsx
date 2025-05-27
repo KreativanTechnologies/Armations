@@ -11,7 +11,7 @@ const HeroSection = () => {
         <Image
           src="/images/Industryimg/Machineimg/Rectangle 113.png"
           alt="Business technology meeting"
-          className="w-full h-full object-cover absolute top-0 left-0 z-0"
+          className="w-full h-full object-cover absolute top-0 left-0 z-0 rounded-lg"
           width={2000}
           height={550}
         />

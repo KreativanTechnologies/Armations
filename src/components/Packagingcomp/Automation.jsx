@@ -34,7 +34,7 @@ Embrace the future of packaging with our automation solutions. Watch your busine
               src="/images/Industryimg/Packagingimg/Rectangle 32.png"
               alt="Business technology meeting"
               fill
-              className="object-cover"
+              className="object-cover rounded-lg"
               priority
             />
           </div>

@@ -34,7 +34,7 @@ Adopt Aarmation Electric innovative automation solutions and experience a new 
               src="/images/Industryimg/Pharmaimg/Rectangle 32.png"
               alt="Business technology meeting"
               fill
-              className="object-cover"
+              className="object-cover rounded-lg"
               priority
             />
           </div>

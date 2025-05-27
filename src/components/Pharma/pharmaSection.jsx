@@ -8,7 +8,7 @@ const PharmaSection = () => {
         <img
           src="/images/about/Pharma/Rectangle 115.png"
           alt="Pharma Background"
-          className="absolute inset-0 w-[90%] h-full object-cover opacity-90 mx-auto"
+          className="absolute inset-0 w-[90%] h-full object-cover opacity-90 mx-auto rounded-lg"
         />
       </div>
 
@@ -23,24 +23,22 @@ const PharmaSection = () => {
                 src="/images/about/Pharma/Rectangle 31 (1).png"
                 alt="Pharma Industry"
                 fill
-                className="object-cover"
+                className="object-cover rounded-lg"
                 priority
               />
             </div>
 
             {/* Right Text Block */}
-            <div
-              className="
-                bg-white  p-6 md:p-8
-                w-[90%] sm:w-[80%] md:w-[55%] 
-                -mt-10 sm:-mt-12 md:mt-0
-                mx-auto md:mx-0
-                relative md:absolute md:right-0 md:top-1/2 md:transform md:-translate-y-1/2
-                z-20
-              "
-            >
+           <div className="
+            w-full max-w-[90%] sm:max-w-[85%] md:max-w-[75%] 
+            lg:w-[55%] bg-white rounded-lg shadow-lg 
+            p-6 md:p-8 
+            lg:absolute lg:right-0 lg:top-1/2 lg:transform lg:-translate-y-1/2 
+            lg:-ml-[20%] mt-4 lg:mt-0 z-10 lg:left-[58%] lg:my-8
+            relative
+          ">
               <div className="space-y-3 h-full flex flex-col justify-center">
-                <h2 className="text-2xl md:text-3xl font-semibold font-Poppins text-black">
+                <h2 className="text-2xl md:text-3xl font-semibold font-Poppins text-black ">
                   Pharmaceutical Industry
                 </h2>
                 <div className="w-20 h-1 bg-red-500 rounded-lg"></div>
