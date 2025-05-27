@@ -58,7 +58,7 @@ const ScadaInfo = () => {
           </div>
           <div className="w-full md:w-[65%] flex justify-center items-center md:z-50">
             <div className="text-base sm:text-lg md:text-xl font-medium font-poppins text-[#606062] bg-[#F5F5F5] p-4 sm:p-6">
-              Improve efficiency and safety by remotely monitoring your sewage treatment plant with our advanced system. Our state-of-the-art cloud technology offers real-time oversight and control from anywhere. With its intuitive interface, you can track performance in real-time, receive instant alerts, and manage operations seamlessly. Consequently, you will reduce downtime and maintain compliance with regulatory standards by monitoring crucial parameters remotely. Additionally, our reliable remote monitoring solution helps sewage treatment plants optimize maintenance schedules, enhance operational efficiencies, and safeguard environmental health.
+              Many power, electric, and water companies still rely on manual labor for measurements and adjustments. SCADA systems can automate these tasks easily. Automation with SCADA cuts labor costs and reduces measurement errors. The system offers benefits like redundancy adjustments, stable backups, and a secure alarm system. Instead of manual checks, SCADA uses scripts to detect and fix system issues. This prevents outages and quickly resolves any that occur. If an outage happens, SCADA’s distributed database helps workers locate the failure instantly.
             </div>
           </div>
         </div>

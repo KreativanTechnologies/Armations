@@ -15,19 +15,19 @@ const leaders = [
     name: "Engineering and Maintenance Head",
     image: "/images/about/a2.png",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac massa id augue ultricies rhoncus.",
+      "Girish Sharma, a 1987 Electrical Engineering graduate, brings 33 years of expertise in maintenance, utilities, and plant engineering. As our ISO-9001:2015 and ISO 14001 representative, he has overseen engineering and maintenance at Aarmation Electric since 2020.",
   },
   {
     name: "Technical Head",
     image: "/images/about/a3.png",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac massa id augue ultricies rhoncus.",
+      "Jasbir Rehal, with a Bachelor’s in Electronics and Instrumentation Engineering and over a decade of experience at L&T and Delta, has been a crucial technical asset at Aarmation since 2018, supporting and advising our engineering team.",
   },
   {
     name: "HR & Finance",
     image: "/images/about/a4.png",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac massa id augue ultricies rhoncus.",
+      "Rishab Sharma, holding a Bachelor’s in Commerce and an MBA in Finance, is our HR and Finance expert. With over 25 years of experience in finance and compliance at companies like Amtek Auto Ltd. and Castex Technologies, he has strengthened Aarmation Electric since 2022.",
   },
 ];
 
