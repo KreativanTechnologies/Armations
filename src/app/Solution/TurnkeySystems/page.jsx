@@ -25,7 +25,7 @@ const gridData = [
   },
   {
     src: "/images/TurnkeySol/T6.png",
-    title: "Proximity Sensors",
+    title: "Temperature Sensors",
   },
   {
     src: "/images/TurnkeySol/T7.png",
