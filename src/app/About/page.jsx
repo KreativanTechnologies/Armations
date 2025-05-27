@@ -27,7 +27,7 @@ const newsData = [
     id: 1,
     image: "/images/NewsStories/Plug.png",
     date: "March 1, 2025",
-    title: "Web Solution Release",
+    title: "Web Solutions Release",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },
