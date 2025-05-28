@@ -40,7 +40,7 @@ const Footer = () => {
             <div className='flex items-start space-x-3'>
               <MapPin className='w-5 h-5 shrink-0 text-white mt-1' />
               <p className=' text-white text-xl font-normal font-poppins leading-[30px]'>
-                6910 OHIO St. South Gate, CA 90280
+                Mohal Saliana,Khasra No 346, Palampur, Kangra,HP ( 176103 )
               </p>
             </div>
             <div className='flex items-center space-x-3'>
@@ -103,9 +103,7 @@ const Footer = () => {
             Corporate Office
           </h3>
           <p className='text-white text-xl font-normal font-poppins leading-[30px]'>
-            SCO - 698, Upper Ground Block - 2, City Of Dreams - 1, High Ground
-            Road, Girinagar, Nalbas, Punjab (140507), Market Dharma, Amaravila
-            349, Palampui, Kangra, HP (176102)
+            SCO – 69B, Upper Ground Block – 2, City Of Dreams -1, High Ground Road, Zirakpur,Nabha, Punjab (140603)
           </p>
         </div>
       </div>
