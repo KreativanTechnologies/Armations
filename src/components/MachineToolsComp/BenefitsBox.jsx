@@ -31,7 +31,7 @@ const BenefitsBox = () => {
                 alt="Benefit Icon"
                 width={48}
                 height={48}
-                className="object-contain"
+                className="object-contain rounded-lg"
               />
             </div>
             <p className="text-sm md:text-base">{benefit.text}</p>

@@ -12,7 +12,7 @@ const FirstParallax = () => {
               src="/images/Industryimg/Automationimg/Rectangle 31.png"
               alt="Business technology meeting"
               fill
-              className="object-cover"
+              className="object-cover rounded-lg"
               priority
             />
           </div>
@@ -20,10 +20,11 @@ const FirstParallax = () => {
           {/* Text Section */}
           <div className="
             w-full max-w-[90%] sm:max-w-[85%] md:max-w-[75%] 
-            lg:w-[55%] bg-white 
+            lg:w-[55%] bg-white rounded-lg shadow-lg 
             p-6 md:p-8 
             lg:absolute lg:right-0 lg:top-1/2 lg:transform lg:-translate-y-1/2 
-            lg:-ml-[20%] mt-[-40px] lg:mt-0 z-10 lg:left-[58%] my-4 lg:my-8
+            lg:-ml-[20%] mt-4 lg:mt-0 z-10 lg:left-[58%] lg:my-8
+            relative
           ">
             <div className="space-y-2">
               <h2 className="text-2xl md:text-3xl font-semibold font-Poppins text-black">The Growing Landscape of the Automation<br></br>Industry in India</h2>
