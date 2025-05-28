@@ -12,6 +12,7 @@ const page = () => {
         <AboutHero/>
         {/* <OurStory/> */}
         <OurLeadership/>
+        
         <HowWeWork/>
         <SolutionWeProvide/>
         <NewsStories newsData={newsData}/>
