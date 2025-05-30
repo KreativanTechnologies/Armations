@@ -1,4 +1,3 @@
-import React from 'react'
 import HeroSection from '../../../components/Ceramic/HeroSection'
 import Section from  '../../../components/Textile/section.jsx'
 import NewsStories from '../../../components/HomePageComp/NewsStories.jsx'

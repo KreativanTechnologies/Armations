@@ -1,21 +1,12 @@
-
-
-
-
 "use client"
-
 import { Search, Globe, Mail, Menu, X, ChevronDown } from "lucide-react"
 import { useState, useCallback, useMemo } from "react"
 import Image from "next/image"
-
-// Constants
 const NAVIGATION_ITEMS = [
   { name: "Home", href: "/Home" },
   { name: "About", href: "/About" },
-  // { name: "Product", href: "#" },
   {
     name: "Solutions",
-    // href: "/Solution",
     hasDropdown: true,
     submenu: [
        { name: "Customized Solutions", href: "/Solution/CustomizedSolutions" },
@@ -31,7 +22,6 @@ const NAVIGATION_ITEMS = [
   },
   {
     name: "Industries",
-    // href: "Industry",
     hasDropdown: true,
     submenu: [
       { name: "Textile Industry", href: "/Industry/Textile" },
@@ -57,7 +47,6 @@ const STYLES = {
   iconButton: "p-2 hover:text-red-400 transition-colors duration-200",
 }
 
-// Components
 const Logo = () => (
   <div className="flex items-center">
     <Image
@@ -163,7 +152,7 @@ export default function Navbar() {
       {/* Optional overlay for better text readability */}
       <div className="absolute inset-0 bg-black/60"></div>
 
-      <div className="max-w-7xl mx-auto flex items-center justify-between relative z-10">
+      <div className="max-w-7xl mx-auto flex items-center justify-between relative z-20">
         <Logo />
 
         {/* Desktop Navigation */}
@@ -197,7 +186,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden mt-4 pb-4 relative z-10">
+        <div className="lg:hidden mt-4 pb-4 relative z-20">
           <div className="flex flex-col space-y-2">
             {navigationItems.map((item) => (
               <NavigationItem

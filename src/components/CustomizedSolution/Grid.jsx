@@ -2,45 +2,49 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-export default function GridGallery({data}) {
+export default function GridGallery({ data }) {
   const [visibleIndexes, setVisibleIndexes] = useState({});
-  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
-  const [showCursor, setShowCursor] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const toggleOverlay = (index) => {
-    setVisibleIndexes((prev) => ({
-      ...prev,
-      [index]: !prev[index],
-    }));
+    if (isMobile) {
+      setVisibleIndexes((prev) => ({
+        ...prev,
+        [index]: !prev[index],
+      }));
+    }
+  };
+
+  const handleMouseEnter = (index) => {
+    if (!isMobile) {
+      setVisibleIndexes((prev) => ({
+        ...prev,
+        [index]: true,
+      }));
+    }
+  };
+
+  const handleMouseLeave = (index) => {
+    if (!isMobile) {
+      setVisibleIndexes((prev) => ({
+        ...prev,
+        [index]: false,
+      }));
+    }
   };
 
   useEffect(() => {
-    const moveCursor = (e) => {
-      setCursorPos({ x: e.clientX, y: e.clientY });
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
     };
 
-    window.addEventListener("mousemove", moveCursor);
-    return () => window.removeEventListener("mousemove", moveCursor);
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
     <div className="relative">
-      {/* Custom Cursor */}
-      {showCursor && (
-        <div
-          className="fixed z-50 pointer-events-none text-white bg-black p-2 text-xs rounded-full hidden md:flex"
-          style={{
-            left: cursorPos.x,
-            top: cursorPos.y,
-            transition: "transform 0.05s ease",
-            transform: "translate(-50%, -50%)",
-            whiteSpace: "nowrap",
-          }}
-        >
-          click
-        </div>
-      )}
-
       {/* Grid */}
       <div className="container mx-auto px-8 py-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-[3vw]">
@@ -49,8 +53,8 @@ export default function GridGallery({data}) {
               key={index}
               className="relative bg-white shadow-2xl drop-shadow-lg rounded-[2vw] overflow-hidden cursor-pointer md:h-[70vh] flex items-center justify-center"
               onClick={() => toggleOverlay(index)}
-              onMouseEnter={() => setShowCursor(true)}
-              onMouseLeave={() => setShowCursor(false)}
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={() => handleMouseLeave(index)}
             >
               {!visibleIndexes[index] ? (
                 <Image

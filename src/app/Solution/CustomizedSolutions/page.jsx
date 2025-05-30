@@ -33,22 +33,22 @@ const gridData = [
   {
     src: "/images/Sensors/S1.webp",
     title: "Data monitoring and controlling of a machine/process.",
-    desc: "This system monitors and controls industrial processes efficiently.",
+    desc: "Data monitoring and control are critical components in the automation of any machine or process. At AEPL, we specialize in implementing smart monitoring and control systems that ensure real-time visibility, efficiency, and reliability of operations. Using advanced sensors, flow meters, level sensors, and analyzers, we continuously track key performance parameters such as pressure, flow, level, temperature, and quality..",
   },
   {
     src: "/images/Sensors/S2.webp",
     title: "Fully automated system with instrumentation and IOT",
-    desc: "Advanced automation using IoT sensors for real-time operations.",
+    desc: "A fully automated system integrated with advanced instrumentation and IoT (Internet of Things) forms the backbone of modern, intelligent operations. At AEPL, we design and deploy such systems to eliminate manual intervention, enhance efficiency, and enable real-time decision-making across various sectors..",
   },
   {
     src: "/images/Sensors/S8.webp",
     title: "Dust controller system",
-    desc: "Keeps dust levels low using sensor-triggered systems.",
+    desc: "A Dust Controller System is an essential solution for managing and minimizing airborne dust particles in industrial and construction environments. At AEPL, we design and implement fully automated dust suppression systems that ensure cleaner, safer, and more compliant workspaces.",
   },
   {
     src: "/images/Sensors/S4.webp",
     title: "Monitoring of DC voltage and tanks",
-    desc: "Tracks voltage and fluid levels using precision sensors.",
+    desc: "Monitoring DC voltage and tank levels is crucial for ensuring the safety, reliability, and efficiency of automated systems. At AEPL, we provide advanced solutions that enable real-time tracking and control of both electrical and fluid parameters using precision instrumentation and IoT integration.",
   },
 ];
 
