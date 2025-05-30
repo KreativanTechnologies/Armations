@@ -18,40 +18,33 @@ export default page
 const newsData = [
   {
     id: 1,
-    image: "/images/NewsStories/Plug.png",
+    image: "/images/blog/lc.jpg",
     date: "March 1, 2025",
-    title: "Web Solution Release",
+    title: "Understanding Logic Controllers: The Heart of Industrial Automation",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "A logic controller is an electronic device that uses programmed instructions to control machinery and processes in industrial settings. Originally developed to replace relay-based control systems, PLCs are now central to automation in manufacturing, assembly lines, and process control. ",
   },
   {
     id: 2,
     image: "/images/NewsStories/Operator.png",
     date: "March 1, 2025",
-    title: "Web Solution Release",
+    title: "Understanding Industrial Sensors: The Backbone of Modern Automation",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "In today’s fast-paced industrial environment, automation and precision are paramount. At the heart of this technological revolution lie industrial sensors, essential devices that monitor and measure various parameters in manufacturing processes.",
   },
   {
     id: 3,
-    image: "/images/NewsStories/Plug.png",
+    image: "/images/blog/iot.png",
     date: "March 1, 2025",
-    title: "Web Solution Release",
+    title: "IoT Experts: Your Guide to Navigating the Industrial Revolution",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "The Internet of Things is changing the industrialization process completely by connecting billions of devices through sensors, software, and network connectivity. All these devices make it easy to collect data and analyze, making it easy to bring major changes into the industrialization process.",
   },
   {
     id: 4,
-    image: "/images/NewsStories/Operator.png",
+    image: "/images/blog/ti.png",
     date: "March 2, 2025",
-    title: "New Tech Launch",
-    description: "The latest tech innovation is here. Discover what’s new!",
-  },
-  {
-    id: 5,
-    image: "/images/NewsStories/Plug.png",
-    date: "March 3, 2025",
-    title: "AI Breakthrough",
-    description: "Artificial Intelligence is evolving faster than ever before.",
+    title: "Transforming Industries with SCADA Innovation",
+    description: "Role of SCADA in Automation with rapid changes in electrical systems, monitoring and controlling these systems quickly is crucial. SCADA, or Supervisory Control and Data Acquisition, plays an irreplaceable role here. As an innovative electrical company, we proudly offer modern SCADA systems. These systems facilitate operations, improve safety, and promote sector development.",
   },
 ];
