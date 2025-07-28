@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const HeroSection = ({ data }) => {
   return (
-    <div className="w-full h-[90vh] relative flex items-center justify-center bg-black/60">
+    <div className="w-full h-[70vh] relative flex items-center justify-center bg-black/60">
       <div className="w-full h-full relative">
         <Image
           src={data.img_Src}
