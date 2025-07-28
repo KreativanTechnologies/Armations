@@ -2,7 +2,7 @@ import React from "react";
 
 const AtArmation = () => {
   return (
-    <div className="bg-gray-100 w-full h-screen py-[8vw] flex px-6 md:px-[7vw]">
+    <div className="bg-gray-100 w-full h-screen py-[8vw] flex px-6 md:px-[6vw]">
       <div className="w-full h-full flex flex-col md:flex-row gap-6 md:gap-0">
         <div className="w-full h-full text-slate-600 flex flex-col justify-center pr-[10vw] font-normal">
           <h1 className="text-xl md:text-4xl font-bold text-black">
