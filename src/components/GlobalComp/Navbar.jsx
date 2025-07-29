@@ -61,6 +61,7 @@ const Logo = () => (
   </div>
 )
 
+
 const IconButton = ({ icon: Icon, onClick, ariaLabel }) => (
   <button className={STYLES.iconButton} onClick={onClick} aria-label={ariaLabel}>
     <Icon className="w-5 h-5" />
