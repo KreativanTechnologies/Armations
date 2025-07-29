@@ -65,7 +65,7 @@ export default function GridGallery({ data }) {
                   className="object-center object-contain"
                 />
               ) : (
-                <div className="w-full h-full bg-red-500 flex flex-col justify-center items-center text-white text-center p-4 md:p-[2vw]">
+                <div className="w-full h-full bg-[#232323] flex flex-col justify-center items-center text-white text-center p-4 md:p-[2vw]">
                   <h3 className="text-lg md:text-[2vw] font-bold mb-2">
                     {item.title}
                   </h3>

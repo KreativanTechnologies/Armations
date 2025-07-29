@@ -12,7 +12,7 @@ const ProductsCard = ({ data }) => {
           <div className="w-full md:w-1/2 px-4 md:px-[3vw]">
             <div
               className={`flex w-full h-full flex-col items-center text-white justify-center gap-4 p-6 md:p-[2vw] text-center rounded-[2vw] ${
-                index % 2 === 0 ? 'bg-red-500' : 'bg-black'
+                index % 2 === 0 ? 'bg-gray-400' : 'bg-gray-900'
               }`}
             >
               <h1 className="text-xl md:text-[2vw] font-semibold">
