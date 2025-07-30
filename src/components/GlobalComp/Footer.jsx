@@ -8,19 +8,21 @@ import {
   Linkedin,
   Youtube,
 } from "lucide-react";
-import whiteLogo from "../../assets/navbar/whiteLogo.png";
+// import whiteLogo from "/../public/images/logo.png";
 import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className='bg-[#606062] text-white'>
+    <footer className='bg-[#232323] text-white'>
       {/* Main Footer Content */}
       <div className='max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
         {/* Company Info */}
         <div>
           <Image
-            src={whiteLogo}
-            className='max-w-[229.85px] h-24 text-red-600 object-contain'
+      src="/images/logo.png"
+      width={200}
+      height={60}
+            // className='max-w-[229.85px] h-24  object-contain'
             alt='logo'
           />
 
