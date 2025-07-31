@@ -42,7 +42,7 @@ const OurLeadership = () => {
   };
 
   return (
-    <section className="pt-[170vw] md:pt-60 lg:pt-30 px-4 md:px-16 bg-gray-100 text-center">
+    <section className="pt-[270vw] md:pt-90 lg:pt-42 px-4 md:px-16 bg-gray-100 text-center">
       <h2 className="text-4xl font-bold text-gray-900">
         Our <span className="text-red-600">Leadership</span>
       </h2>

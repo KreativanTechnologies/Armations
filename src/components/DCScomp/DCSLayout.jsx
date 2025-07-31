@@ -8,7 +8,7 @@ const DCSLayout = () => {
       <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#00a651] font-poppins mb-6">
         Basic Layout of DCS Connected with Industrial Sensor & Equipment
       </h2>
-      <div className="w-full max-w-5xl rounded-xl overflow-hidden shadow-lg">
+      <div className="w-full max-w-5xl  rounded-xl overflow-hidden shadow-lg">
         <Image
           src={DCSLayoutImage}
           alt="Basic Layout of DCS"
