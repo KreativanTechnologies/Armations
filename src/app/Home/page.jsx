@@ -105,8 +105,8 @@ import OurAchievements from "../../components/HomePageComp/OurAchievements.jsx";
 import OurMission from "../../components/HomePageComp/OurMission.jsx";
 import Parallax from "../../components/HomePageComp/Parallax.jsx";
 import { Zap, Sun } from "lucide-react";
-import ChatBotWidget from "../../components/Chatbot/ChatBotWidget.jsx"; // ✅ Import chatbot
-import Slider from "../../components/HomePageComp/Slider.jsx"; // Import Slider component
+import ChatBotWidget from "../../components/Chatbot/ChatBotWidget.jsx"; 
+import Slider from "../../components/HomePageComp/Slider.jsx"; 
 const heroSectionData = {
   img_Src: "/images/home/bg.png",
   title: "Aarmation Electric",
@@ -180,35 +180,35 @@ const newsData = [
 const sliderData = [
 
   {
-    img_Src: "http://localhost:3000/_next/image/?url=%2Fimages%2Fabout%2Fa2.png&w=2048&q=75",
+    img_Src: "/images/about/a2.png",
     alt: "1",
     author: "Bob Williams",
     desc: "Tech enthusiast and blogger, sharing insights on web development.",
     href: "#",
   },
   {
-    img_Src: "http://localhost:3000/_next/image/?url=%2Fimages%2Fabout%2Fa2.png&w=2048&q=75",
+    img_Src: "/images/about/a2.png",
     alt: "2",
     author: "Charlie Brown",
     desc: "Illustrator and storyteller, bringing characters to life with vibrant art.",
     href: "#",
   },
   {
-    img_Src: "http://localhost:3000/_next/image/?url=%2Fimages%2Fabout%2Fa2.png&w=2048&q=75",
+    img_Src: "/images/about/a2.png",
     alt: "3",
     author: "Diana Miller",
     desc: "Food critic and chef, reviewing the finest culinary experiences.",
     href: "#",
   },
   {
-    img_Src: "http://localhost:3000/_next/image/?url=%2Fimages%2Fabout%2Fa2.png&w=2048&q=75",
+    img_Src: "/images/about/a2.png",
     alt: "4",
     author: "Ethan Davis",
     desc: "Travel photographer, capturing breathtaking landscapes worldwide.",
     href: "#",
   },
   {
-    img_Src: "http://localhost:3000/_next/image/?url=%2Fimages%2Fabout%2Fa2.png&w=2048&q=75",
+    img_Src: "/images/about/a2.png",
     alt: "5",
     author: "Fiona Green",
     desc: "Environmental activist and author, advocating for sustainable living.",
