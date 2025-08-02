@@ -40,12 +40,12 @@ const NAVIGATION_ITEMS = [
 
 const STYLES = {
   navLink:
-    "text-white hover:text-red-400 transition-all duration-200 text-sm pb-1 border-b-2 border-transparent hover:border-red-500 flex items-center gap-1",
+    "text-white hover:text-gray-600 transition-all duration-200 text-sm pb-1 border-b-2 border-transparent hover:border-gray-500 flex items-center gap-1",
   mobileNavLink:
-    "block px-4 py-3 text-white hover:text-red-400 transition-colors duration-200 border border-red-600 rounded-md hover:border-red-400 text-center flex items-center justify-center gap-1",
-  submenuLink: "block px-4 py-2 text-sm text-white hover:text-red-400 hover:bg-gray-900 transition-colors duration-200",
-  dropdown: "bg-black/90 backdrop-blur-sm border border-red-600 rounded-lg shadow-lg",
-  iconButton: "p-2 hover:text-red-400 transition-colors duration-200",
+    "block px-4 py-3 text-white hover:text-gray-600 transition-colors duration-200 border border-gray-600 rounded-md hover:border-gray-400 text-center flex items-center justify-center gap-1",
+  submenuLink: "block px-4 py-2 text-sm text-white hover:text-gray-600 hover:bg-gray-900 transition-colors duration-200",
+  dropdown: "bg-black/90 backdrop-blur-sm border border-gray-600 rounded-lg shadow-lg",
+  iconButton: "p-2 hover:text-gray-400 transition-colors duration-200",
 }
 
 const Logo = () => (
@@ -149,7 +149,7 @@ export default function TransparentNavbar() {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center">
-          <div className="border border-red-600 rounded-full px-6 py-2 flex items-center space-x-6 bg-black/70 backdrop-blur-md">
+          <div className="border border-red-400 rounded-full px-6 py-2 flex items-center space-x-6 bg-black/70 backdrop-blur-md">
             {navigationItems.map((item) => (
               <NavigationItem
                 key={item.name}
