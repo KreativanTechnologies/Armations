@@ -139,7 +139,7 @@ const ChatBotWidget = () => {
                   <button
                     key={idx}
                     onClick={() => sendMessage(q)}
-                    className="bg-gray-200 hover:bg-gray-300 text-xs px-2 py-1 rounded-lg transition"
+                    className="bg-gray-200 hover:bg-gray-300 text-black text-xs px-2 py-1 rounded-lg transition"
                   >
                     {q}
                   </button>
@@ -162,7 +162,7 @@ const ChatBotWidget = () => {
               <div className="p-2 border-t flex items-center gap-2">
                 <input
                   type="text"
-                  className="flex-1 border rounded-lg px-3 py-2 text-sm outline-none"
+                  className="flex-1 border rounded-lg px-3 py-2 text-black text-sm outline-none"
                   placeholder="Type a message..."
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
@@ -170,7 +170,7 @@ const ChatBotWidget = () => {
                 />
                 <button
                   onClick={() => sendMessage(input)}
-                  className="bg-red-500 hover:bg-red-600 text-white p-2 rounded-lg shadow"
+                  className="bg-gradient-to-r from-red-500 to-pink-500 hover:bg-red-600 text-white p-2 rounded-lg shadow"
                 >
                   <Send size={18} />
                 </button>
@@ -182,7 +182,7 @@ const ChatBotWidget = () => {
           {mode === "feedback" && (
             <div className="flex-1 flex flex-col p-3">
               <textarea
-                className="border rounded-lg p-3 text-sm flex-1 outline-none resize-none shadow-inner"
+                className="border rounded-lg p-3 text-black text-sm flex-1 outline-none resize-none shadow-inner"
                 placeholder="Write your feedback here..."
                 value={feedback}
                 onChange={(e) => setFeedback(e.target.value)}

@@ -13,15 +13,10 @@
     "lucide-react": "^0.483.0",
     "next": "^15.2.3",
     "react": "^19.1.0",
-    "react-chat-widget": "^3.1.4",
     "react-dom": "^19.1.0",
     "react-intersection-observer": "^9.16.0",
-<<<<<<< HEAD
-    "react-chatbot-kit": "^1"
-=======
     "react-tsparticles": "^2.12.0",
     "tsparticles": "^2.12.0"
->>>>>>> 8778ceca450477a43b0d6b61d71ea799f25937fc
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
