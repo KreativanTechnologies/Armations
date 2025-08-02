@@ -145,7 +145,7 @@ const Slider = ({ isImgSlider = false, isCardSlider = false, data }) => {
                           <img
                             alt={data.alt || "Card image"}
                             className="w-full h-full object-cover"
-                            src={data.img_Src || "/images/about/a2.png"}
+                            src={data.img_Src || "/placeholder.svg?height=100&width=200&query=card%20image"}
                           />
                         </div>
                       </Link>
@@ -154,7 +154,7 @@ const Slider = ({ isImgSlider = false, isCardSlider = false, data }) => {
                         <img
                           alt={data.alt || "Card image"}
                           className="w-full h-full object-cover"
-                          src={data.img_Src || "/images/about/a2.png"}
+                          src={data.img_Src || "/placeholder.svg?height=100&width=200&query=card%20image"}
                         />
                       </div>
                     )}
