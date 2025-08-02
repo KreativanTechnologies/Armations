@@ -106,7 +106,7 @@ import OurMission from "../../components/HomePageComp/OurMission.jsx";
 import Parallax from "../../components/HomePageComp/Parallax.jsx";
 import { Zap, Sun } from "lucide-react";
 import ChatBotWidget from "../../components/Chatbot/ChatBotWidget.jsx"; // ✅ Import chatbot
-
+import Slider from "../../components/HomePageComp/Slider.jsx"; // Import Slider component
 const heroSectionData = {
   img_Src: "/images/home/bg.png",
   title: "Aarmation Electric",
@@ -177,18 +177,59 @@ const newsData = [
   },
 ];
 
+const sliderData = [
+
+  {
+    img_Src: "http://localhost:3000/_next/image/?url=%2Fimages%2Fabout%2Fa2.png&w=2048&q=75",
+    alt: "1",
+    author: "Bob Williams",
+    desc: "Tech enthusiast and blogger, sharing insights on web development.",
+    href: "#",
+  },
+  {
+    img_Src: "http://localhost:3000/_next/image/?url=%2Fimages%2Fabout%2Fa2.png&w=2048&q=75",
+    alt: "2",
+    author: "Charlie Brown",
+    desc: "Illustrator and storyteller, bringing characters to life with vibrant art.",
+    href: "#",
+  },
+  {
+    img_Src: "http://localhost:3000/_next/image/?url=%2Fimages%2Fabout%2Fa2.png&w=2048&q=75",
+    alt: "3",
+    author: "Diana Miller",
+    desc: "Food critic and chef, reviewing the finest culinary experiences.",
+    href: "#",
+  },
+  {
+    img_Src: "http://localhost:3000/_next/image/?url=%2Fimages%2Fabout%2Fa2.png&w=2048&q=75",
+    alt: "4",
+    author: "Ethan Davis",
+    desc: "Travel photographer, capturing breathtaking landscapes worldwide.",
+    href: "#",
+  },
+  {
+    img_Src: "http://localhost:3000/_next/image/?url=%2Fimages%2Fabout%2Fa2.png&w=2048&q=75",
+    alt: "5",
+    author: "Fiona Green",
+    desc: "Environmental activist and author, advocating for sustainable living.",
+    href: "#",
+  },
+
+]
+
 export default function Page() {
   return (
     <div className="w-full h-full bg-white flex flex-col gap-4 md:gap-0 ">
       <HeroSection data={heroSectionData} />
       <OurMission data={OurVisionData} />
       <Parallax data={ParallaxData} />
-      <OurAchievements />
+      <Slider data={sliderData} />
       <AtArmation />
       <NewsStories newsData={newsData} />
+      <OurAchievements />
+
       <Parallax data={ParallaxData2} />
 
-      {/* ✅ Floating Chatbot */}
       <ChatBotWidget />
     </div>
   );

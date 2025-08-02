@@ -30,7 +30,7 @@ const NewsStories = ({ newsData = [], defaultRows = 1 }) => {
           {newsData.slice(0, itemsToShow).map((news) => (
             <div
               key={news.id}
-              className="bg-transparent overflow-hidden hover:border-b-4 border-b-amber-600 hover:scale-110 duration-2000 hover:z-10 rounded-2xl"
+              className="bg-transparent overflow-hidden hover:border-b-4 border-b-red-600 hover:scale-110 duration-2000 hover:z-10 rounded-2xl"
             >
               <div className="relative w-full h-60 rounded-2xl overflow-hidden">
                 <img

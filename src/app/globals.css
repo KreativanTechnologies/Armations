@@ -30,97 +30,16 @@ body {
   background-position: center;
 }
 
-
-
-
-/* fonts */
-@font-face {
-  font-family: 'arialBold';
-  src: url('/fonts/Arial-BoldMT.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+* {
+  font-family: sans-serif;
 }
 
-@font-face {
-  font-family: 'faBrand';
-  src: url('/fonts/fa-brands-400.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+button {
+  font-family: inherit;
 }
 
-@font-face {
-  font-family: 'faLight';
-  src: url('/fonts/fa-light-300.woff2') format('woff2');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'faRegular';
-  src: url('/fonts/fa-regular-400.woff2') format('woff2');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'faSolid';
-  src: url('/fonts/fa-solid-900.woff2') format('woff2');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'jazminLight';
-  src: url('/fonts/Jazmin-Light.woff2') format('woff2');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'jazminMedium';
-  src: url('/fonts/Jazmin-Medium.woff2') format('woff2');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'jazminRegular';
-  src: url('/fonts/Jazmin-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'memv1';
-  src: url('/fonts/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2') format('woff2');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'memv2';
-  src: url('/fonts/RWmPoKKX6u8sp8fIWdnDKqDSroEH.woff2') format('woff2');
-  font-weight: 500;
-  font-display: swap;
-}
-
-*{
-  font-family: 'memv2';
-}
-button{
-  font-family: 'jazminMedium';
-}
-h1{
-  font-family: 'jazminRegular';
+h1 {
+  font-family: inherit;
 }
 
 @theme {
