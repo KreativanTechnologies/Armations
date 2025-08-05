@@ -1,11 +1,11 @@
 "use client"
 
-import { Search, Globe, Mail, Menu, X, ChevronDown } from "lucide-react"
+import { Search, HandHeart, Mail, Menu, X, ChevronDown } from "lucide-react"
 import { useState, useCallback, useMemo } from "react"
 import Image from "next/image"
 import { motion } from "framer-motion" 
 import { SEARCHABLE_TOPICS } from "../searchdata"
-
+import Link from "next/link"
 const NAVIGATION_ITEMS = [
   { name: "Home", href: "/Home" },
   { name: "About", href: "/About" },
@@ -43,13 +43,13 @@ const NAVIGATION_ITEMS = [
 
 const STYLES = {
   navLink:
-    "text-white hover:text-gray-400 transition-all duration-200 text-md pb-1 border-b-2 border-transparent hover:border-gray-500 flex items-center gap-1",
+    "text-white hover:text-[#00bfff] transition-all duration-200 text-md pb-1 border-b-2 border-transparent hover:border-gray-500 flex items-center gap-1",
   mobileNavLink:
     "block px-4 py-3 text-white hover:text-gray-600 transition-colors duration-200 border border-gray-600 rounded-md hover:border-gray-400 text-center flex items-center justify-center gap-1",
   submenuLink:
-    "block px-4 py-2 text-md text-white hover:text-gray-900 hover:bg-gray-500 transition-colors duration-200",
+    "block px-4 py-2 text-md text-[#f5f5f5] hover:text-[#00bfff] hover:bg-[#3a3a3a] transition-colors duration-200",
   dropdown: "bg-black/90 backdrop-blur-sm border border-gray-600 rounded-lg shadow-lg",
-  iconButton: "p-2 hover:text-gray-400 transition-colors duration-200",
+  iconButton: "p-2 hover:text-[#00bfff] transition-colors duration-200",
   searchInput: "w-full bg-transparent text-white placeholder-gray-400 focus:outline-none",
   searchResultsContainer:
     "absolute top-full left-0 right-0 mt-1 bg-black/90 backdrop-blur-sm border border-gray-600 rounded-lg shadow-lg max-h-60 overflow-y-auto z-50",
@@ -262,8 +262,10 @@ export default function TransparentNavbar() {
             onClick={toggleSearch}
             ariaLabel={isSearchOpen ? "Close search" : "Open search"}
           />
-          <IconButton icon={Globe} ariaLabel="Language" />
-          <IconButton icon={Mail} ariaLabel="Contact" />
+          <IconButton icon={HandHeart} ariaLabel="Language" />
+                          <Link href="/ContactUs">
+                            <IconButton icon={Mail} ariaLabel="Contact" />
+                          </Link>
           <div className="lg:hidden">
             <IconButton
               icon={isMobileMenuOpen ? X : Menu}

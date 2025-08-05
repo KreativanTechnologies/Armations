@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-
+import Link from "next/link";
 const Parallax = ({ data }) => {
   const router = useRouter();
   return (
@@ -27,13 +27,13 @@ const Parallax = ({ data }) => {
         >
           <div className="space-y-2">
             <div className="space-y-2">
-              <h2 className="text-2xl md:text-3xl font-semibold font-Poppins text-black">
+              <h2 className="text-3xl md:text-4xl font-semibold font-Poppins text-black">
                 {data.title}
               </h2>
               <div className="w-24 h-1 bg-red-500"></div>
             </div>
 
-            <p className="text-[#606062] text-lg font-Poppins font-medium md:text-base leading-relaxed">
+            <p className="text-gray-700 text-lg   leading-relaxed">
               {data.desc}
             </p>
             {data.list && (
@@ -43,7 +43,7 @@ const Parallax = ({ data }) => {
                     <div className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-red-50">
                       <item.icon className="w-4 h-4 md:w-5 md:h-5 text-red-500" />
                     </div>
-                    <span className="text-[#606062] font-medium text-lg md:text-base">
+                    <span className="text-gray-700 font-medium text-lg md:text-base">
                       {item.text}
                     </span>
                   </div>
@@ -52,12 +52,13 @@ const Parallax = ({ data }) => {
             )}
 
             <div className="">
-              <button
-                onClick={() => router.push(data.redirectTo)}
-                className="px-4 py-2 cursor-pointer rounded-full border-2 border-red-500 text-black text-[15px] font-normal hover:bg-red-500 hover:text-white transition-colors duration-200"
-              >
-                {data.btn_Text}
-              </button>
+              <Link href="/ContactUs">
+                <button
+                  className="px-4 py-2 cursor-pointer rounded-full border-2 border-red-500 text-black text-[15px] font-normal hover:bg-red-500 hover:text-white transition-colors duration-200"
+                >
+                  {data.btn_Text}
+                </button>
+              </Link>
             </div>
           </div>
         </div>

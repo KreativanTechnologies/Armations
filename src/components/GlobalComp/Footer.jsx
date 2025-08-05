@@ -3,7 +3,7 @@
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Youtube } from "lucide-react"
 import Image from "next/image"
 import { useState, useEffect } from "react"
-
+import Link from "next/link"
 const Footer = () => {
   const [isVisible, setIsVisible] = useState(false)
 
@@ -31,9 +31,11 @@ const Footer = () => {
             Ready to power your plant with SCADA?
           </h1>
           <p className="mt-4 text-base font-bold sm:text-lg md:text-xl">Let{"'"}s transform your operations today.</p>
-          <button className="mt-8 rounded-full border-2 border-white bg-transparent px-8 py-3 text-lg font-medium text-white transition-all duration-300 hover:bg-white hover:text-black hover:shadow-lg">
-            Discover Now
-          </button>
+          <Link href="/ContactUs">
+            <button className="mt-8 rounded-full border-2 cursor-pointer border-white bg-transparent px-8 py-3 text-lg font-medium text-white transition-all duration-300 hover:bg-white hover:text-black hover:shadow-lg">
+              Discover Now
+            </button>
+          </Link>
         </div>
       </section>
       <footer className="bg-[#1c1c1c] text-white">
@@ -61,7 +63,7 @@ const Footer = () => {
             </h3>
             <div className="space-y-3">
               <div className="flex items-start space-x-3 group">
-                <Mail className="h-5 w-5 text-white transition-transform duration-200 group-hover:animate-bounce" />
+                <Mail className="h-5 w-5 text-white transition-transform duration-200 group-hover:animate-spin" />
                 <a
                   href="mailto:info@aarmationelectric.com"
                   className="font-poppins text-lg font-normal leading-[26px] text-white transition-all duration-200 hover:text-blue-300 hover:scale-[1.02] hover:underline hover:underline-offset-4 hover:decoration-2"
@@ -70,7 +72,7 @@ const Footer = () => {
                 </a>
               </div>
               <div className="flex items-start space-x-3 group">
-                <Phone className="h-5 w-5 text-white transition-transform duration-200 group-hover:animate-bounce" />
+                <Phone className="h-5 w-5 text-white transition-transform duration-200 group-hover:animate-spin" />
                 <a
                   href="tel:+91 78140 00888"
                   className="font-poppins text-lg font-normal leading-[26px] text-white transition-all duration-200 hover:text-blue-300 hover:scale-[1.02] hover:underline hover:underline-offset-4 hover:decoration-2"
@@ -119,8 +121,8 @@ const Footer = () => {
               <p className="font-poppins text-lg font-normal leading-[26px] text-white transition-all duration-200 hover:brightness-125">
                 SCO - 69b, City Of Dreams - 1, High Ground Road, Zirakpur, Punjab (140603)
               </p>
-              <div className="flex items-start space-x-3 group">
-                <MapPin className="mt-1 h-5 w-5 shrink-0 text-white transition-transform duration-200 group-hover:animate-bounce" />
+              <div className="flex items-start space-x-3  group ">
+                <MapPin className="mt-1 h-5 w-5 shrink-0 text-white  transition-transform duration-200 group-hover:animate-spin" />
                 <p className="font-poppins text-lg font-normal leading-[26px] text-white transition-all duration-200 hover:text-blue-300 hover:scale-[1.02] hover:underline hover:underline-offset-4 hover:decoration-2">
                   Mohal Saliana,Khasra No 346, Palampur, Kangra,HP ( 176103 )
                 </p>

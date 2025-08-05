@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 const OurMission = ({ data }) => {
   return (
     <div className="h-full flex md:pl-20 flex-col-reverse md:flex-row items-center justify-between w-full overflow-hidden px-6 md:px-0 gap-4 md:gap-0">
@@ -9,12 +10,14 @@ const OurMission = ({ data }) => {
           {data.title}
           <div className="w-28 h-1 bg-red-500"></div>
         </h1>
-        <p className="text-lg text-black leading-relaxed">{data.desc}</p>
+        <p className="text-lg text-gray-700 leading-relaxed">{data.desc}</p>
         <div className="w-full text-black md:w-1/2">
           {data.btn_Text && (
-            <button className="rounded-full px-10 py-3 text-base border cursor-pointer border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-colors">
-              {data.btn_Text}
-            </button>
+            <Link href="/ContactUs">
+              <button className="rounded-full px-10 py-3 text-base border cursor-pointer border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-colors">
+                {data.btn_Text}
+              </button>
+            </Link>
           )}
         </div>
       </div>
