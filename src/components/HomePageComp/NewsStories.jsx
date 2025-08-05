@@ -41,7 +41,7 @@ const NewsStories = ({ newsData = [], defaultRows = 1 }) => {
                 />
               </div>
               <div className="p-4">
-                <p className="text-gray-500 text-sm">{news.title} {news.date}</p>
+                <p className="text-gray-800 text-md">{news.title} {news.date}</p>
                 <h3 className="font-semibold text-lg mt-2">{news.description}</h3>
               </div>
             </div>
