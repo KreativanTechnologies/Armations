@@ -1,10 +1,19 @@
 "use client"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { ChevronRight, ChevronLeft } from "lucide-react" 
 
 const Slider = ({ isImgSlider = false, isCardSlider = false, data }) => {
   const [current, setCurrent] = useState(1)
+
+  // Auto-move slider every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent(prev => prev === data.length - 1 ? 0 : prev + 1)
+    }, 3000)
+
+    return () => clearInterval(interval)
+  }, [data.length])
 
   const handleRightClick = () => {
     setCurrent(current === data.length - 1 ? 0 : current + 1)
@@ -47,6 +56,10 @@ const Slider = ({ isImgSlider = false, isCardSlider = false, data }) => {
 
   return (
     <div className="w-full h-full py-[4vw] md:py-[3vw] bg-gray-200">
+      <h1 className="text-center text-[5vw] md:text-2xl lg:text-3xl text-gray-900 font-bold">Key Clients and Brands</h1>
+
+
+
       <div
         className={` ${
           isCardSlider ? `h-[100vw] md:h-[45vw] lg:h-[48vw]` : ``
@@ -83,12 +96,9 @@ const Slider = ({ isImgSlider = false, isCardSlider = false, data }) => {
                           />
                         </div>
                       </div>
-                      <div className="h-1/2 w-full overflow-hidden flex flex-col items-center justify-start">
-                        <p className="text-black text-[5.5vw] md:text-[2vw] lg:text-[2.2vw] font-medium text-center">
+                      <div className=" w-full overflow-hidden flex flex-col items-center justify-start">
+                        <p className="text-black text-[4vw] md:text-sm lg:text-base text-center">
                           {data.author}
-                        </p>
-                        <p className="text-[3.2vw] text-center md:text-[1vw] lg:text-[1.2vw] ">
-                          {data.desc}
                         </p>
                       </div>
                     </Link>
@@ -104,11 +114,8 @@ const Slider = ({ isImgSlider = false, isCardSlider = false, data }) => {
                         </div>
                       </div>
                       <div className="h-1/2 w-full overflow-hidden flex flex-col items-center justify-start">
-                        <p className="text-black text-[4vw] md:text-[2vw] lg:text-[2vw] font-medium text-center">
+                        <p className="text-black text-[4vw] md:text-sm lg:text-base font-medium text-center">
                           {data.author}
-                        </p>
-                        <p className="text-[3.2vw] text-center md:text-[1vw] lg:text-[1.2vw] ">
-                          {data.desc}
                         </p>
                       </div>
                     </>
@@ -162,18 +169,14 @@ const Slider = ({ isImgSlider = false, isCardSlider = false, data }) => {
                   <div className="h-1/2 w-full overflow-hidden flex flex-col items-center justify-start">
                     {data?.href ? (
                       <Link href={data.href}>
-                        <p className="text-gray-900 text-[5.5vw] md:text-[2.1vw] lg:text-[2.5vw] font-medium text-center">
+                        <p className="text-gray-900 text-[4vw] md:text-sm lg:text-base font-medium text-center">
                           {data.author}
                         </p>
-                        <p className="text-[3.2vw] md:text-[1vw] lg:text-[1.2vw] text-center">{data.desc}</p>
                       </Link>
                     ) : (
-                      <>
-                        <p className="text-gray-900 text-[5.5vw] md:text-[2.1vw] lg:text-[2.5vw] font-medium text-center">
-                          {data.author}
-                        </p>
-                        <p className="text-[3.2vw] md:text-[1vw] lg:text-[1.2vw] text-center">{data.desc}</p>
-                      </>
+                      <p className="text-gray-900 text-[4vw] md:text-sm lg:text-base font-medium text-center">
+                        {data.author}
+                      </p>
                     )}
                   </div>
                 </div>
