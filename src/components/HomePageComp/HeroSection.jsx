@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 import Particles from "react-tsparticles"
-import { loadFull } from "tsparticles" // To load all presets
+import { loadFull } from "tsparticles"
 import Link from "next/link"
 const HeroSection = ({ data }) => {
   const particlesInit = async (main) => {

@@ -3,7 +3,7 @@
 import { Search, HandHeart, Mail, Menu, X, ChevronDown } from "lucide-react"
 import { useState, useCallback, useMemo } from "react"
 import Image from "next/image"
-import { motion } from "framer-motion" 
+import { motion } from "framer-motion"
 import { SEARCHABLE_TOPICS } from "../searchdata"
 import Link from "next/link"
 const NAVIGATION_ITEMS = [
@@ -80,9 +80,9 @@ const IconButton = ({ icon: Icon, onClick, ariaLabel }) => (
     className={STYLES.iconButton}
     onClick={onClick}
     aria-label={ariaLabel}
-    whileHover={{ scale: 1.2, rotate: 20 }} 
-    whileTap={{ scale: 0.8, y: 5 }} 
-    transition={{ type: "spring", stiffness: 500, damping: 10 }} 
+    whileHover={{ scale: 1.2, rotate: 20 }}
+    whileTap={{ scale: 0.8, y: 5 }}
+    transition={{ type: "spring", stiffness: 500, damping: 10 }}
   >
     <Icon className="w-5 h-5" />
   </motion.button>
@@ -196,14 +196,14 @@ export default function TransparentNavbar() {
     setIsSearchOpen(false)
     setSearchTerm("")
     setSearchResults([])
-    closeMobileMenu() 
+    closeMobileMenu()
   }, [closeMobileMenu])
 
   const navigationItems = useMemo(() => NAVIGATION_ITEMS, [])
 
   return (
-    <nav className="absolute top-0 left-0 right-0 z-50 text-white px-4 py-3 bg-black/20"> 
-    {/* // backdrop-blur-sm */}
+    <nav className="absolute top-0 left-0 right-0 z-50 text-white px-4 py-3 bg-black/20">
+      {/* // backdrop-blur-sm */}
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Logo />
         {isSearchOpen ? (
@@ -262,10 +262,12 @@ export default function TransparentNavbar() {
             onClick={toggleSearch}
             ariaLabel={isSearchOpen ? "Close search" : "Open search"}
           />
-          <IconButton icon={HandHeart} ariaLabel="Language" />
-                          <Link href="/ContactUs">
-                            <IconButton icon={Mail} ariaLabel="Contact" />
-                          </Link>
+          <Link href="/Social">
+            <IconButton icon={HandHeart} ariaLabel="Language" />
+          </Link>
+          <Link href="/ContactUs">
+            <IconButton icon={Mail} ariaLabel="Contact" />
+          </Link>
           <div className="lg:hidden">
             <IconButton
               icon={isMobileMenuOpen ? X : Menu}

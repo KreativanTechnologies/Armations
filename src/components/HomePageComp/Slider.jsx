@@ -55,10 +55,10 @@ const Slider = ({ isImgSlider = false, isCardSlider = false, data }) => {
   }
 
   return (
-    <div className="w-full h-full py-[4vw] md:py-[3vw] bg-gray-200">
-      <h1 className="text-center text-[5vw] md:text-2xl lg:text-3xl text-gray-900 font-bold">Key Clients and Brands</h1>
-
-
+    <div className="w-full h-full py-[4vw] md:py-[3vw] bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+      <h1 className="text-center text-[5vw] md:text-2xl lg:text-3xl text-gray-800 font-bold mb-8 animate-pulse">
+        Key Clients and Brands
+      </h1>
 
       <div
         className={` ${
@@ -70,16 +70,17 @@ const Slider = ({ isImgSlider = false, isCardSlider = false, data }) => {
             <div
               key={index}
               onClick={() => handleMouseEnter(index)}
-              className={`absolute transition-transform  duration-300 transform 
+              className={`absolute transition-all duration-500 ease-in-out transform 
                         ${getClass(index)}
                         h-[60vw] w-[85%] md:h-[18vw] md:w-[30%] lg:h-[20vw] lg:w-[32%] justify-center
-                        rounded-lg overflow-hidden bg-[#D9D9D9] shadow-lg flex flex-col bg-opacity-100 hover:scale-105 duration-500 hover:z-50 
+                        rounded-2xl overflow-hidden bg-white shadow-2xl flex flex-col bg-opacity-100 hover:scale-110 hover:shadow-3xl hover:rotate-1 duration-700 hover:z-50 cursor-pointer
+                        border border-gray-200 backdrop-blur-sm
                         ${
                           isCardSlider
                             ? `h-[95%] w-[85%] md:h-[90%] md:w-[35%] lg:h-[90%] lg:w-[42%] bg-transparent border-none shadow-none`
                             : isImgSlider
                               ? `p-0 h-[60vw] w-[85%] md:h-[18vw] md:w-[30%] lg:h-[20vw] lg:w-[32%]`
-                              : `p-[4vw] md:p-[1.6vw] h-[60vw] w-[85%] md:h-[18vw] md:w-[30%] lg:h-[20vw] lg:w-[32%]`
+                              : `p-0 h-[60vw] w-[85%] md:h-[18vw] md:w-[30%] lg:h-[20vw] lg:w-[32%]`
                         } 
                         `}
             >
@@ -87,34 +88,34 @@ const Slider = ({ isImgSlider = false, isCardSlider = false, data }) => {
                 <div className="w-full h-full p-[5vw] md:p-[2vw] lg:p-[2vw] flex flex-col gap-2">
                   {data?.href ? (
                     <Link href={data.href}>
-                      <div className="h-1/2 w-full flex items-center justify-center">
-                        <div className="w-[25vw] h-[25vw] md:w-[7vw] md:h-[7vw] lg:w-[8vw] lg:h-[8vw] rounded-full overflow-hidden">
+                      <div className="h-1/2 w-full flex items-center justify-center group">
+                        <div className="w-[25vw] h-[25vw] md:w-[7vw] md:h-[7vw] lg:w-[8vw] lg:h-[8vw] rounded-full overflow-hidden ring-4 ring-red-500 group-hover:ring-blue-400 transition-all duration-500 group-hover:scale-110">
                           <img
                             alt={data.alt}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 filter group-hover:brightness-110 bg-white p-2"
                             src={data.img_Src || "/placeholder.svg"}
                           />
                         </div>
                       </div>
-                      <div className=" w-full overflow-hidden flex flex-col items-center justify-start">
-                        <p className="text-black text-[4vw] md:text-sm lg:text-base text-center">
+                      <div className="h-1/2 w-full overflow-hidden flex flex-col items-center justify-start">
+                        <p className="text-gray-700 text-[4vw] md:text-sm lg:text-base text-center font-semibold group-hover:text-red-600 transition-colors duration-300 animate-fadeInUp">
                           {data.author}
                         </p>
                       </div>
                     </Link>
                   ) : (
                     <>
-                      <div className="h-1/2 w-full flex items-center justify-center">
-                        <div className="w-[25vw] h-[25vw] md:w-[7vw] md:h-[7vw] lg:w-[8vw] lg:h-[8vw] rounded-full overflow-hidden">
+                      <div className="h-1/2 w-full flex items-center justify-center group">
+                        <div className="w-[25vw] h-[25vw] md:w-[7vw] md:h-[7vw] lg:w-[8vw] lg:h-[8vw] rounded-full overflow-hidden ring-4 ring-blue-200 group-hover:ring-red-400 transition-all duration-500 group-hover:scale-110">
                           <img
                             alt={data.alt}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 filter group-hover:brightness-110 bg-white p-2"
                             src={data.img_Src || "/placeholder.svg"}
                           />
                         </div>
                       </div>
                       <div className="h-1/2 w-full overflow-hidden flex flex-col items-center justify-start">
-                        <p className="text-black text-[4vw] md:text-sm lg:text-base font-medium text-center">
+                        <p className="text-gray-700 text-[4vw] md:text-sm lg:text-base font-semibold text-center group-hover:text-red-600 transition-colors duration-300 animate-fadeInUp">
                           {data.author}
                         </p>
                       </div>
@@ -122,60 +123,65 @@ const Slider = ({ isImgSlider = false, isCardSlider = false, data }) => {
                   )}
                 </div>
               ) : isImgSlider ? (
-                <div className="w-full h-full flex items-center justify-center">
+                <div className="w-full h-full flex items-center justify-center group">
                   {data?.href ? (
                     <Link href={data?.href}>
-                      <div className="w-[30vw] h-[30vw] md:w-[9vw] md:h-[9vw] lg:w-[10vw] lg:h-[10vw] rounded-full overflow-hidden">
+                      <div className="w-[30vw] h-[30vw] md:w-[9vw] md:h-[9vw] lg:w-[10vw] lg:h-[10vw] rounded-full overflow-hidden ring-4 ring-red-200 group-hover:ring-red-400 transition-all duration-500 group-hover:scale-110">
                         <img
                           alt={data.alt}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 filter group-hover:brightness-110 bg-white p-2"
                           src={data.img_Src || "/placeholder.svg"}
                         />
                       </div>
                     </Link>
                   ) : (
-                    <div className="w-[30vw] h-[30vw] md:w-[9vw] md:h-[9vw] lg:w-[10vw] lg:h-[10vw] rounded-full overflow-hidden">
+                    <div className="w-[30vw] h-[30vw] md:w-[9vw] md:h-[9vw] lg:w-[10vw] lg:h-[10vw] rounded-full overflow-hidden ring-4 ring-blue-200 group-hover:ring-red-400 transition-all duration-500 group-hover:scale-110 bg-white">
                       <img
                         alt={data.alt}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 filter group-hover:brightness-110 p-2"
                         src={data.img_Src || "/placeholder.svg"}
                       />
                     </div>
                   )}
                 </div>
               ) : (
-                <div className="w-full h-full p-[5vw] md:p-[2vw] lg:p-[2vw] flex flex-col gap-2">
-                  <div className="h-1/2 w-full flex items-center justify-center">
+                <div className="w-full h-full flex flex-col group">
+                  {/* Image Section - Top Half */}
+                  <div className="h-1/2 w-full flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-all duration-1000"></div>
                     {data?.href ? (
                       <Link href={data.href}>
-                        <div className="w-[25vw] h-[25vw] md:w-[7vw] md:h-[7vw] lg:w-[8vw] lg:h-[8vw] rounded-full overflow-hidden">
+                        <div className="w-[25vw] h-[25vw] md:w-[7vw] md:h-[7vw] lg:w-[8vw] lg:h-[8vw] rounded-full overflow-hidden ring-4 ring-white shadow-lg group-hover:ring-red-500 transition-all duration-500 group-hover:scale-110 group-hover:shadow-2xl bg-white">
                           <img
                             alt={data.alt || "Card image"}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 filter group-hover:brightness-110 group-hover:contrast-110 p-2"
                             src={data.img_Src || "/placeholder.svg?height=100&width=200&query=card%20image"}
                           />
                         </div>
                       </Link>
                     ) : (
-                      <div className="w-[25vw] h-[25vw] md:w-[7vw] md:h-[7vw] lg:w-[8vw] lg:h-[8vw] rounded-full overflow-hidden">
+                      <div className="w-[25vw] h-[25vw] md:w-[7vw] md:h-[7vw] lg:w-[8vw] lg:h-[8vw] rounded-full overflow-hidden ring-4 ring-white shadow-lg group-hover:ring-red-500 transition-all duration-500 group-hover:scale-110 group-hover:shadow-2xl bg-white">
                         <img
                           alt={data.alt || "Card image"}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 filter group-hover:brightness-110 group-hover:contrast-110 p-2"
                           src={data.img_Src || "/placeholder.svg?height=100&width=200&query=card%20image"}
                         />
                       </div>
                     )}
                   </div>
-                  <div className="h-1/2 w-full overflow-hidden flex flex-col items-center justify-start">
+                  
+                  {/* Title Section - Bottom Half */}
+                  <div className="h-1/2 w-full overflow-hidden flex flex-col items-center justify-center bg-gradient-to-t from-gray-50 to-white relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     {data?.href ? (
                       <Link href={data.href}>
-                        <p className="text-gray-900 text-[4vw] md:text-sm lg:text-base font-medium text-center">
-                          {data.author}
+                        <p className="text-gray-800 text-[4vw] md:text-sm lg:text-base font-bold text-center px-4 py-2 rounded-lg group-hover:text-blue-600 transition-all duration-300 group-hover:bg-white/50 group-hover:shadow-md transform group-hover:scale-105 relative z-10">
+                          <span className="inline-block group-hover:animate-bounce">{data.author}</span>
                         </p>
                       </Link>
                     ) : (
-                      <p className="text-gray-900 text-[4vw] md:text-sm lg:text-base font-medium text-center">
-                        {data.author}
+                      <p className="text-gray-800 text-[4vw] md:text-sm lg:text-base font-bold text-center px-4 py-2 rounded-lg group-hover:text-blue-600 transition-all duration-300 group-hover:bg-white/50 group-hover:shadow-md transform group-hover:scale-105 relative z-10">
+                        <span className="inline-block group-hover:animate-bounce">{data.author}</span>
                       </p>
                     )}
                   </div>
@@ -184,23 +190,41 @@ const Slider = ({ isImgSlider = false, isCardSlider = false, data }) => {
             </div>
           ))}
         </div>
+        
         <div className="w-full flex justify-center">
           <div className="flex gap-[5vw] md:gap-[1.5vw]">
             <button
               onClick={handleLeftClick}
-              className="p-2 w-[10vw] h-[10vw] md:w-[2.5vw] md:h-[2.5vw] lg:w-[3vw] lg:h-[3vw] bg-blue-400 hover:bg-blue-600 rounded-full flex justify-center items-center"
+              className="p-2 w-[10vw] h-[10vw] md:w-[2.5vw] md:h-[2.5vw] lg:w-[3vw] lg:h-[3vw] bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 rounded-full flex justify-center items-center shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 text-white hover:rotate-[-5deg]"
             >
-              <ChevronLeft className="text-[4vw] md:text-[2vw]" />
+              <ChevronLeft className="text-[4vw] md:text-[2vw] drop-shadow-sm" />
             </button>
             <button
               onClick={handleRightClick}
-              className="p-2 w-[10vw] h-[10vw] md:w-[2.5vw] md:h-[2.5vw] lg:w-[3vw] lg:h-[3vw] bg-blue-400 hover:bg-blue-600 rounded-full flex justify-center items-center"
+              className="p-2 w-[10vw] h-[10vw] md:w-[2.5vw] md:h-[2.5vw] lg:w-[3vw] lg:h-[3vw] bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 rounded-full flex justify-center items-center shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 text-white hover:rotate-[5deg]"
             >
-              <ChevronRight className="text-[4vw] md:text-[2vw]" />
+              <ChevronRight className="text-[4vw] md:text-[2vw] drop-shadow-sm" />
             </button>
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        .animate-fadeInUp {
+          animation: fadeInUp 0.6s ease-out;
+        }
+      `}</style>
     </div>
   )
 }

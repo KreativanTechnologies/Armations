@@ -19,7 +19,7 @@ const AtArmation = () => {
         </div>
 
         {/* Images Section */}
-        <div className="w-full lg:w-1/2 h-96 sm:h-[500px] md:h-[600px] lg:h-[700px]">
+        <div className="w-full lg:w-1/2 h-96 sm:h-[500px] md:h-[600px] lg:h-[500px]">
           <div className="w-full h-full flex relative">
             {/* First Image - Top Left */}
             <div className="w-3/5 h-3/5 absolute -top-4 -left-2 sm:-left-4 lg:top-[19%] lg:h-[65%] lg:w-[60%] overflow-hidden z-10 hover:z-40 hover:scale-105 transition-all duration-1000 hover:opacity-100 cursor-pointer rounded-2xl hover:rounded-3xl shadow-lg">
@@ -40,7 +40,7 @@ const AtArmation = () => {
             </div>
 
             {/* Third Image - Bottom Right */}
-            <div className="w-4/5 h-3/5 sm:h-2/3 absolute -right-2 -bottom-2 sm:-right-4 lg:-right-[2%] lg:bottom-4
+            <div className="w-4/5 h-3/5 sm:h-2/3 absolute -right-2 -bottom-0 sm:-right-4 lg:-right-[2%] lg:bottom-7
              lg:h-[50%] lg:w-[55%] overflow-hidden z-20 hover:z-40 hover:scale-105 transition-all duration-1000 hover:opacity-100 rounded-2xl cursor-pointer hover:rounded-3xl shadow-lg">
               <img
                 className="w-full h-full object-cover"

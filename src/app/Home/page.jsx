@@ -264,7 +264,7 @@ const sliderData = [
     href: "#",
   },
     {
-    img_Src: "/images/home/12.png",
+    img_Src: "/images/home/13.jpeg",
     alt: "13",
     author: "P C Construction",
     desc: "Environmental activist and author, advocating for sustainable living.",
@@ -272,17 +272,17 @@ const sliderData = [
   },
 
     {
-    img_Src: "/images/home/12.png",
+    img_Src: "/images/home/14.jpeg",
     alt: "14",
-    author: "Rebound Envirotech Pvt Ltd.",
+    author: "Harjeet Singh Govt Contractors",
     desc: "Environmental activist and author, advocating for sustainable living.",
     href: "#",
   },
 
     {
-    img_Src: "/images/home/12.png",
+    img_Src: "/images/home/15.png",
     alt: "15",
-    author: "Rebound Envirotech Pvt Ltd.",
+    author: "Katsons Technologies",
     desc: "Environmental activist and author, advocating for sustainable living.",
     href: "#",
   },

@@ -145,7 +145,7 @@ const OurAchievements = () => {
                 className=" backdrop-blur-sm border border-white/20 text-white shadow-lg transition-all duration-300 ease-in-out rounded-lg"
               >
                 <div className="flex flex-col items-center justify-center p-6 md:p-4">
-                  <span className="text-5xl md:text-6xl font-bold text-purple-400 drop-shadow-md">
+                  <span className="text-5xl md:text-6xl font-bold text-red-500 drop-shadow-md">
                     <Counter target={item.number} start={inView} />
                   </span>
                   <span className="text-lg md:text-2xl text-white text-center mt-2 font-medium">{item.text}</span>
