@@ -1,145 +1,308 @@
 "use client";
-import React, { useState, useEffect } from 'react';
-import { Facebook, Instagram, Linkedin, Youtube, Globe } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Facebook, Instagram, Linkedin, Youtube, Globe, ArrowDown } from 'lucide-react';
+import * as THREE from 'three';
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-
 const AarmationLanding = () => {
     const [isVisible, setIsVisible] = useState(false);
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const mountRef = useRef(null);
+    const sceneRef = useRef(null);
+    const rendererRef = useRef(null);
+    const geometryRef = useRef(null);
+    const materialRef = useRef(null);
+    const meshRef = useRef(null);
+    const animationIdRef = useRef(null);
 
     useEffect(() => {
         setIsVisible(true);
+        
+        // Three.js scene setup
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+        
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setClearColor(0x000000, 0);
+        
+        if (mountRef.current) {
+            mountRef.current.appendChild(renderer.domElement);
+        }
+
+        // Create animated globe
+        const geometry = new THREE.SphereGeometry(2, 32, 32);
+        
+        // Create wireframe material for globe effect
+        const material = new THREE.ShaderMaterial({
+            uniforms: {
+                time: { value: 0 },
+                color1: { value: new THREE.Color(0x00ff88) },
+                color2: { value: new THREE.Color(0x0088ff) },
+            },
+            vertexShader: `
+                uniform float time;
+                varying vec2 vUv;
+                varying vec3 vPosition;
+                
+                void main() {
+                    vUv = uv;
+                    vPosition = position;
+                    
+                    vec3 pos = position;
+                    float wave = sin(pos.x * 10.0 + time) * 0.1;
+                    pos.z += wave;
+                    
+                    gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+                }
+            `,
+            fragmentShader: `
+                uniform float time;
+                uniform vec3 color1;
+                uniform vec3 color2;
+                varying vec2 vUv;
+                varying vec3 vPosition;
+                
+                void main() {
+                    float pattern = sin(vUv.x * 20.0) * sin(vUv.y * 20.0);
+                    float pulse = sin(time * 2.0) * 0.5 + 0.5;
+                    
+                    vec3 color = mix(color1, color2, pattern * pulse);
+                    float alpha = 0.7 + pattern * 0.3;
+                    
+                    gl_FragColor = vec4(color, alpha);
+                }
+            `,
+            transparent: true,
+            wireframe: false,
+        });
+        
+        const mesh = new THREE.Mesh(geometry, material);
+        scene.add(mesh);
+
+        // Add wireframe overlay for globe grid effect
+        const wireframeGeometry = new THREE.SphereGeometry(2.01, 16, 16);
+        const wireframeMaterial = new THREE.MeshBasicMaterial({
+            color: 0x00ffaa,
+            wireframe: true,
+            transparent: true,
+            opacity: 0.3,
+        });
+        const wireframeMesh = new THREE.Mesh(wireframeGeometry, wireframeMaterial);
+        scene.add(wireframeMesh);
+
+        // Add lights
+        const ambientLight = new THREE.AmbientLight(0x404040, 0.6);
+        scene.add(ambientLight);
+        
+        const pointLight = new THREE.PointLight(0x00ff88, 1, 100);
+        pointLight.position.set(10, 10, 10);
+        scene.add(pointLight);
+
+        const pointLight2 = new THREE.PointLight(0xff0044, 1, 100);
+        pointLight2.position.set(-10, -10, 10);
+        scene.add(pointLight2);
+
+        camera.position.z = 8;
+
+        // Store references
+        sceneRef.current = scene;
+        rendererRef.current = renderer;
+        geometryRef.current = geometry;
+        materialRef.current = material;
+        meshRef.current = mesh;
+
+        // Animation loop
+        const animate = () => {
+            animationIdRef.current = requestAnimationFrame(animate);
+            
+            const time = Date.now() * 0.001;
+            
+            if (meshRef.current) {
+                meshRef.current.rotation.x += 0.005;
+                meshRef.current.rotation.y += 0.01;
+                meshRef.current.position.y = Math.sin(time) * 0.3;
+                
+                // Update shader uniform
+                if (material.uniforms) {
+                    material.uniforms.time.value = time;
+                }
+            }
+            
+            // Rotate wireframe independently
+            if (wireframeMesh) {
+                wireframeMesh.rotation.x += 0.003;
+                wireframeMesh.rotation.y += 0.008;
+            }
+            
+            renderer.render(scene, camera);
+        };
+        animate();
+
+        // Handle resize
+        const handleResize = () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        };
+        
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+            if (animationIdRef.current) {
+                cancelAnimationFrame(animationIdRef.current);
+            }
+            if (mountRef.current && renderer.domElement) {
+                mountRef.current.removeChild(renderer.domElement);
+            }
+            geometry.dispose();
+            material.dispose();
+            wireframeGeometry.dispose();
+            wireframeMaterial.dispose();
+            renderer.dispose();
+        };
     }, []);
+
+    useEffect(() => {
+        const handleMouseMove = (e) => {
+            const newMousePosition = {
+                x: (e.clientX / window.innerWidth) * 2 - 1,
+                y: -(e.clientY / window.innerHeight) * 2 + 1,
+            };
+            setMousePosition(newMousePosition);
+            
+            if (meshRef.current) {
+                // Smooth mouse following for the globe
+                meshRef.current.rotation.x = newMousePosition.y * 0.5;
+                meshRef.current.rotation.y = newMousePosition.x * 0.5;
+                
+                // Add subtle position movement
+                meshRef.current.position.x = newMousePosition.x * 0.5;
+                meshRef.current.position.z = newMousePosition.y * 0.3;
+            }
+        };
+
+        window.addEventListener('mousemove', handleMouseMove);
+        return () => window.removeEventListener('mousemove', handleMouseMove);
+    }, []);
+
+    const particlesLoaded = (container) => {
+    };
+
+       const particlesInit = async (main) => {
+        await loadFull(main);
+    };
+
+    const particleOptions = {
+        fullScreen: { enable: false },
+        background: { color: { value: "transparent" } },
+        fpsLimit: 120,
+        interactivity: {
+            events: {
+                onClick: { enable: true, mode: "push" },
+                onHover: { enable: true, mode: "grab" },
+                resize: true,
+            },
+            modes: {
+                push: { quantity: 4 },
+                grab: { distance: 200, line_linked: { opacity: 0.5 } },
+            },
+        },
+        particles: {
+            color: { value: "#ffffff" },
+            links: {
+                color: "#ffffff",
+                distance: 150,
+                enable: true,
+                opacity: 0.4,
+                width: 1,
+            },
+            collisions: { enable: true },
+            move: {
+                direction: "none",
+                enable: true,
+                outModes: { default: "bounce" },
+                speed: 1.5,
+            },
+            number: {
+                density: { enable: true, area: 800 },
+                value: 60,
+            },
+            opacity: { value: 0.6 },
+            shape: { type: "circle" },
+            size: { value: { min: 1, max: 5 } },
+        },
+        detectRetina: true,
+    };
 
     const socialLinks = [
         {
             icon: Facebook,
             name: 'Facebook',
-            color: 'bg-blue-600',
+            color: 'from-blue-600 to-blue-800',
             handle: 'Aarmation',
             url: 'https://facebook.com/Aarmation',
+            glow: 'shadow-blue-500/50',
         },
         {
             icon: Instagram,
             name: 'Instagram',
-            color: 'bg-gradient-to-r from-purple-500 to-pink-500',
+            color: 'from-purple-500 via-pink-500 to-orange-500',
             handle: 'aarmation_electric',
             url: 'https://instagram.com/aarmation_electric',
+            glow: 'shadow-purple-500/50',
         },
         {
             icon: Linkedin,
             name: 'LinkedIn',
-            color: 'bg-blue-700',
+            color: 'from-blue-700 to-blue-900',
             handle: 'aarmation_electric',
             url: 'https://linkedin.com/in/aarmation_electric',
+            glow: 'shadow-blue-400/50',
         },
-        // {
-        //     icon: Youtube,
-        //     name: 'YouTube',
-        //     color: 'bg-red-600',
-        //     handle: 'aarmation_electric',
-        //     url: 'https://youtube.com/@aarmation_electric',
-        // },
     ];
-
-    const particlesInit = async (main) => {
-        await loadFull(main);
-    };
-
-    const particlesLoaded = (container) => {
-        // console.log(container);
-    };
-
-    const particleOptions = {
-        fullScreen: {
-            enable: false,
-        },
-        background: {
-            color: {
-                value: "transparent",
-            },
-        },
-        fpsLimit: 120,
-        interactivity: {
-            events: {
-                onClick: {
-                    enable: true,
-                    mode: "push",
-                },
-                onHover: {
-                    enable: true,
-                    mode: "repulse",
-                },
-                resize: true,
-            },
-            modes: {
-                push: {
-                    quantity: 4,
-                },
-                repulse: {
-                    distance: 100,
-                    duration: 0.4,
-                },
-            },
-        },
-        particles: {
-            color: {
-                value: "#ffffff",
-            },
-            links: {
-                color: "#ffffff",
-                distance: 150,
-                enable: true,
-                opacity: 0.5,
-                width: 1,
-            },
-            collisions: {
-                enable: true,
-            },
-            move: {
-                direction: "none",
-                enable: true,
-                outModes: {
-                    default: "bounce",
-                },
-                random: false,
-                speed: 1,
-                straight: false,
-            },
-            number: {
-                density: {
-                    enable: true,
-                    area: 800,
-                },
-                value: 80,
-            },
-            opacity: {
-                value: 0.5,
-            },
-            shape: {
-                type: "circle",
-            },
-            size: {
-                value: { min: 1, max: 5 },
-            },
-        },
-        detectRetina: true,
-    };
 
     return (
         <div className="min-h-screen relative overflow-hidden">
-            {/* Background Image + Overlay */}
-            <div className="absolute inset-0">
-                <div
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat brightness-80"
-                    style={{
-                        backgroundImage: `url('/images/home/Sbg.png')`,
-                    }}
-                />
-                <div className="absolute inset-0 bg-black/50" />
+            {/* Background Image */}
+            <div 
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style={{
+                    backgroundImage: `url('/images/home/Sbg.png')`
+                }}
+            />
+            
+            {/* Dark overlay for better text readability */}
+            <div className="absolute inset-0 bg-black/70" />
+
+            {/* Three.js Globe */}
+            <div ref={mountRef} className="absolute inset-0 z-10" />
+            
+            {/* Additional animated overlay gradients */}
+            <div className="absolute inset-0 opacity-20 z-20">
+                <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500 rounded-full mix-blend-screen filter blur-3xl animate-pulse"></div>
+                <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500 rounded-full mix-blend-screen filter blur-3xl animate-pulse animation-delay-2000"></div>
+                <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-green-500 rounded-full mix-blend-screen filter blur-3xl animate-pulse animation-delay-4000"></div>
             </div>
 
-            <Particles
+            {/* Floating Particles */}
+            {/* <div className="absolute inset-0 overflow-hidden z-30">
+                {Array.from({ length: 20 }).map((_, i) => (
+                    <div
+                        key={i}
+                        className="absolute w-4 h-4 bg-black rounded-full opacity-30 animate-float"
+                        style={{
+                            left: `${Math.random() * 100}%`,
+                            top: `${Math.random() * 100}%`,
+                            animationDelay: `${Math.random() * 5}s`,
+                            animationDuration: `${5 + Math.random() * 5}s`,
+                        }}
+                    />
+                ))}
+            </div> */}
+
+             <Particles
                 id="tsparticles"
                 init={particlesInit}
                 loaded={particlesLoaded}
@@ -149,47 +312,158 @@ const AarmationLanding = () => {
             />
 
             {/* Main Content */}
-            <div className="relative z-10 flex flex-col items-center justify-center min-h-screen pt-40 text-center px-6">
-                {/* Heading */}
-                <div className={`mb-16 transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-                    <h2 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">
-                        <span className="bg-red-500 bg-clip-text text-transparent animate-pulse">
+            <div className="relative z-40 flex flex-col items-center justify-center min-h-screen px-6">
+                {/* Heading with 3D Transform */}
+                <div 
+                    className={`mb-20 transform transition-all duration-1500 delay-300 ${
+                        isVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-20 opacity-0 scale-90'
+                    }`}
+                    style={{
+                        transform: `perspective(1000px) rotateY(${mousePosition.x * 5}deg) rotateX(${mousePosition.y * 5}deg)`,
+                    }}
+                >
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-center mt-28 leading-tight">
+                        <span className="bg-gradient-to-r from-red-300 via-red-800 to-gray-400 bg-clip-text text-transparent animate-gradient-x drop-shadow-2xl">
                             TRANSFORM
                         </span>
                         <br />
-                        <span className="text-white">YOUR BUSINESS</span>
-                    </h2>
-                    <p className="text-xl md:text-2xl text-gray-300 font-light max-w-2xl mx-auto leading-relaxed">
-                        with cutting-edge automation solutions
+                        <span className="text-gray-300 drop-shadow-2xl animate-bounce">
+                            YOUR BUSINESS
+                        </span>
+                    </h1>
+                    <p className="text-2xl md:text-3xl text-gray-200 font-light max-w-4xl mx-auto leading-relaxed animate-fade-in-up">
+                        with cutting-edge <span className="text-red-600 font-semibold">automation solutions</span>
                     </p>
                 </div>
 
-                {/* Social Media Section */}
-                <div className={`mb-16 transform transition-all duration-1000 delay-600 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                        {socialLinks.map((social) => {
+                {/* 3D Social Media Cards */}
+                <div className={`mb-20 transform transition-all duration-1500 delay-800 ${
+                    isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+                }`}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        {socialLinks.map((social, index) => {
                             const IconComponent = social.icon;
                             return (
-                                <a
+                                <div
                                     key={social.name}
-                                    href={social.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="group cursor-pointer transform transition-all duration-300 hover:scale-110 hover:-translate-y-2"
+                                    className="group cursor-pointer transform transition-all duration-500 hover:scale-110 hover:-translate-y-4"
+                                    style={{
+                                        animationDelay: `${index * 200}ms`,
+                                    }}
                                 >
-                                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/25">
-                                        <div className={`inline-flex p-3 rounded-xl ${social.color} mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                                            <IconComponent className="text-white" size={24} />
+                                    <a
+                                        href={social.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="block"
+                                    >
+                                        <div className={`
+                                            relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl 
+                                            rounded-3xl p-8 border border-white/20 
+                                            transition-all duration-500 
+                                            hover:border-white/40 hover:shadow-2xl hover:${social.glow}
+                                            transform hover:rotate-y-12 hover:rotate-x-12
+                                            perspective-1000
+                                        `}>
+                                            {/* Glow effect */}
+                                            <div className={`absolute inset-0 bg-gradient-to-r ${social.color} opacity-0 group-hover:opacity-20 rounded-3xl transition-all duration-500`}></div>
+                                            
+                                            {/* Icon with 3D effect */}
+                                            <div className={`
+                                                relative inline-flex p-4 rounded-2xl bg-gradient-to-r ${social.color} mb-6 
+                                                group-hover:scale-125 group-hover:rotate-12 transition-all duration-500
+                                                shadow-lg group-hover:shadow-2xl
+                                            `}>
+                                                <IconComponent className="text-white relative z-10" size={32} />
+                                                <div className="absolute inset-0 bg-white/20 rounded-2xl group-hover:animate-ping"></div>
+                                            </div>
+                                            
+                                            <h3 className="text-white font-bold text-2xl mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-cyan-400 group-hover:bg-clip-text transition-all duration-300">
+                                                {social.handle}
+                                            </h3>
+                                            <p className="text-gray-300 text-lg group-hover:text-gray-200 transition-colors duration-300">
+                                                Follow us on {social.name}
+                                            </p>
+                                            
+                                            {/* Animated border */}
+                                            <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                                <div className={`absolute inset-0 bg-gradient-to-r ${social.color} rounded-3xl animate-pulse`}></div>
+                                                <div className="absolute inset-1 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl"></div>
+                                            </div>
                                         </div>
-                                        <p className="text-white font-semibold text-lg mb-1">{social.handle}</p>
-                                        <p className="text-gray-300 text-sm">Follow us on {social.name}</p>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                             );
                         })}
                     </div>
                 </div>
+
+                {/* Floating Call to Action */}
+                <div className={`transform transition-all duration-1500 delay-1200 ${
+                    isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+                }`}>
+                    <div className="animate-bounce">
+                        <ArrowDown className="text-white/70 mx-auto" size={32} />
+                    </div>
+                    <p className="text-white/70 text-lg mt-4 animate-pulse">Scroll to explore more</p>
+                </div>
             </div>
+
+            {/* Custom CSS for additional animations */}
+            <style jsx>{`
+                @keyframes gradient-x {
+                    0%, 100% {
+                        background-size: 200% 200%;
+                        background-position: left center;
+                    }
+                    50% {
+                        background-size: 200% 200%;
+                        background-position: right center;
+                    }
+                }
+                
+                @keyframes float {
+                    0%, 100% { transform: translateY(0px) rotate(0deg); }
+                    50% { transform: translateY(-20px) rotate(180deg); }
+                }
+                
+                @keyframes glow {
+                    0%, 100% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
+                    50% { text-shadow: 0 0 40px rgba(255, 255, 255, 0.8); }
+                }
+                
+                .animate-gradient-x {
+                    animation: gradient-x 4s ease infinite;
+                }
+                
+                .animate-float {
+                    animation: float linear infinite;
+                }
+                
+                .animate-glow {
+                    animation: glow 3s ease-in-out infinite;
+                }
+                
+                .animation-delay-2000 {
+                    animation-delay: 2s;
+                }
+                
+                .animation-delay-4000 {
+                    animation-delay: 4s;
+                }
+                
+                .perspective-1000 {
+                    perspective: 1000px;
+                }
+                
+                .rotate-y-12 {
+                    transform: rotateY(12deg);
+                }
+                
+                .rotate-x-12 {
+                    transform: rotateX(12deg);
+                }
+            `}</style>
         </div>
     );
 };

@@ -3,7 +3,7 @@ import HeroSection from "../../../components/DCScomp/HeroSection";
 
 const heroData = {
   img_Src: '/images/supervisory/banner.png',
-  title: "Supervisory control and Data Aquisition",
+  title: "Supervisory Control and Data Acquisition",
 };
 
 const page = () => {

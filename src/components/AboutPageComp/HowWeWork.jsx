@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link"
 
 const HowWeWork = () => {
   return (
@@ -12,12 +13,14 @@ const HowWeWork = () => {
             At Aarmation Electric Private Limited (AEPL), our work process is built on a foundation of innovation, technical expertise, and customer-centricity. We begin by thoroughly understanding the client's requirements through detailed consultations and on-site assessments. Based on these insights, we design customized automation and instrumentation solutions that ensure efficiency, reliability, and scalability. Our engineering team develops tailored systems integrating state-of-the-art electrical panels, pumping machinery, SCADA, and IoT-enabled automation technologies. We handle the complete lifecycle—from design, procurement, and manufacturing to installation and commissioning—ensuring seamless project execution.
           </p>
         </div>
-        <div className="md:absolute w-full md:w-[50%] h-full md:h-[25%] bottom-0 left-0 z-10 px-[5vw]">
-          <button
-            className="mt-[1vw] cursor-pointer border-2 text-md md:text-[1.5vw] font-normal border-red-500 text-black px-6 py-2 md:px-8 md:py-4 rounded-full hover:bg-red-500 hover:text-white transition"
-          >
-            More on How we work
-          </button>
+        <div className="md:absolute w-full md:w-[50%]  md:h-[25%] bottom-0 left-0 z-10 px-[5vw]">
+          <Link href="/ContactUs">
+            <button
+              className="mt-[1vw] cursor-pointer border-2 text-md md:text-[1.5vw] font-normal border-red-500 text-black px-6 py-2 md:px-8 md:py-4 rounded-full hover:bg-red-500 hover:text-white transition"
+            >
+              More on How we work
+            </button>
+          </Link>
         </div>
 
         <div className="w-full h-full flex items-end justify-end"></div>
