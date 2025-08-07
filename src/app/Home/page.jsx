@@ -135,7 +135,7 @@ const ParallaxData = {
 
 const ParallaxData2 = {
   title: "Did You Know?",
-  desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
+  desc: "We are dedicated to delivering the most innovative and customized products and solutions that meet both stated and implied customer needs. Our goal is to enhance applications by offering the latest technology at affordable prices. Additionally, we commit to providing prompt after-sales service within 24 hours. We also focus on developing technocrats by offering training and opportunities in cutting-edge technologies.",
   btn_Text: "Learn More",
   redirectTo: "/About",
   img_Src: "/om.png",
