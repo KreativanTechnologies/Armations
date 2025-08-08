@@ -31,7 +31,7 @@ export default function ScadaInfo() {
         </div>
         <div className="w-full md:w-1/2 flex justify-center items-center">
           <img
-            src="/images/supervisory/ScadaInfo.png"
+            src="/images/supervisory/scadaInfo.png"
             alt="SCADA system overview"
             className="w-full max-w-xs sm:max-w-sm md:max-w-lg object-contain rounded-lg transition-transform duration-300 hover:scale-105"
           />
