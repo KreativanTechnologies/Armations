@@ -110,9 +110,9 @@ const HeroSection = ({ data }) => {
         style={{ width: "100%", height: "100%" }} // Explicitly set dimensions
       />
       {/* Content Overlay */}
-      <div className="relative flex flex-col items-center justify-center h-full text-center text-white px-6 z-10">
-        <h1 className="text-4xl md:text-6xl font-bold">{data.title}</h1>
-        <p className="mt-4 text-lg md:text-2xl max-w-6xl">{data.desc}</p>
+      <div className="relative flex flex-col items-center justify-center h-full text-center text-white px-6 pt-8 z-10">
+        <h1 className="text-3xl md:text-6xl font-bold">{data.title}</h1>
+        <p className="mt-4 text-sm md:text-2xl max-w-6xl">{data.desc}</p>
         {data.btn_Text && (
                 <Link href="/ContactUs">
 
