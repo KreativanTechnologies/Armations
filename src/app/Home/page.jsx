@@ -207,13 +207,13 @@ const sliderData = [
     desc: "Travel photographer, capturing breathtaking landscapes worldwide.",
     href: "#",
   },
-  {
-    img_Src: "/images/home/5.png",
-    alt: "5",
-    author: "Tethys (Horiba)",
-    desc: "Environmental activist and author, advocating for sustainable living.",
-    href: "#",
-  },
+  // {
+  //   img_Src: "/images/home/5.png",
+  //   alt: "5",
+  //   author: "Tethys (Horiba)",
+  //   desc: "Environmental activist and author, advocating for sustainable living.",
+  //   href: "#",
+  // },
     {
     img_Src: "/images/home/6.jpeg",
     alt: "6",
