@@ -57,7 +57,7 @@ const Slider = ({ isImgSlider = false, isCardSlider = false, data }) => {
   return (
     <div className="w-full h-full py-[4vw] md:py-[3vw] bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       <h1 className="text-center text-[5vw] md:text-2xl lg:text-3xl text-gray-800 font-bold mb-8 animate-pulse">
-        Key Clients and Brands
+        Authorized partners
       </h1>
 
       <div

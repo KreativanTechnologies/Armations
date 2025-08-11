@@ -1,9 +1,10 @@
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
-import { Facebook, Instagram, Linkedin, Youtube, Globe, ArrowDown } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Youtube, Globe } from 'lucide-react';
 import * as THREE from 'three';
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+
 const AarmationLanding = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -33,12 +34,12 @@ const AarmationLanding = () => {
         // Create animated globe
         const geometry = new THREE.SphereGeometry(2, 32, 32);
         
-        // Create wireframe material for globe effect
+        // Create shader material for globe effect with red/gray theme
         const material = new THREE.ShaderMaterial({
             uniforms: {
                 time: { value: 0 },
-                color1: { value: new THREE.Color(0x00ff88) },
-                color2: { value: new THREE.Color(0x0088ff) },
+                color1: { value: new THREE.Color(0xff0044) }, // Red
+                color2: { value: new THREE.Color(0x888888) }, // Gray
             },
             vertexShader: `
                 uniform float time;
@@ -80,10 +81,10 @@ const AarmationLanding = () => {
         const mesh = new THREE.Mesh(geometry, material);
         scene.add(mesh);
 
-        // Add wireframe overlay for globe grid effect
+        // Add wireframe overlay for globe grid effect with red color
         const wireframeGeometry = new THREE.SphereGeometry(2.01, 16, 16);
         const wireframeMaterial = new THREE.MeshBasicMaterial({
-            color: 0x00ffaa,
+            color: 0xff4444, // Red wireframe
             wireframe: true,
             transparent: true,
             opacity: 0.3,
@@ -91,15 +92,15 @@ const AarmationLanding = () => {
         const wireframeMesh = new THREE.Mesh(wireframeGeometry, wireframeMaterial);
         scene.add(wireframeMesh);
 
-        // Add lights
+        // Add lights with red/gray theme
         const ambientLight = new THREE.AmbientLight(0x404040, 0.6);
         scene.add(ambientLight);
         
-        const pointLight = new THREE.PointLight(0x00ff88, 1, 100);
+        const pointLight = new THREE.PointLight(0xff0044, 1, 100); // Red light
         pointLight.position.set(10, 10, 10);
         scene.add(pointLight);
 
-        const pointLight2 = new THREE.PointLight(0xff0044, 1, 100);
+        const pointLight2 = new THREE.PointLight(0x888888, 1, 100); // Gray light
         pointLight2.position.set(-10, -10, 10);
         scene.add(pointLight2);
 
@@ -190,7 +191,7 @@ const AarmationLanding = () => {
     const particlesLoaded = (container) => {
     };
 
-       const particlesInit = async (main) => {
+    const particlesInit = async (main) => {
         await loadFull(main);
     };
 
@@ -279,30 +280,14 @@ const AarmationLanding = () => {
             {/* Three.js Globe */}
             <div ref={mountRef} className="absolute inset-0 z-10" />
             
-            {/* Additional animated overlay gradients */}
+            {/* Additional animated overlay gradients with red/gray theme */}
             <div className="absolute inset-0 opacity-20 z-20">
-                <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500 rounded-full mix-blend-screen filter blur-3xl animate-pulse"></div>
-                <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500 rounded-full mix-blend-screen filter blur-3xl animate-pulse animation-delay-2000"></div>
-                <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-green-500 rounded-full mix-blend-screen filter blur-3xl animate-pulse animation-delay-4000"></div>
+                <div className="absolute top-0 left-0 w-96 h-96 bg-red-500 rounded-full mix-blend-screen filter blur-3xl animate-pulse"></div>
+                <div className="absolute top-0 right-0 w-96 h-96 bg-gray-500 rounded-full mix-blend-screen filter blur-3xl animate-pulse animation-delay-2000"></div>
+                <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-red-600 rounded-full mix-blend-screen filter blur-3xl animate-pulse animation-delay-4000"></div>
             </div>
 
-            {/* Floating Particles */}
-            {/* <div className="absolute inset-0 overflow-hidden z-30">
-                {Array.from({ length: 20 }).map((_, i) => (
-                    <div
-                        key={i}
-                        className="absolute w-4 h-4 bg-black rounded-full opacity-30 animate-float"
-                        style={{
-                            left: `${Math.random() * 100}%`,
-                            top: `${Math.random() * 100}%`,
-                            animationDelay: `${Math.random() * 5}s`,
-                            animationDuration: `${5 + Math.random() * 5}s`,
-                        }}
-                    />
-                ))}
-            </div> */}
-
-             <Particles
+            <Particles
                 id="tsparticles"
                 init={particlesInit}
                 loaded={particlesLoaded}
@@ -312,7 +297,7 @@ const AarmationLanding = () => {
             />
 
             {/* Main Content */}
-            <div className="relative z-40 flex flex-col items-center justify-center min-h-screen px-6">
+            <div className="relative py-10 z-40 flex flex-col items-center justify-center min-h-screen px-6">
                 {/* Heading with 3D Transform */}
                 <div 
                     className={`mb-20 transform transition-all duration-1500 delay-300 ${
@@ -332,12 +317,12 @@ const AarmationLanding = () => {
                         </span>
                     </h1>
                     <p className="text-2xl md:text-3xl text-gray-200 font-light max-w-4xl mx-auto leading-relaxed animate-fade-in-up">
-                        with cutting-edge <span className="text-red-600 font-semibold">automation solutions</span>
+                        with cutting-edge <span className="text-gray-900 font-semibold">automation solutions</span>
                     </p>
                 </div>
 
                 {/* 3D Social Media Cards */}
-                <div className={`mb-20 transform transition-all duration-1500 delay-800 ${
+                <div className={`transform transition-all duration-1500 delay-800 ${
                     isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
                 }`}>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -396,16 +381,6 @@ const AarmationLanding = () => {
                             );
                         })}
                     </div>
-                </div>
-
-                {/* Floating Call to Action */}
-                <div className={`transform transition-all duration-1500 delay-1200 ${
-                    isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
-                }`}>
-                    <div className="animate-bounce">
-                        <ArrowDown className="text-white/70 mx-auto" size={32} />
-                    </div>
-                    <p className="text-white/70 text-lg mt-4 animate-pulse">Scroll to explore more</p>
                 </div>
             </div>
 

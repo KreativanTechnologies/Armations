@@ -173,7 +173,7 @@ const ContactUs = () => {
   return (
     <section className='relative contasct_bg_image w-full contact-section mb-10'>
       {/* Contact Form Container */}
-      <div className='lg:w-full mx-auto lg:ml-[80px] rounded-lg w-4/5 lg:max-w-4xl px-8 py-10 bg-white'>
+      <div className='lg:w-full mx-auto lg:ml-[80px] rounded-lg w-4/5 lg:max-w-4xl px-8 py-10 bg-gray-200'>
         <h2 className='text-black text-xl md:text-3xl font-semibold font-poppins'>
           Contact Us
         </h2>
@@ -186,18 +186,18 @@ const ContactUs = () => {
             <input
               type='text'
               placeholder='Name'
-              className='w-1/2 p-3 text-[#1f1f1f]/50 text-lg font-normal border border-gray-200 rounded-md outline-none'
+              className='w-1/2 p-3 text-[#1f1f1f]/50 text-lg font-normal border border-gray-600 rounded-md outline-none'
             />
             <input
               type='email'
               placeholder='Email'
-              className='w-1/2 p-3 text-[#1f1f1f]/50 text-lg font-normal border border-gray-200 rounded-md outline-none'
+              className='w-1/2 p-3 text-[#1f1f1f]/50 text-lg font-normal border border-gray-600 rounded-md outline-none'
             />
           </div>
           <textarea
             placeholder='Message'
             rows='4'
-            className='w-full p-3 text-[#1f1f1f]/50 text-lg font-normal border border-gray-200 rounded-md outline-none'
+            className='w-full p-3 text-[#1f1f1f]/50 text-lg font-normal border border-gray-600 rounded-md outline-none'
           ></textarea>
           <button
             type='submit'
