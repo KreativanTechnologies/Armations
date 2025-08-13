@@ -1,4 +1,4 @@
-import HeroSection from '../../../components/Ceramic/HeroSection'
+import HeroSection from '../../../components/Ceramic/HeroSection.jsx'
 import Section from  '../../../components/Textile/section.jsx'
 import NewsStories from '../../../components/HomePageComp/NewsStories.jsx'
 

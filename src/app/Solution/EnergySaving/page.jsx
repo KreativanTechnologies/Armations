@@ -1,5 +1,5 @@
 'use client';
-import HeroSection from "../../../components/DCScomp/HeroSection";
+import HeroSection from "../../../components/DCScomp/HeroSection.jsx";
 import Grid from "../../../components/CustomizedSolution/Grid.jsx";
 
 const heroData = {

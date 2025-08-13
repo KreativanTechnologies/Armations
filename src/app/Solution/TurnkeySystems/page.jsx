@@ -1,5 +1,5 @@
-import Range from '../../../components/TurenkeySystems/CompleteRange';
-import HeroSection from "../../../components/DCScomp/HeroSection";
+import Range from '../../../components/TurenkeySystems/CompleteRange.jsx';
+import HeroSection from "../../../components/DCScomp/HeroSection.jsx";
 import Grid from "../../../components/CustomizedSolution/Grid.jsx";
 
 const gridData = [

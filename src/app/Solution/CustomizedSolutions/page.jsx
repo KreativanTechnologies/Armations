@@ -1,6 +1,6 @@
 "use client";
 import Grid from "../../../components/CustomizedSolution/Grid.jsx";
-import HeroSection from "../../../components/DCScomp/HeroSection";
+import HeroSection from "../../../components/DCScomp/HeroSection.jsx";
 import ProductsCard from "../../../components/Common/ProductsCard.jsx";
 
 const heroData = {
