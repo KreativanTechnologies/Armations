@@ -151,7 +151,7 @@ const AarmationLanding = () => {
                         </span>
                     </h1>
                     <p className="text-2xl md:text-3xl text-gray-200 font-light max-w-4xl mx-auto leading-relaxed animate-fade-in-up">
-                        with cutting-edge <span className="text-gray-900 font-semibold">automation solutions</span>
+                        with cutting-edge <span className="text-red-500 font-semibold">automation solutions</span>
                     </p>
                 </div>
 
