@@ -94,6 +94,7 @@
 // prem
 
 import Image from "next/image";
+import Link from "next/link"
 
 const Section = () => {
   return (
@@ -124,9 +125,11 @@ const Section = () => {
             <h2 className="text-3xl font-semibold text-red-600 mb-8">
               Can’t Find What You are Looking For?
             </h2>
-            <button className="px-8 py-3 border border-red-500 text-black rounded-full hover:bg-red-500 hover:text-white transition">
-              Get in Touch with us!
-            </button>
+            <Link href="/contactUs">
+              <button className="px-8 py-3 border cursor-pointer border-red-500 text-black rounded-full hover:bg-red-500 hover:text-white transition">
+                Get in Touch with us!
+              </button>
+            </Link>
           </div>
         </div>
       </div>

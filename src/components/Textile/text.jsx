@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from "next/link"
 
 const   Text = () => {
   return (
@@ -32,9 +33,11 @@ const   Text = () => {
                  The Textile Industry has grown rapidly due to the advent of automation. Textile products such as cloth, yarn, cotton and other fabrics have been easier to produce due to automation. Automation has improved product quality and reduced working hours, while providing safer working conditions for employees.
               </p>
               <div className="pt-2 md:pt-4">
-                <button className="mt-4 px-4 py-2.5 rounded-full border-2 border-red-500 text-black text-[15px] font-normal hover:bg-red-500 hover:text-white transition-colors duration-200">
-                  Learn More
-                </button>
+                 <Link href="/contactUs">
+                  <button className="mt-4 px-4 py-2.5 cursor-pointer rounded-full border-2 border-red-500 text-black text-[15px] font-normal hover:bg-red-500 hover:text-white transition-colors duration-200">
+                    Learn More
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

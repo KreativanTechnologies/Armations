@@ -1,22 +1,24 @@
-"use client";
-import { useState, useEffect } from "react";
+"use client"
+import { useState, useEffect } from "react"
+import { useRouter } from "next/navigation"
 
 const NewsStories = ({ newsData = [], defaultRows = 1 }) => {
-  const [showAll, setShowAll] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [showAll, setShowAll] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+  const router = useRouter()
 
   useEffect(() => {
-    const checkScreenSize = () => setIsMobile(window.innerWidth < 640);
-    checkScreenSize();
-    window.addEventListener("resize", checkScreenSize);
-    return () => window.removeEventListener("resize", checkScreenSize);
-  }, []);
+    const checkScreenSize = () => setIsMobile(window.innerWidth < 640)
+    checkScreenSize()
+    window.addEventListener("resize", checkScreenSize)
+    return () => window.removeEventListener("resize", checkScreenSize)
+  }, [])
 
-  const itemsToShow = showAll
-    ? newsData.length
-    : isMobile
-    ? 3
-    : defaultRows * 3;
+  const itemsToShow = showAll ? newsData.length : isMobile ? 3 : defaultRows * 3
+
+  const handleCardClick = (newsId) => {
+    router.push("/blog")
+  }
 
   return (
     <div className="h-full w-full bg-white text-black px-6 md:px-[5vw] py-8 md:py-[3vw] flex flex-col gap-8">
@@ -30,18 +32,21 @@ const NewsStories = ({ newsData = [], defaultRows = 1 }) => {
           {newsData.slice(0, itemsToShow).map((news) => (
             <div
               key={news.id}
-              className="bg-transparent overflow-hidden hover:border-b-4 border-b-red-600 hover:scale-110 duration-2000 hover:z-10 rounded-2xl"
+              onClick={() => handleCardClick(news.id)}
+              className="bg-transparent overflow-hidden hover:border-b-4 border-b-red-600 hover:scale-110 duration-2000 hover:z-10 rounded-2xl cursor-pointer"
             >
               <div className="relative w-full h-60 rounded-2xl overflow-hidden">
                 <img
-                  src={news.image}
+                  src={news.image || "/placeholder.svg"}
                   alt={news.title}
                   layout="fill"
                   className="w-full h-full object-cover object-center"
                 />
               </div>
               <div className="p-4">
-                <p className="text-gray-800 text-md">{news.title} {news.date}</p>
+                <p className="text-gray-800 text-md">
+                  {news.title} {news.date}
+                </p>
                 <h3 className="font-semibold text-lg mt-2">{news.description}</h3>
               </div>
             </div>
@@ -60,7 +65,7 @@ const NewsStories = ({ newsData = [], defaultRows = 1 }) => {
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default NewsStories;
+export default NewsStories

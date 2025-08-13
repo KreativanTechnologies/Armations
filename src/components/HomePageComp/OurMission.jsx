@@ -13,7 +13,7 @@ const OurMission = ({ data }) => {
         <p className="text-lg text-gray-700 leading-relaxed">{data.desc}</p>
         <div className="w-full text-black md:w-1/2">
           {data.btn_Text && (
-            <Link href="/ContactUs">
+            <Link href="/contactUs">
               <button className="rounded-full px-10 py-3 text-base border cursor-pointer border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-colors">
                 {data.btn_Text}
               </button>

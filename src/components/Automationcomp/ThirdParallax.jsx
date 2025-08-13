@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from "next/link"
 
 const ThirdParallax = () => {
   return (
@@ -32,10 +33,12 @@ const ThirdParallax = () => {
                 Growth in India’s automation industry is impressive. High initial investment cost, unavailable enough manpower with the required skill set, and hesitation for ch
 Investment in training programs and the development of affordable solutions in automation will bridge these gaps and accelerate adoptions.
               </p>
-              <div className="pt-2 md:pt-4">
-                <button className="mt-4 px-4 py-2.5 rounded-full border-2 border-red-500 text-black text-[15px] font-normal hover:bg-red-500 hover:text-white transition-colors duration-200">
-                  Learn More
-                </button>
+             <div className="pt-2 md:pt-4">
+                <Link href="/contactUs">
+                  <button className="mt-4 px-4 py-2.5 cursor-pointer rounded-full border-2 border-red-500 text-black text-[15px] font-normal hover:bg-red-500 hover:text-white transition-colors duration-200">
+                    Learn More
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

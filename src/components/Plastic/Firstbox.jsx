@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from "next/link"
 
 const Firstbox = () => {
   return (
@@ -33,9 +34,11 @@ const Firstbox = () => {
                 Automation offers flexibility to manufacturers and helps them optimize the machines according to their needs and changing market trends. Apart from reducing labor costs, automation also leads to decrease in wastage of raw materials, reducing overall cost of production. Reduces the need of workers operating between moving parts, thus improving the safety standards of the plant. Leads to higher productivity and multi-tasking.
               </p>
               <div className="pt-2 md:pt-4">
-                <button className="mt-4 px-4 py-2.5 rounded-full border-2 border-red-500 text-black text-[15px] font-normal hover:bg-red-500 hover:text-white transition-colors duration-200">
-                  Learn More
-                </button>
+                <Link href="/contactUs">
+                  <button className="mt-4 px-4 py-2.5 cursor-pointer rounded-full border-2 border-red-500 text-black text-[15px] font-normal hover:bg-red-500 hover:text-white transition-colors duration-200">
+                    Learn More
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

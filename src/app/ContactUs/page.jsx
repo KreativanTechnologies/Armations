@@ -45,7 +45,7 @@ const ContactInfo = () => {
               <div className='text-black font-semibold mb-1'>
                 Head Office & Works:
               </div>
-              <div className='text-[#606062] font-medium'>
+              <div className='text-[#606062]'>
                 Mohal Saliana,Khasra No 346, Palampur, Kangra,HP ( 176103 )
               </div>
             </div>
@@ -53,7 +53,7 @@ const ContactInfo = () => {
               <div className='font-semibold text-black mb-1'>
                 Corporate Office:
               </div>
-              <div className='text-gray-600'>
+              <div className='text-[#606062]'>
                 SCO – 69B, Upper Ground Block – 2, City Of Dreams -1, High
                 Ground Road, Zirakpur,Nabha, Punjab (140603)
               </div>
@@ -169,44 +169,175 @@ const WhyChooseUs = () => {
   );
 };
 
-const ContactUs = () => {
-  return (
-    <section className='relative contasct_bg_image w-full contact-section mb-10'>
-      {/* Contact Form Container */}
-      <div className='lg:w-full mx-auto lg:ml-[80px] rounded-lg w-4/5 lg:max-w-4xl px-8 py-10 bg-gray-300'>
-        <h2 className='text-black text-xl md:text-3xl font-semibold font-poppins'>
-          Contact Us
-        </h2>
-        <h3 className='text-[#ec3436] text-xl md:text-3xl font-bold font-poppins mb-5'>
-          Reach and Get in Touch With Us!
-        </h3>
+import { useState } from 'react';
 
-        <form className='space-y-4'>
+const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Create mailto link with form data
+      const subject = encodeURIComponent(`Contact Form Submission from ${formData.name}`);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      );
+      const mailtoLink = `mailto:info@aarmationelectric.com?subject=${subject}&body=${body}`;
+      
+      // Open default email client
+      window.location.href = mailtoLink;
+      
+      // Reset form after submission
+      setFormData({ name: '', email: '', message: '' });
+      alert('Email client opened! Please send the email from your default email application.');
+    } catch (error) {
+      console.error('Error:', error);
+      alert('There was an error processing your request. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <section className='relative contact_bg_image w-full contact-section mb-10'>
+      {/* Contact Form Container */}
+      <div className='lg:w-full mx-auto lg:ml-[80px] rounded-lg w-4/5 lg:max-w-2xl px-8 py-10 bg-stone-200 shadow-xl hover:shadow-2xl transition-all duration-500 animate-fadeInUp transform hover:translate-y-[-5px]'>
+        <div className='transform hover:translate-y-[-2px] transition-all duration-300'>
+          <h2 className='text-black text-xl md:text-3xl font-semibold font-poppins animate-slideInLeft'>
+            Contact Us
+          </h2>
+          <h3 className='text-[#ec3436] text-xl md:text-3xl font-bold font-poppins mb-5 animate-slideInRight'>
+            Reach and Get in Touch With Us!
+          </h3>
+        </div>
+
+        <form className='space-y-4 animate-fadeInUp animation-delay-300' onSubmit={handleSubmit}>
           <div className='flex space-x-4'>
             <input
               type='text'
+              name='name'
               placeholder='Name'
-              className='w-1/2 p-3 text-[#1f1f1f]/50 text-lg font-normal border border-gray-600 rounded-md outline-none'
+              value={formData.name}
+              onChange={handleInputChange}
+              required
+              className='w-1/2 p-3 text-[#1f1f1f]/50 text-lg font-normal border border-gray-600 rounded-md outline-none transition-all duration-300 hover:border-[#ec3436] focus:border-[#ec3436] focus:ring-2 focus:ring-[#ec3436]/20 hover:shadow-md focus:shadow-md transform hover:translate-y-[-1px] focus:translate-y-[-1px]'
             />
             <input
               type='email'
+              name='email'
               placeholder='Email'
-              className='w-1/2 p-3 text-[#1f1f1f]/50 text-lg font-normal border border-gray-600 rounded-md outline-none'
+              value={formData.email}
+              onChange={handleInputChange}
+              required
+              className='w-1/2 p-3 text-[#1f1f1f]/50 text-lg font-normal border border-gray-600 rounded-md outline-none transition-all duration-300 hover:border-[#ec3436] focus:border-[#ec3436] focus:ring-2 focus:ring-[#ec3436]/20 hover:shadow-md focus:shadow-md transform hover:translate-y-[-1px] focus:translate-y-[-1px]'
             />
           </div>
           <textarea
+            name='message'
             placeholder='Message'
             rows='4'
-            className='w-full p-3 text-[#1f1f1f]/50 text-lg font-normal border border-gray-600 rounded-md outline-none'
+            value={formData.message}
+            onChange={handleInputChange}
+            required
+            className='w-full p-3 text-[#1f1f1f]/50 text-lg font-normal border border-gray-600 rounded-md outline-none transition-all duration-300 hover:border-[#ec3436] focus:border-[#ec3436] focus:ring-2 focus:ring-[#ec3436]/20 hover:shadow-md focus:shadow-md transform hover:translate-y-[-1px] focus:translate-y-[-1px]'
           ></textarea>
           <button
             type='submit'
-            className='px-4 py-3 text-black text-lg md:text-xl font-normal border border-red-500  rounded-full cursor-pointer hover:bg-red-500 hover:text-white transition'
+            disabled={isSubmitting}
+            className={`px-4 py-3 text-lg md:text-xl font-normal border border-red-500 rounded-full cursor-pointer transition-all duration-300 transform hover:translate-y-[-2px] hover:shadow-lg active:translate-y-[0px] ${
+              isSubmitting 
+                ? 'bg-gray-400 text-gray-600 cursor-not-allowed' 
+                : 'text-black hover:bg-red-500 hover:text-white'
+            }`}
           >
-            Send Message
+            {isSubmitting ? 'Sending...' : 'Send Message'}
           </button>
         </form>
       </div>
+
+      <style jsx>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes slideInLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes slideInRight {
+          from {
+            opacity: 0;
+            transform: translateX(50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes pulseSubtle {
+          0%, 100% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.02);
+          }
+        }
+
+        .animate-fadeInUp {
+          animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .animate-slideInLeft {
+          animation: slideInLeft 0.8s ease-out forwards;
+        }
+
+        .animate-slideInRight {
+          animation: slideInRight 0.8s ease-out forwards;
+        }
+
+        .animate-pulse-subtle {
+          animation: pulseSubtle 3s ease-in-out infinite;
+        }
+
+        .animation-delay-300 {
+          animation-delay: 0.3s;
+          opacity: 0;
+        }
+
+        .shadow-3xl {
+          box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+        }
+      `}</style>
     </section>
   );
 };

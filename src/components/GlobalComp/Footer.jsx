@@ -31,7 +31,7 @@ const Footer = () => {
             Ready to power your plant with SCADA?
           </h1>
           <p className="mt-4 text-base font-bold sm:text-lg md:text-xl">Let{"'"}s transform your operations today.</p>
-          <Link href="/ContactUs">
+          <Link href="/contactUs">
             <button className="mt-8 rounded-full border-2 cursor-pointer border-white bg-transparent px-8 py-3 text-lg font-medium text-white transition-all duration-300 hover:bg-white hover:text-black hover:shadow-lg">
               Discover Now
             </button>
