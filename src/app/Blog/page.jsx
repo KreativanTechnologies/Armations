@@ -50,5 +50,5 @@ const newsData = [
     title: "Transforming Industries with SCADA Innovation",
     description: "Role of SCADA in Automation with rapid changes in electrical systems, monitoring and controlling these systems quickly is crucial. SCADA, or Supervisory Control and Data Acquisition, plays an irreplaceable role here. As an innovative electrical company, we proudly offer modern SCADA systems. These systems facilitate operations, improve safety, and promote sector development.",
   },
-   
+  
 ];
