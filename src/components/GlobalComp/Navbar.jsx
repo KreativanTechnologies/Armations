@@ -13,14 +13,14 @@ const NAVIGATION_ITEMS = [
     name: "Solutions",
     hasDropdown: true,
     submenu: [
-      { name: "Customized Solutions", href: "/solution/customizedsolutions" },
-      { name: "Energy Saving Solutions", href: "/solution/energysaving" },
-      { name: "Turnkey Systems", href: "/solution/turnkeysystems" },
-      { name: "Distributed Control Systems", href: "/solution/distributedcontrolsystems" },
-      { name: "Switchgear Solutions", href: "/solution/switchgearsolutions" },
+      { name: "Customized Solutions", href: "/solution/customizedSolutions" },
+      { name: "Energy Saving Solutions", href: "/solution/energySaving" },
+      { name: "Turnkey Systems", href: "/solution/turnkeySystems" },
+      { name: "Distributed Control Systems", href: "/solution/distributedControlSystems" },
+      { name: "Switchgear Solutions", href: "/solution/switchgearSolutions" },
       {
         name: "Supervisory Control & Data Acquisition",
-        href: "/solution/supervisorycontroldataacquisition",
+        href: "/solution/supervisoryControlDataAcquisition",
       },
     ],
   },
@@ -30,7 +30,7 @@ const NAVIGATION_ITEMS = [
     submenu: [
       { name: "Textile Industry", href: "/industry/textile" },
       { name: "Pharmaceutical Industry", href: "/industry/pharma" },
-      { name: "Machine Tool Industry", href: "/industry/machinetools" },
+      { name: "Machine Tool Industry", href: "/industry/machineTools" },
       { name: "Automation Industry", href: "/industry/automation" },
       { name: "Plastic Industry", href: "/industry/plastic" },
       { name: "Packaging Industry", href: "/industry/packaging" },
@@ -38,7 +38,7 @@ const NAVIGATION_ITEMS = [
     ],
   },
   { name: "Blog", href: "/blog" },
-  { name: "Contact Us", href: "/contactus" },
+  { name: "Contact Us", href: "/contactUs" },
 ]
 
 const STYLES = {
@@ -265,7 +265,7 @@ export default function TransparentNavbar() {
           <Link href="/social">
             <IconButton icon={HandHeart} ariaLabel="Language" />
           </Link>
-          <Link href="/contactus">
+          <Link href="/contactUs">
             <IconButton icon={Mail} ariaLabel="Contact" />
           </Link>
           <div className="lg:hidden">
