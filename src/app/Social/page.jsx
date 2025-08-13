@@ -1,168 +1,15 @@
 "use client";
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Facebook, Instagram, Linkedin, Youtube, Globe } from 'lucide-react';
-import * as THREE from 'three';
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
 const AarmationLanding = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-    const mountRef = useRef(null);
-    const sceneRef = useRef(null);
-    const rendererRef = useRef(null);
-    const geometryRef = useRef(null);
-    const materialRef = useRef(null);
-    const meshRef = useRef(null);
-    const animationIdRef = useRef(null);
 
     useEffect(() => {
         setIsVisible(true);
-        
-        // Three.js scene setup
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-        
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setClearColor(0x000000, 0);
-        
-        if (mountRef.current) {
-            mountRef.current.appendChild(renderer.domElement);
-        }
-
-        // Create animated globe
-        const geometry = new THREE.SphereGeometry(2, 32, 32);
-        
-        // Create shader material for globe effect with red/gray theme
-        const material = new THREE.ShaderMaterial({
-            uniforms: {
-                time: { value: 0 },
-                color1: { value: new THREE.Color(0xff0044) }, // Red
-                color2: { value: new THREE.Color(0x888888) }, // Gray
-            },
-            vertexShader: `
-                uniform float time;
-                varying vec2 vUv;
-                varying vec3 vPosition;
-                
-                void main() {
-                    vUv = uv;
-                    vPosition = position;
-                    
-                    vec3 pos = position;
-                    float wave = sin(pos.x * 10.0 + time) * 0.1;
-                    pos.z += wave;
-                    
-                    gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
-                }
-            `,
-            fragmentShader: `
-                uniform float time;
-                uniform vec3 color1;
-                uniform vec3 color2;
-                varying vec2 vUv;
-                varying vec3 vPosition;
-                
-                void main() {
-                    float pattern = sin(vUv.x * 20.0) * sin(vUv.y * 20.0);
-                    float pulse = sin(time * 2.0) * 0.5 + 0.5;
-                    
-                    vec3 color = mix(color1, color2, pattern * pulse);
-                    float alpha = 0.7 + pattern * 0.3;
-                    
-                    gl_FragColor = vec4(color, alpha);
-                }
-            `,
-            transparent: true,
-            wireframe: false,
-        });
-        
-        const mesh = new THREE.Mesh(geometry, material);
-        scene.add(mesh);
-
-        // Add wireframe overlay for globe grid effect with red color
-        const wireframeGeometry = new THREE.SphereGeometry(2.01, 16, 16);
-        const wireframeMaterial = new THREE.MeshBasicMaterial({
-            color: 0xff4444, // Red wireframe
-            wireframe: true,
-            transparent: true,
-            opacity: 0.3,
-        });
-        const wireframeMesh = new THREE.Mesh(wireframeGeometry, wireframeMaterial);
-        scene.add(wireframeMesh);
-
-        // Add lights with red/gray theme
-        const ambientLight = new THREE.AmbientLight(0x404040, 0.6);
-        scene.add(ambientLight);
-        
-        const pointLight = new THREE.PointLight(0xff0044, 1, 100); // Red light
-        pointLight.position.set(10, 10, 10);
-        scene.add(pointLight);
-
-        const pointLight2 = new THREE.PointLight(0x888888, 1, 100); // Gray light
-        pointLight2.position.set(-10, -10, 10);
-        scene.add(pointLight2);
-
-        camera.position.z = 8;
-
-        // Store references
-        sceneRef.current = scene;
-        rendererRef.current = renderer;
-        geometryRef.current = geometry;
-        materialRef.current = material;
-        meshRef.current = mesh;
-
-        // Animation loop
-        const animate = () => {
-            animationIdRef.current = requestAnimationFrame(animate);
-            
-            const time = Date.now() * 0.001;
-            
-            if (meshRef.current) {
-                meshRef.current.rotation.x += 0.005;
-                meshRef.current.rotation.y += 0.01;
-                meshRef.current.position.y = Math.sin(time) * 0.3;
-                
-                // Update shader uniform
-                if (material.uniforms) {
-                    material.uniforms.time.value = time;
-                }
-            }
-            
-            // Rotate wireframe independently
-            if (wireframeMesh) {
-                wireframeMesh.rotation.x += 0.003;
-                wireframeMesh.rotation.y += 0.008;
-            }
-            
-            renderer.render(scene, camera);
-        };
-        animate();
-
-        // Handle resize
-        const handleResize = () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        };
-        
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-            if (animationIdRef.current) {
-                cancelAnimationFrame(animationIdRef.current);
-            }
-            if (mountRef.current && renderer.domElement) {
-                mountRef.current.removeChild(renderer.domElement);
-            }
-            geometry.dispose();
-            material.dispose();
-            wireframeGeometry.dispose();
-            wireframeMaterial.dispose();
-            renderer.dispose();
-        };
     }, []);
 
     useEffect(() => {
@@ -172,16 +19,6 @@ const AarmationLanding = () => {
                 y: -(e.clientY / window.innerHeight) * 2 + 1,
             };
             setMousePosition(newMousePosition);
-            
-            if (meshRef.current) {
-                // Smooth mouse following for the globe
-                meshRef.current.rotation.x = newMousePosition.y * 0.5;
-                meshRef.current.rotation.y = newMousePosition.x * 0.5;
-                
-                // Add subtle position movement
-                meshRef.current.position.x = newMousePosition.x * 0.5;
-                meshRef.current.position.z = newMousePosition.y * 0.3;
-            }
         };
 
         window.addEventListener('mousemove', handleMouseMove);
@@ -276,9 +113,6 @@ const AarmationLanding = () => {
             
             {/* Dark overlay for better text readability */}
             <div className="absolute inset-0 bg-black/70" />
-
-            {/* Three.js Globe */}
-            <div ref={mountRef} className="absolute inset-0 z-10" />
             
             {/* Additional animated overlay gradients with red/gray theme */}
             <div className="absolute inset-0 opacity-20 z-20">
