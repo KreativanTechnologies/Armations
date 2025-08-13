@@ -26,7 +26,7 @@ const   Text = () => {
             relative
           ">
             <div className="space-y-2">
-              <h2 className="text-[6vw] md:text-[2vw] font-semibold font-Poppins text-black">Plastic Industry</h2>
+              <h2 className="text-[6vw] md:text-[2vw] font-semibold font-Poppins text-black">Textile Industry</h2>
               <div className="w-26 h-1 bg-red-500 rounded-lg"></div>
               <p className="text-[#606062] text-lg font-Poppins font-medium md:text-base leading-relaxed">
                  The Textile Industry has grown rapidly due to the advent of automation. Textile products such as cloth, yarn, cotton and other fabrics have been easier to produce due to automation. Automation has improved product quality and reduced working hours, while providing safer working conditions for employees.
