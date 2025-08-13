@@ -173,7 +173,7 @@ const ContactUs = () => {
   return (
     <section className='relative contasct_bg_image w-full contact-section mb-10'>
       {/* Contact Form Container */}
-      <div className='lg:w-full mx-auto lg:ml-[80px] rounded-lg w-4/5 lg:max-w-4xl px-8 py-10 bg-gray-200'>
+      <div className='lg:w-full mx-auto lg:ml-[80px] rounded-lg w-4/5 lg:max-w-4xl px-8 py-10 bg-gray-300'>
         <h2 className='text-black text-xl md:text-3xl font-semibold font-poppins'>
           Contact Us
         </h2>
