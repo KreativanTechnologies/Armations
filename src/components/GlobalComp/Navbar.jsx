@@ -13,14 +13,14 @@ const NAVIGATION_ITEMS = [
     name: "Solutions",
     hasDropdown: true,
     submenu: [
-      { name: "Customized Solutions", href: "/solution/CustomizedSolutions" },
-      { name: "Energy Saving Solutions", href: "/solution/EnergySaving" },
-      { name: "Turnkey Systems", href: "/solution/turnkeySystems" },
-      { name: "Distributed Control Systems", href: "/solution/distributedControlSystems" },
-      { name: "Switchgear Solutions", href: "/solution/switchgearSolutions" },
+      { name: "Customized Solutions", href: "/Solution/CustomizedSolutions" },
+      { name: "Energy Saving Solutions", href: "/Solution/EnergySaving" },
+      { name: "Turnkey Systems", href: "/Solution/turnkeySystems" },
+      { name: "Distributed Control Systems", href: "/Solution/distributedControlSystems" },
+      { name: "Switchgear Solutions", href: "/Solution/switchgearSolutions" },
       {
         name: "Supervisory Control & Data Acquisition",
-        href: "/solution/supervisoryControlDataAcquisition",
+        href: "/Solution/supervisoryControlDataAcquisition",
       },
     ],
   },
@@ -28,17 +28,17 @@ const NAVIGATION_ITEMS = [
     name: "Industries",
     hasDropdown: true,
     submenu: [
-      { name: "Textile Industry", href: "/industry/Textile" },
-      { name: "Pharmaceutical Industry", href: "/industry/Pharma" },
-      { name: "Machine Tool Industry", href: "/industry/MachineTools" },
-      { name: "Automation Industry", href: "/industry/Automation" },
-      { name: "Plastic Industry", href: "/industry/Plastic" },
-      { name: "Packaging Industry", href: "/industry/Packaging" },
-      { name: "Ceramic Industry", href: "/industry/Ceramic" },
+      { name: "Textile Industry", href: "/Industry/Textile" },
+      { name: "Pharmaceutical Industry", href: "/Industry/Pharma" },
+      { name: "Machine Tool Industry", href: "/Industry/MachineTools" },
+      { name: "Automation Industry", href: "/Industry/Automation" },
+      { name: "Plastic Industry", href: "/Industry/Plastic" },
+      { name: "Packaging Industry", href: "/Industry/Packaging" },
+      { name: "Ceramic Industry", href: "/Industry/Ceramic" },
     ],
   },
-  { name: "Blog", href: "/blog" },
-  { name: "Contact Us", href: "/contactUs" },
+  { name: "Blog", href: "/Blog" },
+  { name: "Contact Us", href: "/ContactUs" },
 ]
 
 const STYLES = {
@@ -262,10 +262,10 @@ export default function TransparentNavbar() {
             onClick={toggleSearch}
             ariaLabel={isSearchOpen ? "Close search" : "Open search"}
           />
-          <Link href="/social">
+          <Link href="/Social">
             <IconButton icon={HandHeart} ariaLabel="Language" />
           </Link>
-          <Link href="/contactUs">
+          <Link href="/ContactUs">
             <IconButton icon={Mail} ariaLabel="Contact" />
           </Link>
           <div className="lg:hidden">
