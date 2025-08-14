@@ -36,7 +36,7 @@ const Parallaxbox = () => {
             It has also provided safer working conditions for employees.
               </p>
               <div className="pt-2 md:pt-4">
-               <Link href="/contactUs">
+               <Link href="/ContactUs">
                   <button className="mt-4 px-4 py-2.5 cursor-pointer rounded-full border-2 border-red-500 text-black text-[15px] font-normal hover:bg-red-500 hover:text-white transition-colors duration-200">
                     Learn More
                   </button>

@@ -125,7 +125,7 @@ const Section = () => {
             <h2 className="text-3xl font-semibold text-red-600 mb-8">
               Can’t Find What You are Looking For?
             </h2>
-            <Link href="/contactUs">
+            <Link href="/ContactUs">
               <button className="px-8 py-3 border cursor-pointer border-red-500 text-black rounded-full hover:bg-red-500 hover:text-white transition">
                 Get in Touch with us!
               </button>

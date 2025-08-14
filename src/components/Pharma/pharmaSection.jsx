@@ -47,7 +47,7 @@ const PharmaSection = () => {
                   The Pharmaceutical Industry plays a pivotal role in global healthcare, driving advancements in medical science and improving patient outcomes. It focuses on research, development, and production of drugs to treat a wide range of conditions—leveraging technology and scientific research to deliver safe medications.
                 </p>
                 <div className="pt-2 md:pt-4">
-                  <Link href="/contactUs">
+                  <Link href="/ContactUs">
                     <button className="mt-2 px-4 py-2.5 cursor-pointer rounded-full border-2 border-red-500 text-black text-sm md:text-base hover:bg-red-500 hover:text-white transition-colors duration-200">
                       Learn More
                     </button>

@@ -17,7 +17,7 @@ const NewsStories = ({ newsData = [], defaultRows = 1 }) => {
   const itemsToShow = showAll ? newsData.length : isMobile ? 3 : defaultRows * 3
 
   const handleCardClick = (newsId) => {
-    router.push("/blog")
+    router.push("/Blog")
   }
 
   return (

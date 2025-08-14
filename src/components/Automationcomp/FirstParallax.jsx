@@ -34,7 +34,7 @@ const FirstParallax = () => {
                  The Automation Industry in India stands before a quantum jump. The rapid industrial growth, with fast and continuous changes in technology, has driven automation to the forefront in fostering innovation and giving a competitive edge to businesses across most industries. This article explores emerging automation in India, current trends, and their future prospects.
               </p>
               <div className="pt-2 md:pt-4">
-                <Link href="/contactUs">
+                <Link href="/ContactUs">
                   <button className="mt-4 px-4 py-2.5 cursor-pointer rounded-full border-2 border-red-500 text-black text-[15px] font-normal hover:bg-red-500 hover:text-white transition-colors duration-200">
                     Learn More
                   </button>
