@@ -30,7 +30,7 @@ const HowWeWork = () => {
           <img
             src="/images/AtArmation/Enginee.png"
             alt="How We Work"
-            className="h-full w-full object-center object-cover"
+            className="h-full  object-center object-cover"
           />
         </div>
       </div>
