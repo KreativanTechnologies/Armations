@@ -28,6 +28,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/components/GlobalComp/Navbar.jsx"
-  ],
+, "src/app/page.jsx"  ],
   "exclude": ["node_modules"]
 }
