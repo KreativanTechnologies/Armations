@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 import { SEARCHABLE_TOPICS } from "../searchdata"
 import Link from "next/link"
 const NAVIGATION_ITEMS = [
-  { name: "Home", href: "/Home" },
+  { name: "Home", href: "/home" },
   { name: "About", href: "/about" },
   {
     name: "Solutions",
