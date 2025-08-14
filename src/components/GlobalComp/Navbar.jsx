@@ -8,7 +8,7 @@ import { SEARCHABLE_TOPICS } from "../searchdata"
 import Link from "next/link"
 const NAVIGATION_ITEMS = [
   { name: "Home", href: "/Home" },
-  { name: "About", href: "/about" },
+  { name: "About", href: "/About" },
   {
     name: "Solutions",
     hasDropdown: true,
