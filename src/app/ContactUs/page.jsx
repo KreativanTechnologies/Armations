@@ -112,7 +112,7 @@ const ContactInfo = () => {
         </div>
         <div className='space-y-1 text-xl md:text-2xl font-medium text-[#606062]'>
           <div className=''>Monday to Friday</div>
-          <div className=''>9am - 5 pm</div>
+          <div className=''>9 am - 5 pm</div>
         </div>
       </div>
     </div>
@@ -216,7 +216,7 @@ const ContactUs = () => {
   return (
     <section className='relative contact_bg_image w-full contact-section mb-10'>
       {/* Contact Form Container */}
-      <div className='lg:w-full mx-auto lg:ml-[80px] rounded-lg w-4/5 lg:max-w-2xl px-8 py-10 bg-stone-200 shadow-xl hover:shadow-2xl transition-all duration-500 animate-fadeInUp transform hover:translate-y-[-5px]'>
+      <div className='lg:w-full mx-auto lg:ml-[80px] rounded-lg w-4/5 lg:max-w-2xl px-8 py-10 bg-black/70 shadow-xl hover:shadow-2xl transition-all duration-500 animate-fadeInUp transform hover:translate-y-[-5px]'>
         <div className='transform hover:translate-y-[-2px] transition-all duration-300'>
           <h2 className='text-black text-xl md:text-3xl font-semibold font-poppins animate-slideInLeft'>
             Contact Us
@@ -235,7 +235,7 @@ const ContactUs = () => {
               value={formData.name}
               onChange={handleInputChange}
               required
-              className='w-1/2 p-3 text-[#1f1f1f]/50 text-lg font-normal border border-gray-600 rounded-md outline-none transition-all duration-300 hover:border-[#ec3436] focus:border-[#ec3436] focus:ring-2 focus:ring-[#ec3436]/20 hover:shadow-md focus:shadow-md transform hover:translate-y-[-1px] focus:translate-y-[-1px]'
+              className='w-1/2 p-3 placeholder-gray-400 text-gray-300 text-lg font-normal border-2 border-gray-400 rounded-md outline-none transition-all duration-300 hover:border-[#ec3436] focus:border-[#ec3436] focus:ring-2 focus:ring-[#ec3436]/20 hover:shadow-md focus:shadow-md transform hover:translate-y-[-1px] focus:translate-y-[-1px]'
             />
             <input
               type='email'
@@ -244,7 +244,7 @@ const ContactUs = () => {
               value={formData.email}
               onChange={handleInputChange}
               required
-              className='w-1/2 p-3 text-[#1f1f1f]/50 text-lg font-normal border border-gray-600 rounded-md outline-none transition-all duration-300 hover:border-[#ec3436] focus:border-[#ec3436] focus:ring-2 focus:ring-[#ec3436]/20 hover:shadow-md focus:shadow-md transform hover:translate-y-[-1px] focus:translate-y-[-1px]'
+              className='w-1/2 p-3 placeholder-gray-400 text-gray-300 text-lg font-normal border-2 border-gray-400 rounded-md outline-none transition-all duration-300 hover:border-[#ec3436] focus:border-[#ec3436] focus:ring-2 focus:ring-[#ec3436]/20 hover:shadow-md focus:shadow-md transform hover:translate-y-[-1px] focus:translate-y-[-1px]'
             />
           </div>
           <textarea
@@ -254,7 +254,7 @@ const ContactUs = () => {
             value={formData.message}
             onChange={handleInputChange}
             required
-            className='w-full p-3 text-[#1f1f1f]/50 text-lg font-normal border border-gray-600 rounded-md outline-none transition-all duration-300 hover:border-[#ec3436] focus:border-[#ec3436] focus:ring-2 focus:ring-[#ec3436]/20 hover:shadow-md focus:shadow-md transform hover:translate-y-[-1px] focus:translate-y-[-1px]'
+            className='w-full p-3 placeholder-gray-400 text-gray-300 text-lg font-normal border-2 border-gray-400 rounded-md outline-none transition-all duration-300 hover:border-[#ec3436] focus:border-[#ec3436] focus:ring-2 focus:ring-[#ec3436]/20 hover:shadow-md focus:shadow-md transform hover:translate-y-[-1px] focus:translate-y-[-1px]'
           ></textarea>
           <button
             type='submit'

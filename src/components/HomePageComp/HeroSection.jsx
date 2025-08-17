@@ -114,7 +114,7 @@ const HeroSection = ({ data }) => {
         <h1 className="text-3xl md:text-6xl font-bold">{data.title}</h1>
         <p className="mt-4 text-sm md:text-2xl max-w-6xl">{data.desc}</p>
         {data.btn_Text && (
-          <Link href="/ContactUs">
+          <Link href="/contactUs">
             <button className="mt-6 px-6 py-3 border-2 border-white rounded-full text-lg font-medium hover:bg-white hover:text-black transition cursor-pointer">
               {data.btn_Text}
             </button>

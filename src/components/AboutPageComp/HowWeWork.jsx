@@ -14,7 +14,7 @@ const HowWeWork = () => {
           </p>
         </div>
         <div className="md:absolute w-full md:w-[50%]  md:h-[25%] bottom-0 left-0 z-10 px-[5vw]">
-          <Link href="/ContactUs">
+          <Link href="/contactUs">
             <button
               className="mt-[1vw] cursor-pointer border-2 text-md md:text-[1.5vw] font-normal border-red-500 text-black px-6 py-2 md:px-8 md:py-4 rounded-full hover:bg-red-500 hover:text-white transition"
             >

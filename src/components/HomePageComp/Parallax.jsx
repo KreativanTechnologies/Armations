@@ -52,7 +52,7 @@ const Parallax = ({ data }) => {
             )}
 
             <div className="">
-              <Link href="/ContactUs">
+              <Link href="/contactUs">
                 <button
                   className="px-4 py-2 cursor-pointer rounded-full border-2 border-red-500 text-black text-[15px] font-normal hover:bg-red-500 hover:text-white transition-colors duration-200"
                 >

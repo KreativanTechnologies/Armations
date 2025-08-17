@@ -63,7 +63,7 @@ export const SEARCHABLE_TOPICS = [
     description: "Specialized solutions for the ceramic industry",
   },
   { title: "Blog Posts", href: "/Blog", description: "Latest news, articles, and insights" },
-  { title: "Contact Information", href: "/ContactUs", description: "Get in touch with us" },
+  { title: "Contact Information", href: "/contactUs", description: "Get in touch with us" },
   { title: "Products Overview", href: "/Products", description: "Explore our range of products" },
   { title: "Trainings", href: "/Trainings", description: "Training programs and workshops" },
   { title: "Enquire Now", href: "/EnquireNow", description: "Submit your inquiry" },

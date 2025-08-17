@@ -34,7 +34,7 @@ const ThirdParallax = () => {
 Investment in training programs and the development of affordable solutions in automation will bridge these gaps and accelerate adoptions.
               </p>
              <div className="pt-2 md:pt-4">
-                <Link href="/ContactUs">
+                <Link href="/contactUs">
                   <button className="mt-4 px-4 py-2.5 cursor-pointer rounded-full border-2 border-red-500 text-black text-[15px] font-normal hover:bg-red-500 hover:text-white transition-colors duration-200">
                     Learn More
                   </button>
