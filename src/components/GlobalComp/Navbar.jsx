@@ -43,7 +43,7 @@ const NAVIGATION_ITEMS = [
 
 const STYLES = {
   navLink:
-    "text-white hover:text-[#00bfff] transition-all duration-200 text-md pb-1 border-b-2 border-transparent hover:border-gray-500 flex items-center gap-",
+    "text-white hover:text-[#00bfff] transition-all duration-200 text-md pb-1 border-b-2 border-transparent hover:border-gray-500 flex items-center gap-1",
   mobileNavLink:
     "block px-4 py-3 text-white hover:text-gray-600 transition-colors duration-200 border border-gray-600 rounded-md hover:border-gray-400 text-center flex items-center justify-center gap-1",
   submenuLink:
