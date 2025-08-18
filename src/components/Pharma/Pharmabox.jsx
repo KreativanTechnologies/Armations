@@ -14,12 +14,12 @@ const Pharmabox = () => {
         <div className="flex flex-col-reverse lg:flex-row bg-white m-0 p-0 max-w-full w-full">
           
           {/* Text Section */}
-          <div className="w-full lg:w-1/2 space-y-4 text-black py-6 md:py-10 text-justify px-0 lg:px-6">
+          <div className="w-full lg:w-1/2 space-y-4 text-black py-6 md:py-10  px-0 lg:px-6">
             <h2 className="text-2xl md:text-3xl font-bold">
               <span className="text-red-600">Automation</span> for the Pharmaceutical Industry
             </h2>
             <div className="w-44 h-1 bg-red-500 rounded-lg" />
-            <p className="text-[15px] md:text-[16px] leading-relaxed text-gray-700">
+            <p className="text-[15px] md:text-[16px] leading-relaxed text-justify text-gray-700">
               Automation for the Plastic Industry transforms production processes with precision and efficiency. Our advanced automation solutions are designed to enhance every stage of plastic manufacturing.
 By implementing cutting-edge technology, we streamline operations and increase speed while maintaining high accuracy. Automated systems handle repetitive tasks such as molding, trimming, and assembly with consistency, reducing the need for manual intervention and minimizing errors. This results in faster production cycles and improved product quality.
 Our solutions are tailored to meet the specific needs of the plastic sector, whether for packaging, automotive parts, or consumer goods. We offer customized systems that integrate seamlessly with your existing processes, providing flexibility and scalability to adapt to market changes and production demands.

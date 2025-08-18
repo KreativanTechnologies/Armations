@@ -89,7 +89,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="/About"
+                  href="/about"
                   className="font-poppins text-lg font-normal leading-[26px] text-white transition-all duration-200 hover:text-blue-300 hover:translate-x-1 hover:scale-[1.02] hover:underline hover:underline-offset-4 hover:decoration-2"
                 >
                   About
@@ -105,10 +105,10 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/trainings"
+                  href="/blog"
                   className="font-poppins text-lg font-normal leading-[26px] text-white transition-all duration-200 hover:text-blue-300 hover:translate-x-1 hover:scale-[1.02] hover:underline hover:underline-offset-4 hover:decoration-2"
                 >
-                  Trainings
+                  Blogs
                 </a>
               </li>
             </ul>

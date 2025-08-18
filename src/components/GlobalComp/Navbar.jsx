@@ -29,7 +29,7 @@ const NAVIGATION_ITEMS = [
     hasDropdown: true,
     submenu: [
       { name: "Textile Industry", href: "/industry/textile" },
-      { name: "Pharmaceutical Industry", href: "/industry/pharmaceutical" },
+      { name: "Pharmaceutical Industry", href: "/industry/pharma" },
       { name: "Machine Tool Industry", href: "/industry/machineTools" },
       { name: "Automation Industry", href: "/industry/automation" },
       { name: "Plastic Industry", href: "/industry/plastic" },
