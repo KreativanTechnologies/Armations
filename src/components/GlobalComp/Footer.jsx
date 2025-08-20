@@ -122,7 +122,7 @@ const Footer = () => {
                <div className="flex items-start space-x-3  group ">
                 <MapPin className="mt-1 h-5 w-5 shrink-0 text-white  transition-transform duration-200 group-hover:animate-spin" />
                 <p className="font-poppins text-lg font-normal leading-[26px] text-white transition-all duration-200 hover:text-blue-300 hover:scale-[1.02] hover:underline hover:underline-offset-4 hover:decoration-2">
-                  SCO - 69b, City Of Dreams - 1, High Ground Road, Zirakpur, Punjab (140603)
+                  SCO - 69B, City Of Dreams - 1, High Ground Road, Zirakpur, Punjab (140603)
                 </p>
               </div>
               <div className="flex items-start space-x-3  group ">
