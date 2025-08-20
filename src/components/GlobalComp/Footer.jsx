@@ -1,4 +1,4 @@
-"use client" 
+"use client"
 
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Youtube } from "lucide-react"
 import Image from "next/image"
@@ -10,7 +10,7 @@ const Footer = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true)
-    }, 100) 
+    }, 100)
 
     return () => clearTimeout(timer)
   }, [])
@@ -40,9 +40,8 @@ const Footer = () => {
       </section>
       <footer className="bg-[#1c1c1c] text-white">
         <div
-          className={`mx-auto grid max-w-7xl grid-cols-1 gap-4 px-6 py-8 md:grid-cols-2 lg:grid-cols-4 transition-all duration-700 ease-out ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`mx-auto grid max-w-7xl grid-cols-1 gap-4 px-6 py-8 md:grid-cols-2 lg:grid-cols-4 transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
         >
           <div className={`space-y-3 transition-all duration-700 ease-out ${isVisible ? "delay-100" : ""}`}>
             <Image
@@ -115,20 +114,25 @@ const Footer = () => {
           </div>
           <div className={`transition-all duration-700 ease-out ${isVisible ? "delay-400" : ""}`}>
             <h3 className="mb-3 font-raleway text-xl font-bold leading-snug text-white transition-all duration-200 hover:scale-105 hover:text-blue-300">
-              Corporate Office
+              Head Office
+
             </h3>
             <div className="space-y-3">
-              
-               <div className="flex items-start space-x-3  group ">
-                <MapPin className="mt-1 h-5 w-5 shrink-0 text-white  transition-transform duration-200 group-hover:animate-spin" />
-                <p className="font-poppins text-lg font-normal leading-[26px] text-white transition-all duration-200 hover:text-blue-300 hover:scale-[1.02] hover:underline hover:underline-offset-4 hover:decoration-2">
-                  SCO - 69B, City Of Dreams - 1, High Ground Road, Zirakpur, Punjab (140603)
-                </p>
-              </div>
+
               <div className="flex items-start space-x-3  group ">
                 <MapPin className="mt-1 h-5 w-5 shrink-0 text-white  transition-transform duration-200 group-hover:animate-spin" />
                 <p className="font-poppins text-lg font-normal leading-[26px] text-white transition-all duration-200 hover:text-blue-300 hover:scale-[1.02] hover:underline hover:underline-offset-4 hover:decoration-2">
                   Mohal Saliana, Khasra No 346, Palampur, Kangra, HP (176103)
+
+                </p>
+              </div>
+              <h3 className="mb-3 font-raleway text-xl font-bold leading-snug text-white transition-all duration-200 hover:scale-105 hover:text-blue-300">
+                Corporate Office
+              </h3>
+              <div className="flex items-start space-x-3  group ">
+                <MapPin className="mt-1 h-5 w-5 shrink-0 text-white  transition-transform duration-200 group-hover:animate-spin" />
+                <p className="font-poppins text-lg font-normal leading-[26px] text-white transition-all duration-200 hover:text-blue-300 hover:scale-[1.02] hover:underline hover:underline-offset-4 hover:decoration-2">
+                  SCO - 69B, City Of Dreams - 1, High Ground Road, Zirakpur, Punjab (140603)
                 </p>
               </div>
             </div>
@@ -144,32 +148,32 @@ const Footer = () => {
                 aarmationelectric
               </span>
             </div>
-           <div className="mt-3 flex space-x-4 md:mt-0">
-  <a
-    href="https://www.facebook.com/Aarmation/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-white transition-all duration-200 hover:scale-150 hover:rotate-6 hover:text-blue-400"
-  >
-    <Facebook className="h-5 w-5" />
-  </a>
-  <a
-    href="https://www.instagram.com/aarmation_electric/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-white transition-all duration-200 hover:scale-150 hover:rotate-6 hover:text-blue-400"
-  >
-    <Instagram className="h-5 w-5" />
-  </a>
-  <a
-    href="https://www.linkedin.com/company/aarmation-electric-pvt-ltd/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-white transition-all duration-200 hover:scale-150 hover:rotate-6 hover:text-blue-400"
-  >
-    <Linkedin className="h-5 w-5" />
-  </a>
-</div>
+            <div className="mt-3 flex space-x-4 md:mt-0">
+              <a
+                href="https://www.facebook.com/Aarmation/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white transition-all duration-200 hover:scale-150 hover:rotate-6 hover:text-blue-400"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.instagram.com/aarmation_electric/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white transition-all duration-200 hover:scale-150 hover:rotate-6 hover:text-blue-400"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/aarmation-electric-pvt-ltd/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white transition-all duration-200 hover:scale-150 hover:rotate-6 hover:text-blue-400"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </div>
 
           </div>
         </div>
