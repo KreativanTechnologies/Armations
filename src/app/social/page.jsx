@@ -96,7 +96,7 @@ const AarmationLanding = () => {
             name: 'LinkedIn',
             color: 'from-blue-700 to-blue-900',
             handle: 'aarmation_electric',
-            url: 'https://linkedin.com/in/aarmation_electric',
+            url: 'https://www.linkedin.com/company/aarmation-electric-pvt-ltd/',
             glow: 'shadow-blue-400/50',
         },
     ];

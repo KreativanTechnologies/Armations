@@ -144,27 +144,33 @@ const Footer = () => {
                 aarmationelectric
               </span>
             </div>
-            <div className="mt-3 flex space-x-4 md:mt-0">
-              <a
-                href="https://www.facebook.com/Aarmation/"
-                className="text-white transition-all duration-200 hover:scale-150 hover:rotate-6 hover:text-blue-400"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="https://www.instagram.com/aarmation_electric/"
-                className="text-white transition-all duration-200 hover:scale-150 hover:rotate-6 hover:text-blue-400"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="text-white transition-all duration-200 hover:scale-150 hover:rotate-6 hover:text-blue-400"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-              
-            </div>
+           <div className="mt-3 flex space-x-4 md:mt-0">
+  <a
+    href="https://www.facebook.com/Aarmation/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-white transition-all duration-200 hover:scale-150 hover:rotate-6 hover:text-blue-400"
+  >
+    <Facebook className="h-5 w-5" />
+  </a>
+  <a
+    href="https://www.instagram.com/aarmation_electric/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-white transition-all duration-200 hover:scale-150 hover:rotate-6 hover:text-blue-400"
+  >
+    <Instagram className="h-5 w-5" />
+  </a>
+  <a
+    href="https://www.linkedin.com/company/aarmation-electric-pvt-ltd/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-white transition-all duration-200 hover:scale-150 hover:rotate-6 hover:text-blue-400"
+  >
+    <Linkedin className="h-5 w-5" />
+  </a>
+</div>
+
           </div>
         </div>
       </footer>
